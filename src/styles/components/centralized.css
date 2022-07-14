@@ -1,0 +1,241 @@
+/* Centralized */
+/*  Focus On your Trade*/
+.focus-trade-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-block: 32px;
+    margin-inline: 150px;
+}
+.focus-trade-body .focus-trade-img{
+    margin-bottom:48px;
+    background-color: var(--gray-200);
+    padding: 10px;
+    border-radius: 15px;
+    position: relative;
+}
+.focus-trade-body .focus-trade-img::after {
+	position: absolute;
+	content: " ";
+	top: 20px;
+	left: -20px;
+	background-color: var(--light-blue);
+	border-radius: 15px;
+	width: 60px;
+	height: 60px;
+	z-index: -50;
+}
+.focus-trade-body .title-focus-trade{
+    color: var(--white);
+    font-size: 24px;
+    font-weight: bold;
+}
+.focus-trade-body .title-focus-trade .focus-trade-blue{
+    color: var(--light-blue);
+}
+.focus-trade-body .title-focus-trade2{
+    color: var(--white);
+    font-size: 20px;
+    font-weight: bold;
+
+}
+.focus-trade-body .text-focus-trade{
+    color: var(--white);
+    font-size: 14px;
+    text-align: center;
+    padding-inline:200px;
+    margin-block: 16px;
+    font-weight: bold;
+}
+.focus-trade-body .search-assets-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 15px;
+    padding-block: 16px;
+    width: 90%;
+    padding-inline: 32px;
+}
+.focus-trade-body .search-assets-box .input-search-assets{
+    background: transparent;
+    border: none;
+    color: var(--gray-900);
+    font-size: 16px;
+    flex-grow: 1;
+
+}
+.focus-trade-body .search-assets-box .input-search-assets::placeholder{
+    color: var(--gray-200);
+    font-size: 15px;
+}
+.focus-trade-body .search-assets-box .input-search-assets:focus-visible{
+    border: none;
+}
+.focus-trade-body .search-assets-box .btn-search-assets{
+    background-color: transparent;
+    border: none;
+    color: var(--bs-blue-900);
+}
+/* assets */
+.assets-card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-block: 32px;
+    
+    
+}
+.assets-card .value-assets-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: var(--bs-blue-900);
+    padding-block: 32px;
+    padding-inline: 16px;
+    border-radius: 0px 10px 10px 0px;
+    
+}
+.assets-card .value-assets-body .value-assets-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 16px;
+
+}
+.value-assets-box .value-assets{
+    color: var(--white);
+    font-size: 16px;
+    font-weight: bold;
+
+}
+.value-assets-box .name-assets{
+    color: var(--white);
+    font-size:24px;
+    font-weight: bold;
+}
+.assets-card .assets-bitcoin {
+	background-image: linear-gradient(180deg, #fbbc23 ,#f79c1a);
+	padding-block: 56px;
+	padding-inline: 27px;
+	border-radius: 10px 0px 0px 10px;
+}
+.assets-card .assets-etherium {
+	background-image: linear-gradient(180deg, #9cbdf3 ,#6b87d0);
+	padding-block: 56px;
+	padding-inline: 27px;
+	border-radius: 10px 0px 0px 10px;
+}
+.assets-card .assets-apple {
+	background-image: linear-gradient(180deg, #7cc2ba ,#52b096);
+	padding-block: 56px;
+	padding-inline: 27px;
+	border-radius: 10px 0px 0px 10px;
+}
+/* technology */
+.technology-centralized-body{
+    margin-block: 32px;
+}
+.technology-centralized-body .caption-technology{
+    color: var(--white);
+    font-size: 16px;
+    width: 50%;
+    text-align: center;
+}
+.technology-centralized-items{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+    margin-bottom: 32px;
+    background-image: linear-gradient(180deg, #0d2742, #0a325d);
+    border-radius: 20px;
+    padding-block: 16px;
+    position: relative;
+    padding-inline: 40px;
+
+}
+.technology-centralized-items .dec-technology-centralized-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 48px;
+}
+.technology-centralized-items .dec-technology-centralized-box .title-artificial{
+    color: var(--white);
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.technology-centralized-items .dec-technology-centralized-box .dec-artificial{
+    color: var(--white);
+    font-size: 13px;
+}
+.technology-centralized-body .technology-centralized-items .technology-centralized-img {
+	background-image: linear-gradient(to bottom right, #0e77ec, #4527ad);
+	padding-inline: 16px;
+	padding-block: 32px;
+	border-radius: 17px;
+	position: absolute;
+	left: -12px;
+	top: 0px;
+}
+/* Table assets */
+.table-assets-body{
+    background-color: var(--bs-blue-900);
+    padding-block: 32px;
+}
+.table-assets-body .head-table-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+.table-assets-body .head-table-box .head-link-table{
+    color: var(--white);
+    font-weight: bold;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+   
+}
+.table-assets-body .banner-trader-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.banner-text-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.banner-text-items .title-banner{
+    color: var(--white);
+    font-size: 16px;
+    margin-top: 20px;
+    
+}
+.banner-text-items .text-banner{
+    color: var(--white);
+    font-size: 13px;
+    margin-top: 16px;
+    
+    
+}
+.icon-banner-box{
+    padding-block: 32px;
+}
+.banner-trader-box{
+    background-color: var(--light-blue);
+    padding-block: 32px;
+    border-radius: 20px 0px 0px 20px;
+}
+
+
