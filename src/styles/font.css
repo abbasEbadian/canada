@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "Roboto";
+    src: url('./fonts/Roboto/Roboto-Medium.ttf') format("truetype");
+}
+@font-face {
+    font-family: "TransRobotics";
+    src: url('./fonts/sf_transrobotics/SF TransRobotics.ttf') format("truetype");
+}
 *{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "TransRobotics", Courier, monospace;
+    
+    font-weight: lighter;
 }

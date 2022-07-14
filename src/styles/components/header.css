@@ -20,9 +20,8 @@ header .navbar-item{
 }
 
 header .navbar-item  a.nav-link{
-    font-size: 16px;
+    /* font-size: 14px; */
     color: var(--white);
-    font-weight: 900;
   
 
 
@@ -47,7 +46,6 @@ header .navbar-item .btn-down-white-paper{
     text-decoration: none;
     color: var(--bs-blue-900);
     border-radius: 20px;
-    font-weight: bold;
     padding-block: 8px;
     padding-inline: 16px;
     border: none;
