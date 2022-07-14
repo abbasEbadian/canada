@@ -13,7 +13,7 @@ import Transaction from '../img/Transaction.png'
 import Commission from '../img/commission.png'
 import Liquidity from '../img/Liquidity.png'
 import Platform from '../img/Platform.png'
-import Phone from '../img/phone.png'
+import Phone from '../img/Phone.png'
 import CheckIcon from '@mui/icons-material/Check';
 import SyncIcon from '@mui/icons-material/Sync';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
