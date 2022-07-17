@@ -8,7 +8,7 @@ import protocolimg3 from '../img/protocol-component-img3.png'
 import protocolimg4 from '../img/protocol-component-img4.png'
 import CircuitDesign from '../img/CircuitDesign.png'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import LogoGoals from '../img/Logo-goals.png'
+import LogoGoals from '../img/goal_logo.gif'
 import Transaction from '../img/Transaction.png'
 import Commission from '../img/commission.png'
 import Liquidity from '../img/Liquidity.png'
@@ -58,7 +58,7 @@ function Home() {
             </div>
             <div className="col-12 col-lg-7">
               <div className="circuit-design">
-                <img src={CircuitDesign} alt="" width={700} height={700} />
+                <img src={CircuitDesign} alt=""/>
               </div>
             </div>
           </div>
@@ -75,7 +75,6 @@ function Home() {
               <div className="protocol-component-item">
                 <div className="protocol-component-shape-box">
                   <img src={protocolimg1} alt="" className='protocol-img1' height={51} width={51} />
-
                 </div>
                 <h5 className='caption-protocol-component'>Tokenized share</h5>
                 <p className='text-protocol-component'>
@@ -224,7 +223,7 @@ function Home() {
         <div className="assest-body">
           <div className="row">
             {/* Apple */}
-            <div className="apple-assest my-5 asset-row">
+            <div className="apple-assest asset-row">
               <div className="row">
 
 
@@ -250,7 +249,7 @@ function Home() {
               </div>
             </div>
             {/* Bitcoin */}
-            <div className="bitcoin-assest my-5 asset-row">
+            <div className="bitcoin-assest asset-row">
               <div className="row flex-row-reverse">
 
 
@@ -282,7 +281,7 @@ function Home() {
 
             </div>
             {/* Etherium */}
-            <div className="etherium-assest my-5 asset-row">
+            <div className="etherium-assest asset-row">
               <div className="row">
                 <div className="col-lg-7 content">
                   <div className="assest-img">
@@ -311,7 +310,7 @@ function Home() {
         </div>
         {/* goals*/}
         <div className="goals-body">
-          <div className="d-flex align-items-center">
+          <div className="d-flex align-items-center mb-5">
             <div className="col-12 col-lg-8">
               <div className="goals-item">
                 <div className="title-Broadcasts-box">
@@ -336,9 +335,8 @@ function Home() {
             </div>
             <div className="col-12 col-lg-4">
               <div className="Logo-Goals-box">
-                <img src={LogoGoals} alt="" />
-                <span>Goals</span>
-              </div>
+                <img src={LogoGoals} alt="" width={500} />
+               </div>
             </div>
           </div>
           <div className="row">
