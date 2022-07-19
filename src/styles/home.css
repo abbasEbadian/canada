@@ -100,7 +100,8 @@
     z-index: 50;
     border: 1px solid var(--white);
     position: relative;
-    
+    margin: 5px 0;
+    opacity: .8;
 }
 .protocol-component-item .protocol-component-shape-box{
     position: relative;
@@ -111,10 +112,11 @@
 .protocol-component-item .protocol-component-shape-box::after {
 	position: absolute;
 	content: " ";
-	top: -1px;
+	top: 0;
 	left: -25px;
-	background-color: var(--light-blue);
-	height: 65px;
+	/* background-color: var(--light-blue); */
+    background: linear-gradient(to left, #028bf8,  #008CFC);
+	height: 62px;
 	width: 65px;
 	border-radius: 18px;
 }
@@ -129,7 +131,7 @@
     flex-direction: column;
     justify-content: flex-start;
     margin-inline: 48px;
-    margin-bottom: 200px;
+    /* margin-bottom: 200px; */
 
 }
 .goals-item .texts-goals{
@@ -584,4 +586,7 @@
     .road-map-body .octagon-accessTime, .road-map-body .octagon-sync, .road-map-body .octagon-check{
         padding-top: 60px;
     }
+}
+.circuit-design img {
+    width: 100%;
 }
