@@ -57,7 +57,7 @@ function Home() {
               </div>
             </div>
             <div className="col-12 col-lg-7">
-              <div className="circuit-design">
+              <div className="circuit-design text-center">
                 <img src={CircuitDesign} alt="" width={550}  />
               </div>
             </div>
