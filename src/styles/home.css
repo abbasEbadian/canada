@@ -592,9 +592,9 @@
         padding-top: 60px;
     }
 }
-@media (max-width: 1200px) {
-    .protocol-component-body .title-Broadcasts-box{
-        
+@media (min-width: 1200px) {
+    .title-Broadcasts-box button{
+        visibility: hidden;
     }
 
 }
