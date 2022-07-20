@@ -1,3 +1,13 @@
 :root{
     --motion-size: 200px;
 }
+
+.jcw, .jcb{
+    justify-content: space-between !important; 
+}
+.jcc{
+    justify-content: center !important;
+}
+.aic{
+    align-items: center !important;
+}

@@ -3,6 +3,10 @@
     src: url('./fonts/Roboto/Roboto-Medium.ttf') format("truetype");
 }
 @font-face {
+    font-family: "RobotoLight";
+    src: url('./fonts/Roboto/Roboto-Light.ttf') format("truetype");
+}
+@font-face {
     font-family: "TransRobotics";
     src: url('./fonts/sf_transrobotics/SF TransRobotics.ttf') format("truetype");
 }
@@ -10,4 +14,7 @@
     font-family: "TransRobotics", Courier, monospace;
     
     font-weight: lighter;
+}
+.ff{
+    font-family: 'RobotoLight', Times, serif;
 }

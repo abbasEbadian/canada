@@ -33,7 +33,7 @@ function Footer() {
       <div className="footer-body">
         <div className="container">
           <div className="footer-items">
-            <div className="d-flex align-items-center">
+            <div className="d-flex align-items-center flex-wrap">
               <div className="col-12 col-lg-4 px-4">
                 <div className="footer-logo">
                   <div className="logo-box">
@@ -47,21 +47,16 @@ function Footer() {
               </div>
               <div className="col-12 col-lg-3 px-4">
                 <div className="links-body">
-                  <span className="title-footer">Links</span>
+                  <span className="title-footer d-none d-lg-block">Links</span>
                   <div className="link-box">
                    
-                    <div className="links">
-                      
-                    <a href="" className='title-link'>Developers</a>
-                    <a href="" className='title-link'>Community</a>
-                    <a href="" className='title-link'>Media</a>
-                    <a href="" className='title-link'>Ecosystem</a>
-                      
-                    </div>
-                   
-
+                    
                     
                     <div className="links">
+                     <a href="" className='title-link'>Developers</a>
+                      <a href="" className='title-link'>Community</a>
+                      <a href="" className='title-link'>Media</a>
+                      <a href="" className='title-link'>Ecosystem</a>
                       
                       <a href="" className='title-link'>About Us</a>
                       <a href="" className='title-link'>Contact Us</a>

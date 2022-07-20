@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import Router from './pages';
 import './styles/global.css';
+import 'swiper/css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   const [count, setCount] = useState(0)

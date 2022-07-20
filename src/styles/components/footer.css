@@ -80,6 +80,18 @@
     position: relative;
 
 }
+.footer-body .links{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-body .title-link:not(:last-of-type){
+    border-right: 1px solid #5555;
+}
+.footer-body .title-link{
+    padding-inline: 6px;
+    flex: 1 1 auto;
+    text-align: center;
+}
 .footer-body .footer-items .links-body .link-box .links a.title-link::after {
 	position: absolute;
 	content: ' ';
