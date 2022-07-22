@@ -17,7 +17,7 @@ export default () => {
     };
     return (
 
-        <div className="road-map-body">
+        <div className="road-map-body " data-aos="zoom-in-up">
             <div className="title-Broadcasts-box text-center d-flex jcw aic">
                 <button className='btn text-white bg-transparent'><ChevronLeft fontSize="large" className="border rounded-circle swiper-button-prev" /></button>
                 <div>

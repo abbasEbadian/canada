@@ -19,6 +19,7 @@ import RoadMap from '../components/subHome/RoadMap'
 
 
 function Home() {
+
   const CaptionName = {
     protocol: "Protocol components",
     road: "Road Map",
@@ -38,8 +39,8 @@ function Home() {
               <div className="welcom-item">
 
                 <h2 className='my-3 text-center'>
-                <span className='title-welcom'><span className='welcom-b'>Welcome</span> to the new
-                  generation trading platform</span>
+                  <span className='title-welcom'><span className='welcom-b'>Welcome</span> to the new
+                    generation trading platform</span>
                 </h2>
                 <p className="text-welcom">Decentralized multi assets perpetual platform, built on Solana</p>
                 <div className="read-more-welcom-box">
@@ -58,7 +59,7 @@ function Home() {
             </div>
             <div className="col-12 col-lg-7">
               <div className="circuit-design text-center">
-                <img src={CircuitDesign} alt="" width={550}  />
+                <img src={CircuitDesign} alt="" width={550} />
               </div>
             </div>
           </div>
@@ -71,32 +72,34 @@ function Home() {
 
           </div>
           <div className="row">
-          <div className="col-12 col-lg-3 my-2 my-md-0">
-              <div className="protocol-component-item">
+            <div className="col-12 col-lg-3 my-2 my-md-0" data-aos="flip-left">
+              <div className="protocol-component-item"  >
                 <div className="protocol-component-shape-box">
                   <img src={protocolimg1} alt="" className='protocol-img1' height={51} width={51} />
                 </div>
-                <h5 className='caption-protocol-component'>Tokenized share</h5>
+                <h5 className='caption-protocol-component'>Decentralized perpetual
+                  multi asset platform</h5>
                 <p className='text-protocol-component ff'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                Trade Gold, BTC, Equities and Forex on a decentralized and ermissionless platform
                 </p>
               </div>
 
             </div>
-            <div className="col-12 col-lg-3 my-2 my-md-0">
+            <div className="col-12 col-lg-3 my-2 my-md-0" data-aos="flip-right">
               <div className="protocol-component-item">
                 <div className="protocol-component-shape-box">
                   <img src={protocolimg2} alt="" className='protocol-img1' height={51} width={51} />
 
                 </div>
-                <h5 className='caption-protocol-component'>Tokenized share</h5>
+                <h5 className='caption-protocol-component'>Centralized regulated
+platform</h5>
                 <p className='text-protocol-component ff'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                Liquidity aggregation of the best traditional market LPs to empower DEX platform
                 </p>
               </div>
 
             </div>
-            <div className="col-12 col-lg-3 my-2 my-md-0">
+            <div className="col-12 col-lg-3 my-2 my-md-0" data-aos="flip-left">
               <div className="protocol-component-item">
                 <div className="protocol-component-shape-box">
                   <img src={protocolimg3} alt="" className='protocol-img1' height={51} width={51} />
@@ -104,20 +107,21 @@ function Home() {
                 </div>
                 <h5 className='caption-protocol-component'>Tokenized share</h5>
                 <p className='text-protocol-component ff'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                Invest on the best equities around the World without restriction
                 </p>
               </div>
 
             </div>
-            <div className="col-12 col-lg-3 my-2 my-md-0">
+            <div className="col-12 col-lg-3 my-2 my-md-0" data-aos="flip-right">
               <div className="protocol-component-item">
                 <div className="protocol-component-shape-box">
                   <img src={protocolimg4} alt="" className='protocol-img1' height={51} width={51} />
 
                 </div>
-                <h5 className='caption-protocol-component'>Tokenized share</h5>
+                <h5 className='caption-protocol-component'>Investment management
+platform</h5>
                 <p className='text-protocol-component ff'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                Find the best investment manager that help you to achieve your goal in a fully transparent platform
                 </p>
               </div>
 
@@ -135,7 +139,7 @@ function Home() {
               <div className="row">
 
 
-              <div className="col-lg-7 col-12 content">
+                <div className="col-lg-7 col-12 content">
                   <div className="assest-img">
                     <img src={apple_motion} alt="apple motion" />
                   </div>
@@ -150,7 +154,7 @@ function Home() {
                       <span className="value-assest">CHG</span>
                       <span className="value-assest">VOL</span>
                     </div>
-                    </div>
+                  </div>
                   {/* mobile assets */}
                   <div className="assets-item-mobile">
                     <div className="caption-assest-box-mobile">
@@ -179,7 +183,7 @@ function Home() {
 
 
 
-                <div className="col-lg-8 content">
+                <div className="col-lg-8 content"  >
 
                   <div className="assest-item x4">
                     <div className="caption-assest-box">
@@ -195,7 +199,7 @@ function Home() {
                   </div>
                   <div className="assest-img">
                     <img src={apple_motion} alt="apple motion" />
-                    </div>
+                  </div>
                   {/* mobile assets */}
                   <div className="assets-item-mobile">
                     <div className="caption-assest-box-mobile">
@@ -219,7 +223,7 @@ function Home() {
             {/* Etherium */}
             <div className="etherium-assest  asset-row">
               <div className="row">
-              <div className="col-lg-7 col-12 content">
+                <div className="col-lg-7 col-12 content"  >
                   <div className="assest-img">
                     <img src={apple_motion} alt="apple motion" />
                   </div>
@@ -235,7 +239,7 @@ function Home() {
                       <span className="value-assest">CHG</span>
                       <span className="value-assest">VOL</span>
                     </div>
-                    </div>
+                  </div>
                   {/* mobile assets */}
                   <div className="assets-item-mobile">
                     <div className="caption-assest-box-mobile">
@@ -261,7 +265,7 @@ function Home() {
         </div>
         {/* goals*/}
         <div className="goals-body">
-        <div className="d-flex align-items-center flex-wrap-reverse mb-5">
+          <div className="d-flex align-items-center flex-wrap-reverse mb-5">
             <div className="col-12 col-lg-8">
               <div className="goals-item">
                 <div className="title-Broadcasts-box">
@@ -288,11 +292,11 @@ function Home() {
               <div className="Logo-Goals-box">
                 <img src={LogoGoals} alt="goals" className='w-100' />
                 {/* <span>Goals</span> */}
-               </div>
+              </div>
             </div>
           </div>
           <div className="row">
-          <div className="col-12 col-lg-3 my-4">
+            <div className="col-12 col-lg-3 my-4">
               <div className="features-body">
                 <div className="img-features-box1">
                   <img src={Transaction} alt="" height={50} />
@@ -333,10 +337,10 @@ function Home() {
         </div>
         {/* technology */}
         <div className="technology-body">
-        <div className="d-flex align-items-center justify-content-between flex-wrap">
+          <div className="d-flex align-items-center justify-content-between flex-wrap">
             <div className="col-12 col-lg-6">
               <div className="technology-img ">
-                <img src={Phone} alt="" height={283} width={325} />
+                <img src={Phone} alt="" height={283} width={325} data-aos="fade-up-right" />
                 <span className="text-technology-img">
                   Created by investment managers and experienced traders on financial markets.
                 </span>
@@ -351,28 +355,28 @@ function Home() {
                 <p className="caption-technology">
                   We’ve created a unique visual system and strategy across the wideExisting spectrum of visible mobile applications…
                 </p>
-                <div className="dec-technology-box">
+                <div className="dec-technology-box" data-aos="fade-up-left">
                   <span className="title-dec-technology">Hybrid liquidity model</span>
                   <p className="dec-technology">
                     Use hybrid model liquidity, orderbook and Liquidity pool
                   </p>
                 </div>
-                <div className="dec-technology-box">
-                  <span className="title-dec-technology">Hybrid liquidity model</span>
+                <div className="dec-technology-box" data-aos="fade-up-left">
+                  <span className="title-dec-technology">On chain- Orderbook execution</span>
                   <p className="dec-technology">
-                    Use hybrid model liquidity, orderbook and Liquidity pool
+                  On chain trade execution On Solana blockchain
                   </p>
                 </div>
-                <div className="dec-technology-box">
-                  <span className="title-dec-technology">Hybrid liquidity model</span>
+                <div className="dec-technology-box" data-aos="fade-up-left">
+                  <span className="title-dec-technology">Cross chain integration</span>
                   <p className="dec-technology">
-                    Use hybrid model liquidity, orderbook and Liquidity pool
+                  Cross chain integration by Wormhole protocol
                   </p>
                 </div>
-                <div className="dec-technology-box">
-                  <span className="title-dec-technology">Hybrid liquidity model</span>
+                <div className="dec-technology-box" data-aos="fade-up-left">
+                  <span className="title-dec-technology">Tokenized bundle</span>
                   <p className="dec-technology">
-                    Use hybrid model liquidity, orderbook and Liquidity pool
+                  Tokenized position and account, transfer to wallets or use as a collateral
                   </p>
                 </div>
 
