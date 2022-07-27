@@ -16,7 +16,7 @@ import Platform from '../img/Platform.png'
 import Phone from '../img/Phone.png'
 import { apple_motion } from '../img'
 import RoadMap from '../components/subHome/RoadMap'
-
+import myvideo from '../img/video/1.mp4'
 
 function Home() {
 
@@ -59,7 +59,14 @@ function Home() {
             </div>
             <div className="col-12 col-lg-7">
               <div className="circuit-design text-center">
-                <img src={CircuitDesign} alt="" width={550} />
+                {/* <img src={CircuitDesign} alt="" width={550} /> */}
+                {/* <img src={myvideo} alt="" width={550} /> */}
+                {/* <video src={myvideo} controls={false} autoPlay   width="100%">
+                  Sorry, your browser doesn't support embedded videos.
+                </video> */}
+                  <video autoPlay playsInline muted loop className='w-100'>
+                            <source src={myvideo}  type="video/mp4" />
+                        </video>
               </div>
             </div>
           </div>
@@ -80,7 +87,7 @@ function Home() {
                 <h5 className='caption-protocol-component'>Decentralized perpetual
                   multi asset platform</h5>
                 <p className='text-protocol-component ff'>
-                Trade Gold, BTC, Equities and Forex on a decentralized and ermissionless platform
+                  Trade Gold, BTC, Equities and Forex on a decentralized and ermissionless platform
                 </p>
               </div>
 
@@ -92,9 +99,9 @@ function Home() {
 
                 </div>
                 <h5 className='caption-protocol-component'>Centralized regulated
-platform</h5>
+                  platform</h5>
                 <p className='text-protocol-component ff'>
-                Liquidity aggregation of the best traditional market LPs to empower DEX platform
+                  Liquidity aggregation of the best traditional market LPs to empower DEX platform
                 </p>
               </div>
 
@@ -107,7 +114,7 @@ platform</h5>
                 </div>
                 <h5 className='caption-protocol-component'>Tokenized share</h5>
                 <p className='text-protocol-component ff'>
-                Invest on the best equities around the World without restriction
+                  Invest on the best equities around the World without restriction
                 </p>
               </div>
 
@@ -119,9 +126,9 @@ platform</h5>
 
                 </div>
                 <h5 className='caption-protocol-component'>Investment management
-platform</h5>
+                  platform</h5>
                 <p className='text-protocol-component ff'>
-                Find the best investment manager that help you to achieve your goal in a fully transparent platform
+                  Find the best investment manager that help you to achieve your goal in a fully transparent platform
                 </p>
               </div>
 
@@ -355,28 +362,28 @@ platform</h5>
                 <p className="caption-technology">
                   We’ve created a unique visual system and strategy across the wideExisting spectrum of visible mobile applications…
                 </p>
-                <div className="dec-technology-box" data-aos="fade-up-left">
+                <div className="dec-technology-box" data-aos="fade-up">
                   <span className="title-dec-technology">Hybrid liquidity model</span>
                   <p className="dec-technology">
                     Use hybrid model liquidity, orderbook and Liquidity pool
                   </p>
                 </div>
-                <div className="dec-technology-box" data-aos="fade-up-left">
+                <div className="dec-technology-box" data-aos="fade-down">
                   <span className="title-dec-technology">On chain- Orderbook execution</span>
                   <p className="dec-technology">
-                  On chain trade execution On Solana blockchain
+                    On chain trade execution On Solana blockchain
                   </p>
                 </div>
-                <div className="dec-technology-box" data-aos="fade-up-left">
+                <div className="dec-technology-box" data-aos="fade-up">
                   <span className="title-dec-technology">Cross chain integration</span>
                   <p className="dec-technology">
-                  Cross chain integration by Wormhole protocol
+                    Cross chain integration by Wormhole protocol
                   </p>
                 </div>
-                <div className="dec-technology-box" data-aos="fade-up-left">
+                <div className="dec-technology-box" data-aos="fade-down">
                   <span className="title-dec-technology">Tokenized bundle</span>
                   <p className="dec-technology">
-                  Tokenized position and account, transfer to wallets or use as a collateral
+                    Tokenized position and account, transfer to wallets or use as a collateral
                   </p>
                 </div>
 

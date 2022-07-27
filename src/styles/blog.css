@@ -1,0 +1,23 @@
+.flex-blog {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info-blog-post {
+    background-color: #56697D;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.info-blog-post .up-section-info-post img {
+    width: 100%;
+}
+.date-publish {
+    text-align: right;
+    color: #585555;
+}
+.down-section-info-post {
+    padding: 7px;
+}

@@ -4,10 +4,9 @@ function Blog() {
   const [blogPosts, setBLogPosts] = React.useState([
     {
       id: 1,
-      name: "مزایای خرید گیفت کارت",
+      name: "Free educationconsult news 2",
       textBlog:
-        "  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از   از طراحان گرافیک استلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از",
-      publisher: "مدیر سایت",
+        "our professional advisor are here to help You to design Your portfolio, strategy and diminish your trading mistake.",
     },
     {
       id: 2,
@@ -99,10 +98,10 @@ function Blog() {
       <section>
         <div className="container py-5">
           <div className="row align-items-start">
-            <div className="col-md-9 flex-blog order-1">
+            <div className="col-md-12 flex-blog order-1">
               {blogPosts.map((item, idx) => {
                 return (
-                  <div className="col-md-6 col-lg-4 col-6 p-2 blog-cards" key={idx}>
+                  <div className="col-md-6 col-lg-3 col-6 p-2 blog-cards" key={idx}>
                     <BlogPost data={item} />
                   </div>
                 );

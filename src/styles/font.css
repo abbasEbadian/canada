@@ -11,10 +11,10 @@
     src: url('./fonts/sf_transrobotics/SF TransRobotics.ttf') format("truetype");
 }
 *{
-    font-family: "TransRobotics", Courier, monospace;
+    font-family: "Roboto", Courier, monospace;
     
     font-weight: lighter;
 }
 .ff{
-    font-family: 'RobotoLight', Times, serif;
+    font-family: 'Roboto', Times, serif;
 }
