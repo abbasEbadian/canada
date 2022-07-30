@@ -1,3 +1,11 @@
+.content-head-blog {
+    background-image: url('../img/blog/Group-23230.png');
+    width: 100%;
+    height: 215px;
+    background-position: center;
+    background-size: cover;
+}
+
 .flex-blog {
     display: flex;
     flex-wrap: wrap;
@@ -20,4 +28,67 @@
 }
 .down-section-info-post {
     padding: 7px;
+}
+
+.bg-top-news {
+    background-image: url('../img/blog/Group-1152.png');
+    width: 100%;
+    height: 80vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.topNews {
+    position: relative;
+    background-color: #081F37;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 2px #224b77;
+}
+.topNews img {
+    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
+}
+.info-top-news-title {
+    /* padding: 1rem; */
+    line-height: 1.8;
+}
+.nameTop {
+    color: #008CFC;
+    font-size: 19px;
+    margin: 0
+}
+.nameTop2 , .content-info-Tnews {
+    color: #fff;
+    font-size: 19px; 
+    line-height: 1.5;
+}
+
+.viewMore a {
+    color: #fff;
+}
+.viewMore p {
+    margin: 0;
+}
+.more-action-Tnews {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.review-like-Tnews {
+    display: flex;
+    align-items: center;
+}
+.review-like-Tnews  div  a{
+    color: #fff;
+}
+
+@media (max-width:767px) {
+    .topNews > .d-flex {
+        flex-direction: column;
+    }
+    .bg-top-news {
+        height: unset;
+    }
 }

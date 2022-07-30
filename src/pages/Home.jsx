@@ -14,7 +14,9 @@ import Commission from '../img/commission.png'
 import Liquidity from '../img/Liquidity.png'
 import Platform from '../img/Platform.png'
 import Phone from '../img/Phone.png'
-import { apple_motion } from '../img'
+import  apple_motion from '../img/motion/apple.mp4'
+import  etherium_motion from '../img/motion/etherium.mp4'
+import  bitcoin_motion from '../img/motion/bitcoin.mp4'
 import RoadMap from '../components/subHome/RoadMap'
 import myvideo from '../img/video/1.mp4'
 
@@ -144,11 +146,12 @@ function Home() {
             {/* Apple */}
             <div className="apple-assest  asset-row">
               <div className="row">
-
-
                 <div className="col-lg-7 col-12 content">
                   <div className="assest-img">
-                    <img src={apple_motion} alt="apple motion" />
+                    {/* <img src={apple_motion} alt="apple motion" /> */}
+                    <video autoPlay playsInline muted loop className='w-100'>
+                            <source src={apple_motion}  type="video/mp4" />
+                        </video>
                   </div>
                   <div className="assest-item x4">
                     <div className="caption-assest-box">
@@ -177,21 +180,13 @@ function Home() {
                     </div>
                   </div>
                 </div>
-
                 <div className="col-lg-3"></div>
               </div>
             </div>
             {/* Bitcoin */}
             <div className="bitcoin-assest  asset-row">
               <div className="row flex-row-reverse">
-
-
-
-
-
-
                 <div className="col-lg-8 content"  >
-
                   <div className="assest-item x4">
                     <div className="caption-assest-box">
                       <span className="caption-assest">Assest to Trade</span>
@@ -205,7 +200,10 @@ function Home() {
                     </div>
                   </div>
                   <div className="assest-img">
-                    <img src={apple_motion} alt="apple motion" />
+                    {/* <img src={apple_motion} alt="apple motion" /> */}
+                    <video autoPlay playsInline muted loop className='w-100'>
+                            <source src={bitcoin_motion}  type="video/mp4" />
+                        </video>
                   </div>
                   {/* mobile assets */}
                   <div className="assets-item-mobile">
@@ -232,7 +230,10 @@ function Home() {
               <div className="row">
                 <div className="col-lg-7 col-12 content"  >
                   <div className="assest-img">
-                    <img src={apple_motion} alt="apple motion" />
+                    {/* <img src={etherium_motion} alt="apple motion" /> */}
+                    <video autoPlay playsInline muted loop className='w-100' >
+                            <source src={etherium_motion}  type="video/mp4" />
+                        </video>
                   </div>
 
                   <div className="assest-item x4">

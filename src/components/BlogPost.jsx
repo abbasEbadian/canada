@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { get_image } from '../img'
 import postImage from '../img/blog/fgd.png'
 
 function BlogPost({data}) {
@@ -7,7 +8,7 @@ function BlogPost({data}) {
         <div className="info-blog-post">
             <div className="up-section-info-post">
                 <Link to={"/blog/posts/" + data.id}>
-                    <img src={postImage} alt="post-pic" download />
+                    <img src={get_image(data.img)} alt="post-pic" download />
                 </Link>
               
                 {/* <div className="text-left readMore">
