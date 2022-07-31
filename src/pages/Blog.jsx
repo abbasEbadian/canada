@@ -17,6 +17,8 @@ import topnews from '../img/blog/fgd.jpg'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 
 
@@ -110,6 +112,7 @@ function Blog() {
   };
   return (
     <>
+    <Header/>
       <section className='content-head-blog'>
         <div className="container">
           <div className="row justify-content-between">
@@ -266,6 +269,7 @@ function Blog() {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   )
 }
