@@ -6,11 +6,11 @@
     justify-content: center;
     align-items: center;
     margin-block: 32px;
-    margin-inline: 150px;
+    
 }
 .focus-trade-body .focus-trade-img{
     margin-bottom:48px;
-    background-color: var(--gray-200);
+    background-color: #a1b3c7de;
     padding: 10px;
     border-radius: 15px;
     position: relative;
@@ -44,7 +44,6 @@
     color: var(--white);
     font-size: 14px;
     text-align: center;
-    padding-inline:200px;
     margin-block: 16px;
     font-weight: bold;
 }
@@ -84,8 +83,7 @@
     flex-direction: row;
     align-items: center;
     margin-block: 32px;
-    
-    
+    align-items: stretch;
 }
 .assets-card .value-assets-body{
     display: flex;
@@ -98,12 +96,16 @@
     border-radius: 0px 10px 10px 0px;
     
 }
+.img-chart{
+    max-width: 100%;
+}
+
 .assets-card .value-assets-body .value-assets-box{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 16px;
+    margin-bottom: 0px;
 
 }
 .value-assets-box .value-assets{
@@ -119,20 +121,20 @@
 }
 .assets-card .assets-bitcoin {
 	background-image: linear-gradient(180deg, #fbbc23 ,#f79c1a);
-	padding-block: 56px;
-	padding-inline: 27px;
+	padding-block: 55px;
+	padding-inline: 22px;
 	border-radius: 10px 0px 0px 10px;
 }
 .assets-card .assets-etherium {
 	background-image: linear-gradient(180deg, #9cbdf3 ,#6b87d0);
-	padding-block: 56px;
-	padding-inline: 27px;
+	padding-block: 55px;
+	padding-inline: 25px;
 	border-radius: 10px 0px 0px 10px;
 }
 .assets-card .assets-apple {
 	background-image: linear-gradient(180deg, #7cc2ba ,#52b096);
-	padding-block: 56px;
-	padding-inline: 27px;
+	padding-block: 55px;
+	padding-inline: 22px;
 	border-radius: 10px 0px 0px 10px;
 }
 /* technology */
@@ -185,15 +187,22 @@
 	top: 0px;
 }
 /* Table assets */
+.chart-table{
+    box-shadow: 0 7px 17px 0 #174370;
+    border-radius: 20px;
+}
 .table-assets-body{
-    background-color: var(--bs-blue-900);
+    background-color: var(--bs-blue-900-5);
+    margin-block: 100px;
     padding-block: 32px;
+   
 }
 .table-assets-body .head-table-box{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    margin-bottom: 32px;
    
 }
 .table-assets-body .head-table-box .head-link-table{
@@ -202,21 +211,35 @@
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
+    margin-right: 50px;
    
+}
+.table-assets-body .head-table-box .head-link-table.active{
+    background-color: var(--gray-900);
+    padding-block: 10px;
+    padding-inline: 32px;
+    border-radius: 15px;
 }
 .table-assets-body .banner-trader-box{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100%;
+    background-color: var(--light-blue);
+    border-radius: 20px 0px 0px 20px;
+    background-image: url("../../img/BannerTableATrader(2).png");
+    background-position: center center;
+    background-size: 70%;
+    background-repeat: no-repeat;
 }
-.banner-text-items{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+.title-banner-box{
+    text-align: center;
+    width: 100%;
 }
-.banner-text-items .title-banner{
+
+.title-banner{
     color: var(--white);
     font-size: 16px;
     margin-top: 20px;
@@ -226,16 +249,405 @@
     color: var(--white);
     font-size: 13px;
     margin-top: 16px;
+    padding-inline: 32px;
     
     
 }
-.icon-banner-box{
+.table-assets-body .banner-trader-box .icon-banner-box{
     padding-block: 32px;
+    position: relative;
+    margin-top: 150px;
+
 }
-.banner-trader-box{
-    background-color: var(--light-blue);
-    padding-block: 32px;
-    border-radius: 20px 0px 0px 20px;
+.table-assets-body .banner-trader-box .icon-banner-box .icon-banner{
+    position: relative;
+    z-index: 2;
+    width: 90px;
+}
+.table-assets-body .banner-trader-box .icon-banner-box::after{
+    position: absolute;
+    content: " ";
+    background-image: linear-gradient(to bottom right,#126fe6, #3d33ba);
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    bottom: 0;
+    left: -30px;
+
 }
 
+.banner-trader-box .footer-banner-trader{
+    background-color: var(--light-blue-900);
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 8px;
+    border-radius: 0px 0px 0px 20px;
+}
+.powered-by{
+    color: var(--white);
+    font-size: 16px;
+}
+.sort .MuiFormControl-root .MuiInputLabel-root {
+	color: var(--white);
+	
+}
+.sort .MuiInput-root::after{
+    border: none;
+    color: var(--white);
+
+}
+.MuiInput-root-MuiSelect-root::before {
+	border-bottom: none;
+
+}
+.sort .MuiBox-root{
+    margin-left: auto;
+}
+.sort .MuiBox-root .MuiOutlinedInput-root{
+    border: 1px solid var(--gray-900);
+    border-radius: none;
+    width: 30%;
+}
+.table-body .sort{
+    margin-left: auto;
+}
+.table-body{
+    padding-right: 16px;
+}
+.table-box{
+    max-height: 320px;
+    overflow: auto;
+
+}
+.banner-trader-box .footer-baner-trader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--light-blue-900);
+    width: 100%;
+    justify-content: center;
+    border-radius: 0px 0px 0px 20px;
+    padding-block: 10px;
+    
+}
+.table-body .table-box .table-items{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-block: 8px;
+    padding-block: 16px;
+    border-radius: 15px;
+    background-color: var(--bs-blue-700);
+    padding-inline: 16px;
+    width: 100%;
+}
+.table-box .table-items .title-table,
+.table-box .table-items .value-table{
+    color: var(--white);
+    font-size: 16px;
+    text-align: center;
+}
+.x5 .table-items  > *{
+    width: 30%;
+}
+div.x5 .table-items  img{
+    width: 20%;
+    text-align: center;
+}
+.table-box .table-items .action{
+    display: flex;
+}
+.table-box .table-items .currency{
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+.table-box .table-items .btn-table{
+    background:transparent ;
+    border: 1px solid var(--light-blue);
+    color: var(--light-blue-900);
+    border-radius: 15px;
+    font-size: 15px;
+    padding-block: 8px;
+    background-image: linear-gradient(#0f3053, #174370);
+    min-width: 48%;
+    margin-inline: auto;
+}
+/* slider mananger */
+.head-slider-manager{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.head-slider-manager .head-slider-manager-items{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.head-slider-manager .head-slider-manager-items .sort-slider-manger{
+    text-align: end;
+}
+.slider-manager-content{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gray-900);
+    border-radius: 20px; 
+ 
+
+}
+.slider-manager-content .slider-manager-content-border{
+    border: 1px solid var(--gray-200);
+    border-top: none;
+    border-radius: 0px 0px 20px 20px;
+    padding-top: 48px;
+}
+.slider-manager-content .img-manager-slider{
+    background-color: #0a325d;
+    height: 180px;
+    border-radius: 20px 20px 0px 0px;
+    position: relative;
+    background-image: url("../../img/managerimg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+
+}
+.swiper-slide{
+    transition: 0.2s;
+    opacity: 1;
+}
+.swiper-slide-fade{
+    opacity:0.2;
+    transition: 0.4s;
+}
+.slider-manager-content .img-manager-slider .slider-manager-name-box {
+	background-color: var(--gray-200);
+	position: absolute;
+	bottom: -17px;
+	border-radius: 20px;
+	padding-block: 10px;
+	text-align: center;
+	margin-inline: 45px;
+	width: 70%;
+}
+.slider-manager-content .manager-info-box{
+    display: flex;
+    flex-direction: column;
+    padding-inline: 16px;
+    padding-block: 8px;
+
+
+}
+.manager-info-box .manager-info-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 4px;
+}
+.line5125{
+    background-color: var(--gray-200);
+    height: 1px;
+    width:90%;
+    margin-inline: 5px;
+
+}
+.manager-info-box .manager-info-items .manager-info{
+    color: var(--white);
+    font-size: 15px;
+    white-space: nowrap;
+
+}
+.up{
+    color: var(--up) !important;
+}
+.down{
+    color: var(--orange-900) !important;
+}
+.slider-manager-content .invest-manager-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+.slider-manager-content .invest-manager-box .invest-manager{
+    color: var(--light-blue-900);
+    font-size: 15px;
+
+}
+.slider-manager-content .invest-manager-box svg{
+    color: var(--light-blue-900);
+
+}
+/* mobile */
+@media (max-width: 768px){
+    
+    .focus-trade-body {
+
+        margin-block: 0px;
+        margin-inline: 0px;
+    }
+    .focus-trade-body .text-focus-trade {
+
+        padding-inline: 0px;
+
+    }
+    .focus-trade-body .search-assets-box {
+
+        border-radius: 15px;
+        padding-block: 10px;
+
+        padding-inline: 16px;
+    }
+    .assets-card .assets-bitcoin {
+        background-image: linear-gradient(180deg, #fbbc23 ,#f79c1a);
+        padding-block: 30px;
+        padding-inline: 12px;
+        border-radius: 10px 0px 0px 10px;
+    }
+    .assets-card .value-assets-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: var(--bs-blue-900);
+        padding-block: 18px;
+        padding-inline: 15px;
+        border-radius: 0px 10px 10px 0px;
+    }
+    img.img-chart{
+        width: 240px;
+    }
+    .value-assets-box .value-assets {
+
+        font-size: 15px;
+  
+    }
+    .value-assets-box .name-assets {
+
+        font-size: 20px;
+ 
+    }
+    .assets-card .assets-etherium {
+        padding-block: 32px;
+        padding-inline: 17px;
+    }
+    .assets-card .assets-apple {
+
+        padding-block: 27px;
+        padding-inline: 22px;
+
+    }
+    .assets-card .assets-apple {
+        padding-block: 32px;
+        padding-inline: 15px;
+    }
+    .technology-centralized-body .technology-centralized-items .technology-centralized-img {
+        margin-block: 16px;
+        position: unset;
+
+    }
+    .technology-centralized-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 32px;
+        margin-inline: 10px;
+        border-radius: 20px;
+        padding-block: 16px;
+        position: relative;
+        padding-inline: 6px;
+    }
+    body div.x5 div.table-items  {
+        flex-direction: column;
+    }
+    body div.x5 .table-items > *{
+        width: 100%;
+    }
+    body div.x5 .table-items .currency span{
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+    body div.x5 .table-items img{
+        margin-block: 32px;
+        width: 60%;
+        margin-inline: auto;
+    }
+    .table-assets-body .banner-trader-box {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+    .banner-text-items{
+        width: 100%;
+    }
+    .title-banner {
+        text-align: left;
+        margin-top: 0px;
+    
+        display: block;
+
+    }
+    .table-assets-body .banner-trader-box .icon-banner-box::after {
+        height: 70px;
+        width: 70px;
+        bottom: 13px;
+        left: -17px;
+    }
+    .table-assets-body .banner-trader-box .icon-banner-box .icon-banner {
+        position: relative;
+        z-index: 2;
+        width: 40px;
+    }
+    .table-assets-body .banner-trader-box .icon-banner-box {
+        width: 20%;
+        margin-top: 0px;
+    }
+    .title-banner-box{
+        width: 60%;
+        text-align: end;
+    }
+    .banner-text-items .text-banner {
+        color: var(--white);
+        font-size: 13px;
+        margin-top: 0px;
+        padding-inline: 13px;
+        text-align: left;
+    }
+    .technology-centralized-items .dec-technology-centralized-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0px;
+    }
+    .technology-centralized-items .dec-technology-centralized-box .dec-artificial {
+
+        text-align: center;
+    }
+    .technology-centralized-body .caption-technology {
+
+        width: 100%;
+
+    }
+    .table-box .show-more {
+        background-color: var(--light-blue-900);
+        color: var(--white);
+        font-size: 16px;
+        width: 100%;
+        border: none;
+        border-radius: 20px;
+        padding-block: 8px;
+    }
+
+}
 

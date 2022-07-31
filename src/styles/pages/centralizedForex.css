@@ -1,0 +1,210 @@
+/* forex style */
+.table-assets-body .banner-forex-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: var(--bs-green);
+    border-radius: 20px 0px 0px 20px;
+    background-image: url("../../img/ForexBannerBG.png");
+    background-position: center center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+}
+.banner-forex-box .icon-banner-box {
+	margin-top: 160px;
+    margin-bottom: 24px;
+	background: var(--white);
+	padding-block: 50px;
+	padding-inline: 10px;
+	border-radius: 50%;
+}
+.banner-forex-box .icon-banner-box .icon-banner{
+    width: 110px;
+}
+.banner-forex-box .footer-baner-forex{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--bs-green-900);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    border-radius: 0px 0px 0px 20px;
+    padding-block: 10px;
+
+
+}
+.free-education-consult-body{
+    background-color: var(--bs-blue-900);
+    border-radius: 20px;
+    padding: 8px;
+    position: relative;
+}
+a.more-free-education{
+    position: absolute;
+    background: var(--orange-900);
+    bottom: -15px;
+    right: 30px;
+    border-radius: 20px;
+    color: var(--white);
+    padding-inline: 23px;
+    font-size:20px;
+    padding-block: 8px;
+    text-decoration: none;
+}
+a.more-free-education:hover{
+    color: var(--white);
+}
+.free-education-consult-body .free-education-consult-img{
+    background-image: url("../../img/Freeeducation.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    border-radius: 20px;
+
+    
+}
+.free-education-consult-body .free-education-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 16px;
+    margin-bottom:32px ;
+    padding-inline: 10px;
+}
+.free-education-consult-body .free-education-content .title-free-education{
+    color: var(--white);
+    font-size:16px;
+
+}
+.free-education-consult-body .free-education-content .text-free-education{
+    color: var(--white);
+    font-size: 13px;
+    font-weight: light;
+
+}
+.head-silder-free-education{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+.head-silder-free-education .head-slider-Free-education-items{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+.head-slider-Free-education-items .sort-slider-Free-education{
+    text-align: end;
+}
+.CTA-body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-block: 100px;
+}
+.CTA-body .title-cta{
+    color: var(--white);
+    font-size: 24px;
+    position: relative;
+    padding-left: 20px;
+
+}
+.CTA-body .title-cta::after{
+    position: absolute;
+    content: " ";
+    top: -20px;
+    left: 0;
+    background-color: var(--light-blue-900);
+    height: 80px;
+    width: 5px;
+    border-radius: 20px;
+
+}
+.CTA-body .cta-link{
+    display: flex;
+    align-items: center;
+    background-color: var(--orange-900);
+    border-radius: 20px;
+    color: var(--white);
+    padding-block: 8px;
+    padding-inline: 40px;
+    text-decoration: none;
+    position: relative;
+    margin-right: 20px;
+}
+.CTA-body .cta-link::after {
+	content: " ";
+	position: absolute;
+	top: -15px;
+	right: -20px;
+	background-color: var(--light-blue);
+	height: 80px;
+	width: 5px;
+	border-radius: 20px;
+}
+.start-now-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-block: 32px;
+    background-color: var(--light-blue-900);
+    border: 1px solid var(--gray-200);
+    padding-block: 6px;
+    margin: auto;
+    width: 30%;
+    border-radius:25px;
+    padding-inline: 6px;
+
+}
+.start-now-box .text-start-now{
+    color: var(--white);
+    font-size: 14px;
+
+}
+.start-now-box .start-now-link{
+    color: var(--white);
+    background-color: var(--orange-900);
+    border-radius: 20px;
+    text-decoration: none;
+    padding-inline: 32px;
+    padding-block: 10px;
+    margin-left: auto;
+
+}
+.left-right button{
+    background: transparent;
+    color: var(--white);
+    border: none;
+    margin-right: 10px;
+}
+.data-education-box .data-freee-ducation{
+    color: var(--gray-900);
+    text-align: left;
+    margin-left: 20px;
+}
+/* mobile */
+@media (max-width: 768px){
+    .banner-forex-box .icon-banner-box .icon-banner {
+        width: 90px;
+    }
+    .table-assets-body .banner-forex-box {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .banner-forex-box .icon-banner-box {
+        width: 40%;
+        margin-top:0px
+    }
+}
+
+

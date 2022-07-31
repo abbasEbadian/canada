@@ -2,7 +2,8 @@ import React from 'react'
 import PaweredBannerTable from './PaweredBannerTable';
 import TextBannerTable from './TextBannerTable';
 import TitleBannerTable from './TitleBannerTable';
-import protocolimg1 from '../../img/protocol-component-img1.png'
+import BannerTraderLogo from '../../img/BannerTableATrader (1).png';
+import Logo from '../../img/logo.png';
 
 
 function BannerTableATrader() {
@@ -11,21 +12,21 @@ function BannerTableATrader() {
         TextBanner:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi "
     };
     return (
-    <div>
         <div className="banner-trader-box">
             <div className="icon-banner-box">
-                <img src={protocolimg1} alt="" className='icon-banner' />
+                <img src={BannerTraderLogo} alt="BannerTableATrader" className='icon-banner' />
             </div>
+            <TitleBannerTable CaptionHeadBanner={captionbanner.TitleBanner} />
             <div className="banner-text-items">
-                <TitleBannerTable CaptionHeadBanner={captionbanner.TitleBanner}/>
+                
                 <TextBannerTable TextBannerTable={captionbanner.TextBanner}/>
             </div>
-            <div className="footer-banner-bg">
+            <div className="footer-baner-trader">
                 <PaweredBannerTable/>
+                <img src={Logo} alt="logo" width={90} className='ms-3'/>
             </div>
 
         </div>
-    </div>
   )
 }
 

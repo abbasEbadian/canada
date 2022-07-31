@@ -1,21 +1,18 @@
 import React from 'react'
-import Footer from '../components/Footer'
 import Header from '../components/Header'
-import BannerTableATrader from '../components/SubCentralized/BannerTableATrader'
-import HeaderTable from '../components/SubCentralized/HeaderTable'
-import TableInfo from '../components/SubCentralized/TableInfo'
-import SliderManager from '../components/SubCentralized/SliderManager'
-import TechnologyCentralized from '../components/SubCentralized/TechnologyCentralized'
 import AssetsCentralized from '../components/SubCentralized/AssetsCentralized'
 import FocusTradeCentralized from '../components/SubCentralized/FocusTradeCentralized'
 
+import HeaderTable from '../components/SubCentralized/HeaderTable'
+import TableInfo from '../components/SubCentralized/TableInfo'
+import SliderManager from '../components/SubCentralized/SliderManager'
+import BannerTableCForex from '../components/SubCentralized/BannerTableCForex'
+import FreeEducationConsult from '../components/SubCentralized/FreeEducationConsult'
+import CTA from '../components/SubCentralized/CTA'
+import TechnologyCentralized from '../components/SubCentralized/TechnologyCentralized'
+import StartNow from '../components/SubCentralized/StartNow'
 
-function Centralized() {
-  const CaptionName={
-    
-    manager:"Find The Best Manager",
- 
-  };
+function CentralizedForex() {
   return (
     <div>
         <Header/>
@@ -32,7 +29,7 @@ function Centralized() {
                 <div className="chart-table">
                     <div className="row">
                         <div className="col-12 col-lg-4">
-                            <BannerTableATrader/>
+                            <BannerTableCForex/>
                         </div>
                         <div className="col-12 col-lg-8">
                             <TableInfo/>
@@ -41,17 +38,19 @@ function Centralized() {
                 </div>
             </div>
         </div>
-       
+        {/* slider Free education consult */}
+        <FreeEducationConsult/>
         {/* Find manager */}
-        <SliderManager _class="manage-slider"/>
-
+        <SliderManager _class="manage-slider" showBorder/>
+        {/* CTA */}
+        <CTA/>
         {/* technology */}
         <TechnologyCentralized/>
-
-        <Footer/>
-       
+        {/* Start now */}
+        <StartNow/>
+    
     </div>
   )
 }
 
-export default Centralized
+export default CentralizedForex
