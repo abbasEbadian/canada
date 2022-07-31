@@ -10,8 +10,8 @@ function Router() {
       <BrowserRouter>
         <Routes>
             <Route path="/" element={<Home/>} />
-            <Route path="/Centralized" element={<Centralized/>} />
-            <Route path="/Centralized/Forex" element={<CentralizedForex/>} />
+            <Route path="/center" element={<Centralized/>} />
+            <Route path="/center-forex" element={<CentralizedForex/>} />
             <Route path="/Blog" element={<Blog/>} />
         </Routes>
     </BrowserRouter>
