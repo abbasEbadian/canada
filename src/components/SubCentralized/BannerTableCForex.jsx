@@ -1,5 +1,5 @@
 import React from 'react';
-import forexLogo from '../../img/forexlogo.png';
+import forexLogo from '../../img/forexLogo.png';
 import PaweredBannerTable from '../SubCentralized/PaweredBannerTable';
 import TextBannerTable from '../SubCentralized/TextBannerTable';
 import TitleBannerTable from '../SubCentralized/TitleBannerTable';
