@@ -10,3 +10,6 @@
 a {
     text-decoration: none !important;
 }
+.text-white *{
+    color: white !important;
+}

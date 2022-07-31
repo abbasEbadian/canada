@@ -17,8 +17,12 @@ function Centralized() {
  
   };
   return (
-    <div>
+    <div className='centeralized'>
         <Header/>
+        <div className="intro">
+                <span className='back'></span>
+                <span className='back-reverse'></span>
+            </div>
         <div className="container">
           {/*focus trade  */}
           <FocusTradeCentralized/>

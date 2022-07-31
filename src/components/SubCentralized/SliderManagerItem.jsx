@@ -15,20 +15,27 @@ function SliderManagerItem({ showBorder }) {
                                     <div className="manager-info-items">
                                         <span className="manager-info">Investers</span>
                                         <div className="line5125"></div>
-                                        <span className="manager-info">754152</span>
+                                        <span className={`manager-info  ${showBorder ? ' bordered ' : ''}` }>754152</span>
+                        
+                                    </div>
+                                    <div className="manager-info-items">
+                                        <span className="manager-info">AUM</span>
+                                        <div className="line5125"></div>
+                                        <span className={`manager-info ${showBorder ? ' bordered ' : ''}` }>75%</span>
                         
                                     </div>
                                     <div className="manager-info-items">
                                         <span className="manager-info">Returns</span>
                                         <span className="manager-info ms-2">(Last 12 month)</span>
                                         <div className="line5125"></div>
-                                        <span className={`manager-info up ${showBorder ? ' border ' : ''}` }>75%</span>
+                                        <span className={`manager-info up ${showBorder ? ' bordered ' : ''}` }>75%</span>
                         
                                     </div>
+                                    
                                     <div className="manager-info-items">
                                         <span className="manager-info">Investers</span>
                                         <div className="line5125"></div>
-                                        <span className="manager-info down">7</span>
+                                        <span className={`manager-info down ${showBorder ? ' bordered ' : ''}` }>7</span>
                         
                                     </div>
                                 </div>

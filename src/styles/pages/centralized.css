@@ -203,7 +203,9 @@
     align-items: center;
     justify-content: flex-start;
     margin-bottom: 32px;
-   
+    overflow: auto;
+    width: 100%;
+    padding-bottom: 16px;
 }
 .table-assets-body .head-table-box .head-link-table{
     color: var(--white);
@@ -212,10 +214,11 @@
     font-weight: bold;
     text-decoration: none;
     margin-right: 50px;
+    white-space: nowrap;
    
 }
 .table-assets-body .head-table-box .head-link-table.active{
-    background-color: var(--gray-900);
+    background-color: var(--gray-900-5);
     padding-block: 10px;
     padding-inline: 32px;
     border-radius: 15px;
@@ -237,6 +240,7 @@
 .title-banner-box{
     text-align: center;
     width: 100%;
+    margin-block: 12px;
 }
 
 .title-banner{
@@ -256,7 +260,7 @@
 .table-assets-body .banner-trader-box .icon-banner-box{
     padding-block: 32px;
     position: relative;
-    margin-top: 150px;
+    margin-top: auto;
 
 }
 .table-assets-body .banner-trader-box .icon-banner-box .icon-banner{
@@ -301,6 +305,10 @@
 	border-bottom: none;
 
 }
+.sort {
+    
+    padding-right: 16px;
+}
 .sort .MuiBox-root{
     margin-left: auto;
 }
@@ -312,11 +320,9 @@
 .table-body .sort{
     margin-left: auto;
 }
-.table-body{
-    padding-right: 16px;
-}
+
 .table-box{
-    max-height: 320px;
+    max-height: 400px;
     overflow: auto;
 
 }
@@ -329,6 +335,7 @@
     justify-content: center;
     border-radius: 0px 0px 0px 20px;
     padding-block: 10px;
+    margin-top: auto;
     
 }
 .table-body .table-box .table-items{
@@ -358,6 +365,14 @@ div.x5 .table-items  img{
 .table-box .table-items .action{
     display: flex;
 }
+.table-parent {
+    background: var(--bs-blue-900);
+    padding: 8px;
+    border-radius: 16px;
+}
+.table-box .table-items .action button{
+    box-shadow: 0 4px 10px #0005;
+}
 .table-box .table-items .currency{
     display: flex;
     flex-grow: 1;
@@ -375,6 +390,7 @@ div.x5 .table-items  img{
     margin-inline: auto;
 }
 /* slider mananger */
+
 .head-slider-manager{
     display: flex;
     flex-direction: row;
@@ -457,11 +473,16 @@ div.x5 .table-items  img{
     margin-inline: 5px;
 
 }
+.manager-info-box .manager-info-items .manager-info.bordered{
+    border: 1px solid #ddd;
+    background: #0002;
+    border-radius: 6px;
+    padding: 4px 10px;
+}
 .manager-info-box .manager-info-items .manager-info{
     color: var(--white);
     font-size: 15px;
     white-space: nowrap;
-
 }
 .up{
     color: var(--up) !important;
@@ -486,8 +507,17 @@ div.x5 .table-items  img{
 
 }
 /* mobile */
-@media (max-width: 768px){
-    
+@media (max-width: 990px){
+    .left-right{
+        display: flex;
+        align-items: center;
+        justify-content: space-between ;
+    }
+    .table-box{
+        overflow: hidden;
+        max-height: unset;
+        padding: 8px;
+    }
     .focus-trade-body {
 
         margin-block: 0px;
@@ -571,22 +601,28 @@ div.x5 .table-items  img{
     body div.x5 .table-items > *{
         width: 100%;
     }
+    body div.x5 .table-items .currency {
+        padding-block: 8px;
+    }
     body div.x5 .table-items .currency span{
-        text-align: center;
-        display: block;
+        font-size: 17px;
+    }
+    body div.x5 .table-items .currency span:last-of-type{
+        text-align: end;
         width: 100%;
+        display: block;
     }
     body div.x5 .table-items img{
         margin-block: 32px;
-        width: 60%;
+        width: 80%;
         margin-inline: auto;
     }
     .table-assets-body .banner-trader-box {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-
-    }
+        border-radius: 20px 20px 0 0;
+    }   
     .banner-text-items{
         width: 100%;
     }
@@ -639,7 +675,7 @@ div.x5 .table-items  img{
         width: 100%;
 
     }
-    .table-box .show-more {
+    .show-more {
         background-color: var(--light-blue-900);
         color: var(--white);
         font-size: 16px;
@@ -651,3 +687,6 @@ div.x5 .table-items  img{
 
 }
 
+.no-border-select *:before{
+    border: none !important;
+}

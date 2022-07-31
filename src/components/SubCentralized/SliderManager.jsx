@@ -1,26 +1,33 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import HeadSlider from './HeadSlider'
 import SliderManagerItem  from './SliderManagerItem';
 import {Swiper, SwiperSlide} from 'swiper/react'
 import { Navigation } from 'swiper';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 function SliderManager({ _class, showBorder }) {
-    const ref = React.useRef()
+    
+    const desktop = useMediaQuery('(min-width:990px)');
+    const tablet = useMediaQuery('(max-width:990px)');
+    const mobile = useMediaQuery('(max-width:576px)');
+
+    const threshold = useMemo( () => {
+        if(mobile) return 1 
+        if(tablet) return 2  
+        if(desktop) return 3 
+    }, [tablet, mobile, desktop])
+
     const slideChange = ({activeIndex}) =>{
-        const win_size = window.innerWidth
-        if(win_size >= 1200){
-                Array(...document.querySelectorAll(`.${_class} .swiper-slide`)).map((slide, idx) =>{
-                    if( Math.abs( (activeIndex) - idx) >=3 ){
-                        slide.classList.add("swiper-slide-fade")
-                    }else{
-                        slide.classList.remove("swiper-slide-fade")
-                    }
-                })
-            
-        }
+        Array(...document.querySelectorAll(`.${_class} .swiper-slide`)).map((slide, idx) =>{
+            if( Math.abs( (activeIndex) - idx) >= threshold ){
+                slide.classList.add("swiper-slide-fade")
+            }else{
+                slide.classList.remove("swiper-slide-fade")
+            }
+        })
     }
-    const nextElClass = `.${_class} .swiper-button-front `
-    const prevElClass = `.${_class} .swiper-button-back `
+    const nextElClass = `.${_class} .swiper-button-back `
+    const prevElClass = `.${_class} .swiper-button-front `
 
   return (
     <div className={_class} >
@@ -30,7 +37,7 @@ function SliderManager({ _class, showBorder }) {
             <div className="slider-manager-box">
 
             <Swiper
-                spaceBetween={30}
+                spaceBetween={20}
                 modules={[Navigation]}
                 centeredSlides={true}
                 onSwiper ={e => slideChange({activeIndex: 0})}
@@ -42,19 +49,23 @@ function SliderManager({ _class, showBorder }) {
                 onSlideChange={slideChange}
                 breakpoints={{
                     320: {
-                        slidesPerView: 1.6,
-                        spaceBetween: 0,
+                        slidesPerView: 1.4,
+                        spaceBetween: 10,
                     },
                     460: {
-                        slidesPerView: 2.6,
-                    }, 620: {
-                        slidesPerView: 3.6,
+                        slidesPerView: 1.8,
+                    },
+                     620: {
+                        slidesPerView: 2.4,
                     },
                     990: {
-                        slidesPerView: 4.6,
+                        slidesPerView: 3.6,
                     },
                     1200: {
-                        slidesPerView: 5.6,
+                        slidesPerView: 4.4,
+                    },
+                    1400:{
+                        slidesPerView: 5.4,
                     }
                 }}
             >

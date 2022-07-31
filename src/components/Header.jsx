@@ -32,8 +32,8 @@ function Header() {
 
                     <ul className='links meno-collapsed d-xl-flex d-none'>
                         {
-                            links.map(link => {
-                                return <li key={link.label}>
+                            links.map((link, idx) => {
+                                return <li key={link.label} className={idx === 0? ' active ': ''}>
                                     <a href={link.href} className='nav-link'>{link.label}</a>
                                 </li>
                             })
