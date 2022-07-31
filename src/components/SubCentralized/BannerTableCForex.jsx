@@ -1,9 +1,9 @@
 import React from 'react';
-import forexLogo from '../../img/forexLogo.png';
+import forexLogo from '../../img/forexlogo.png';
 import PaweredBannerTable from '../SubCentralized/PaweredBannerTable';
 import TextBannerTable from '../SubCentralized/TextBannerTable';
 import TitleBannerTable from '../SubCentralized/TitleBannerTable';
-import Logo from '../../img/Logo.png';
+import Logo from '../../img/logo.png';
 function BannerTableCForex() {
   
     const captionbanner={
