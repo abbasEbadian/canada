@@ -84,6 +84,11 @@
     color: #fff;
 }
 
+.css-1s2u09g-control {
+    border-radius: 30px !important;
+    padding: 12px;
+}
+
 @media (max-width:767px) {
     .topNews > .d-flex {
         flex-direction: column;

@@ -17,6 +17,14 @@ import topnews from '../img/blog/fgd.jpg'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
+import Paper from '@mui/material/Paper';
+import InputBase from '@mui/material/InputBase';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+import DirectionsIcon from '@mui/icons-material/Directions';
+import SelectBox from "../components/SelectBox"
 
 
 
@@ -119,31 +127,22 @@ function Blog() {
               </div>
             </div>
             <div className="col-3">
-              <Box sx={{ minWidth: 120, backgroundColor: "#fff", borderRadius: "30px" }}>
-                <FormControl fullWidth>
-                  <InputLabel id="demo-simple-select-label">Select topic</InputLabel>
-                  <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    value={topic}
-                    // label="Age"
-                    onChange={handleChange}
-                  >
-                    <MenuItem value={10}>Ten</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
-                  </Select>
-                </FormControl>
-              </Box>
+            <SelectBox/>
             </div>
             <div className="col-5 text-center">
               <h1 className='text-white '>Welcome to Newsroom</h1>
             </div>
             <div className="col-3">
-              <Box sx={{ display: 'flex', alignItems: 'flex-end', borderRadius: '20px', backgroundColor: '#fff' }}>
-                <SearchIcon sx={{ mr: 1, my: 1 }} />
-                <TextField id="input-with-sx" label="seacrh blogs" variant="filled" />
-              </Box>
+              <Paper sx={{  flex: 1 , borderRadius: "30px" }}>
+           
+                <IconButton type="submit" sx={{ p: '16px' }} aria-label="search">
+                  <SearchIcon />
+                </IconButton>
+                <InputBase
+                  sx={{ ml: 1, flex: 1}}
+                  placeholder="Search blogs"
+                />
+              </Paper>
             </div>
           </div>
         </div>
@@ -223,7 +222,7 @@ function Blog() {
               spaceBetween={20}
               slidesPerView={4}
               modules={[Navigation]}
-              navigation
+              // navigation
               autoplay={true}
               breakpoints={{
                 300: {
@@ -263,7 +262,11 @@ function Blog() {
                 );
               })}
             </div>
+
           </div>
+          <Stack spacing={2} sx={{ color: "#008CFC", borderRadius: "15px", marginBlock: "15px" }}>
+            <Pagination count={10} variant="outlined" shape="rounded" />
+          </Stack>
         </div>
       </section>
     </>
