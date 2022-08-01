@@ -18,7 +18,8 @@ import  apple_motion from '../img/motion/apple.mp4'
 import  etherium_motion from '../img/motion/etherium.mp4'
 import  bitcoin_motion from '../img/motion/bitcoin.mp4'
 import RoadMap from '../components/subHome/RoadMap'
-import myvideo from '../img/video/1.mp4'
+import myvideo from '../img/1.mp4'
+import myvideo2 from '../img/1_1.mp4'
 
 function Home() {
 
@@ -60,15 +61,14 @@ function Home() {
               </div>
             </div>
             <div className="col-12 col-lg-7">
-              <div className="circuit-design text-center">
-                {/* <img src={CircuitDesign} alt="" width={550} /> */}
-                {/* <img src={myvideo} alt="" width={550} /> */}
-                {/* <video src={myvideo} controls={false} autoPlay   width="100%">
-                  Sorry, your browser doesn't support embedded videos.
-                </video> */}
-                  <video autoPlay playsInline muted loop className='w-100'>
-                            <source src={myvideo}  type="video/mp4" />
-                        </video>
+              <div className="circuit-design text-center position-relative">
+                
+                  <video autoPlay playsInline muted loop className='w-75'>
+                      <source src={myvideo}  type="video/mp4" />
+                  </video>
+                  <video autoPlay playsInline muted loop className='w-75 position-absolute top-100 end-0'>
+                      <source src={myvideo2}  type="video/mp4" />
+                  </video>
               </div>
             </div>
           </div>
