@@ -126,13 +126,13 @@ function Blog() {
                 <img src={iconbloghead} width={70} alt="" />
               </div>
             </div>
-            <div className="col-3">
+            <div className="col-12 col-lg-3 col-md-12">
             <SelectBox/>
             </div>
-            <div className="col-5 text-center">
+            <div className="col-12 col-lg-5 head-wel col-md-12 text-center">
               <h1 className='text-white '>Welcome to Newsroom</h1>
             </div>
-            <div className="col-3">
+            <div className="col-12 col-lg-3 col-md-12">
               <Paper sx={{  flex: 1 , borderRadius: "30px" }}>
            
                 <IconButton type="submit" sx={{ p: '16px' }} aria-label="search">
