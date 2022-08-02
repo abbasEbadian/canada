@@ -89,6 +89,81 @@
     padding: 12px;
 }
 
+/* Contact page */
+.bg-contact {
+    background-image: url("../img/Page-title.png");
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* .text-contact {
+    text-align: center;
+    padding-block: 4rem;
+    color: #008CFC;
+    opacity: .5;
+}
+.text-contact p {
+ background-color: #008CFC;
+    display: inline-block;
+    border: 1px solid #008CFC;
+    border-radius: 15px;
+    padding: 0.4rem 0.8rem;
+} */
+
+
+
+.protocol-component-item2 {
+    min-height:195px !important;
+}
+
+
+
+.form-contact {
+    background-image: url("../img/blog/Group-1152.png");
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.title-form-contact {
+    color: #fff;
+}
+.title-form-contact p {
+    position: relative;
+    color: #008CFC;
+    text-align: left;
+    margin-left: 5.5rem;
+}
+.title-form-contact p::before {
+    content: '';
+    position: absolute;
+    left: -90px;
+    top: 10px;
+    width: 66px;
+    height: 2px;
+    background-color: #008CFC;
+}
+.send-message a{
+    background-color: #008CFC;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    color: #fff;
+}
+.social-network2 .socail-media-item a {
+    margin:  0 15px;
+    background-color: #fff;
+    padding: 7px 5px;
+    border-radius: 25px;
+    color: #001730;
+}
+/* Contact page */
 @media (max-width:767px) {
     .topNews > .d-flex {
         flex-direction: column;
