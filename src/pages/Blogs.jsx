@@ -13,6 +13,7 @@ function Blogs() {
         manager:"Find The Best Manager",
      
       };
+      console.log("TEST")
     return (
     <div>
         <Header/>

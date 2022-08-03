@@ -9,10 +9,10 @@ function Router() {
   return (
       <HashRouter>
         <Routes>
+            <Route path="/" element={<Home/>} />
             <Route path="/center" element={<Centralized/>} />
             <Route path="/center-forex" element={<CentralizedForex/>} />
             <Route path="/blog" element={<Blogs/>} />
-            <Route path="/" element={<Home/>} />
         </Routes>
     </HashRouter>
   )
