@@ -79,7 +79,7 @@ function Contact() {
             <section className='form-contact'>
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 left-sec-ab">
                             <div className="title-form-contact">
                                 <p className='fw-bold'>Get In Touch</p>
                                 <h4 className='fw-bold mb-4'>Have Any Questions?</h4>
@@ -89,9 +89,17 @@ function Contact() {
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                 </span>
                             </div>
+                            <div className="social-network social-network2">
+                                <div className="socail-media-item">
+                                    <a href="" className='socail-media-link'><LinkedInIcon /></a>
+                                    <a href="" className='socail-media-link'><TelegramIcon /></a>
+                                    <a href="" className='socail-media-link'><InstagramIcon /></a>
+                                    <a href="" className='socail-media-link'><YouTubeIcon /></a>
+                                </div>
+                            </div>
                         </div>
-                        <div className="col-lg-8 d-flex justify-content-between flex-wrap">
-                            <div className="col-lg-6  pe-2">
+                        <div className="col-lg-8 d-flex justify-content-end flex-wrap">
+                            <div className="col-lg-6 col-12">
                                 <Stack
                                     component="form"
                                     sx={{
@@ -113,7 +121,7 @@ function Contact() {
                                     />
                                 </Stack>
                             </div>
-                            <div className="col-lg-6 ps-2">
+                            <div className="col-lg-6 col-12">
                                 <Stack
                                     component="form"
                                     sx={{
@@ -133,7 +141,7 @@ function Contact() {
                                     />
                                 </Stack>
                             </div>
-                            <div className="col-lg-12">
+                            <div className="col-lg-12 col-12">
                                 <Stack
                                     component="form"
                                     sx={{
@@ -156,7 +164,7 @@ function Contact() {
                                     />
                                 </Stack>
                             </div>
-                            <div className="col-lg-12">
+                            <div className="col-lg-12 col-12">
                                 <TextField
                                     placeholder="Message"
                                     multiline
@@ -172,23 +180,13 @@ function Contact() {
                                     }}
                                 />
                             </div>
-                        </div>
-                        <div className="col-lg-12 d-flex justify-content-between py-3">
-
-                            <div className="social-network social-network2">
-                                <div className="socail-media-item">
-                                    <a href="" className='socail-media-link'><LinkedInIcon /></a>
-                                    <a href="" className='socail-media-link'><TelegramIcon /></a>
-                                    <a href="" className='socail-media-link'><InstagramIcon /></a>
-                                    <a href="" className='socail-media-link'><YouTubeIcon /></a>
-                                </div>
-                            </div>
                             <div className="send-message">
                                 <Link to="#">
                                     Send message
                                 </Link>
                             </div>
                         </div>
+                        {/* <div className="col-lg-12 d-flex justify-content-between py-3"></div> */}
                     </div>
                 </div>
             </section>

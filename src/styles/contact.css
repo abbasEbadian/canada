@@ -1,0 +1,117 @@
+/* Contact page */
+.bg-contact {
+  background-image: url("../img/Page-title.png");
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* .text-contact {
+    text-align: center;
+    padding-block: 4rem;
+    color: #008CFC;
+    opacity: .5;
+}
+.text-contact p {
+ background-color: #008CFC;
+    display: inline-block;
+    border: 1px solid #008CFC;
+    border-radius: 15px;
+    padding: 0.4rem 0.8rem;
+} */
+
+.protocol-component-item2 {
+  min-height: 195px !important;
+}
+
+.form-contact {
+  background-image: url("../img/blog/Group-1152.png");
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.title-form-contact {
+  color: #fff;
+}
+.title-form-contact p {
+  position: relative;
+  color: #008cfc;
+  text-align: left;
+  margin-left: 5.5rem;
+}
+.title-form-contact p::before {
+  content: "";
+  position: absolute;
+  left: -90px;
+  top: 10px;
+  width: 66px;
+  height: 2px;
+  background-color: #008cfc;
+}
+.send-message a {
+  background-color: #008cfc;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  color: #fff;
+}
+.social-network2 .socail-media-item a {
+  margin: 0 15px;
+  background-color: #fff;
+  padding: 7px 5px;
+  border-radius: 25px;
+  color: #001730;
+}
+.left-sec-ab {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 992px) {
+  .bg-contact {
+    height: auto;
+  }
+  .protocol-component-body {
+    padding-bottom: 2rem;
+  }
+  .protocol-component-item2 {
+    margin: 0.78rem 0;
+  }
+  .social-network2 {
+    order: 1;
+    margin-top: 1rem;
+  }
+  .socail-media-item {
+    display: flex;
+    justify-content: space-between;
+  }
+  .social-network2 .socail-media-item a {
+    padding: 10px 15px;
+  }
+  .title-form-contact {
+    order: 2;
+    text-align: center;
+    margin: 2rem 0;
+  }
+  .title-form-contact p {
+    text-align: center;
+    margin-left: unset;
+  }
+  .title-form-contact p::before {
+    content: none;
+  }
+  .send-message {
+    width: 100%;
+  }
+  .send-message a {
+    display: flex;
+    justify-content: center;
+}
+}
+/* Contact page */
