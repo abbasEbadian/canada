@@ -7,4 +7,5 @@
 @import url(home.css);
 @import url(blog.css);
 @import url(contact.css);
+@import url(singleblogs.scss);
 @import url(./pages/centralized.css);

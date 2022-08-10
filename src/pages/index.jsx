@@ -4,6 +4,7 @@ import Home from './Home'
 import Centralized from './Centralized'
 import Blog from './Blog'
 import Contact from './Contact'
+import SingleBlog from './SingleBlog'
 function Router() {
   return (
       <BrowserRouter>
@@ -12,6 +13,7 @@ function Router() {
             <Route path="/Centralized" element={<Centralized/>} />
             <Route path="/Blog" element={<Blog/>} />
             <Route path="/contact" element={<Contact/>} />
+            <Route path="/singleBlog" element={<SingleBlog/>} />
         </Routes>
     </BrowserRouter>
   )
