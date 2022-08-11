@@ -24,7 +24,7 @@ function Contact() {
         <>
             <section className='bg-contact'>
                 <div className="text-contact text-center py-5">
-                    {/* <p>Contact Us</p> */}
+                    <button className='title-button'>Contact us</button>
                     <h1 className='text-white fw-bold pt-5'>Any time, we are open 24/7</h1>
                 </div>
                 <div className="container">

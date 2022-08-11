@@ -1,0 +1,346 @@
+/* About style */
+.our-company-body{
+    background-color: #0000;
+    background-image: url("../../img/our-company-body.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;   
+}
+.title-button{
+    background: #3457b855;
+    border-radius: 60px;
+    color: var(--light-blue);
+    border: none;
+    padding: 6px 24px;
+    margin-bottom: 16px;
+}
+.our-company-body .our-company-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-block: 48px;
+    margin-inline: 100px;
+}
+.our-company-body .our-company-items .title-our-company{
+    color: var(--white);
+    font-size: 48px;
+    margin-block: 5px;
+
+}
+.our-company-body .our-company-items .text-our-company{
+    color: var(--white);
+    font-size: 16px;
+    margin-block: 5px;
+    text-align: center;
+    margin-inline: 32px;
+
+}
+.main-concerns-body .main-concerns-content{
+    background-image: url("../../img/sdfsa.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    margin-block: 32px;
+    
+}
+.main-concerns-body .main-concerns-box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-inline:32px;
+    padding-block: 100px;
+}
+.main-concerns-body .main-concerns-box .title-concerns{
+    color: var(--white);
+    font-size: 16px;
+}
+.main-concerns-box .main-concerns-step{
+    display: flex;
+    align-items: flex-start;
+    background-color: #fff5;
+    border-radius: 15px;
+    margin-top: 8px;
+    padding-inline: 10px;
+    padding-block:16px;
+    min-width: 835px;
+}
+.main-concerns-box .main-concerns-step .number-concerns{
+    color: var(--orange);
+    font-size: 16px;
+    margin-right: 10px;
+}
+.main-concerns-box .main-concerns-step .text-concerns{
+    color: var(--white);
+    font-size: 16px;
+}
+.about-main-concerns{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline: 48px;
+    padding-block:32px ;
+}
+.about-main-concerns .text-about-main-concerns{
+    color: var(--white);
+    font-size: 16px;
+    text-align: center;
+
+}
+.decided-body{
+    background-color: var(--bs-blue-900);
+    
+}
+
+.decided-aitems .text-decided{
+    color: var(--white);
+    font-size: 16px;
+    margin-block: 32px;
+    text-align:start ;
+    line-height:40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.itg{
+    padding-block: 48px;
+}
+.img-ITG{
+    max-width: 300px;
+}
+.ITG-items{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.ITG-items .title-ITG{
+    color: var(--orange);
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+.ITG-items .text-ITG{
+    color: var(--white);
+    font-size: 16px;
+}
+.title-Broadcasts-box .text-Our-mission{
+    color: var(--white);
+    font-size: 16px;
+}
+.our-mission-items {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-around;
+	margin-bottom: 32px;
+	background-image: linear-gradient(180deg, #0d2742, #0a325d);
+	border-radius: 20px;
+	padding-block: 16px;
+	position: relative;
+	padding-left: 80px;
+	min-height: 100px;
+}
+.content-our-mission .dec-our-mission{
+    color: var(--white);
+    font-size: 16px;
+    margin-right: 15px;
+}
+.our-mission-items .pc-img-our-mission {
+	background-image: linear-gradient(to bottom right, #8e1c81, #6a1494);
+	padding-inline: 18px;
+	padding-block: 32px;
+	border-radius: 17px;
+	position: absolute;
+	left: -12px;
+	bottom: 20px;
+}
+.our-mission-items .safe-img-our-mission {
+	background-image: linear-gradient(to bottom right, #2c8096, #2e2c6e);
+	padding-inline: 18px;
+	padding-block: 32px;
+	border-radius: 17px;
+	position: absolute;
+	left: -12px;
+	bottom: 20px;
+}
+.text-extra-mission-box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 100px;
+
+}
+.text-extra-mission-box .text-extra-mission{
+    color: var(--white);
+    font-size: 16px;
+}
+.text-extra-mission-box a.read-rtificial{
+    text-decoration: none;
+    color: var(--orange);
+    font-size: 16px;
+    margin-top: 16px;
+
+}
+.text-Our-team-box{
+    padding-inline: 80px;
+}
+.text-Our-team-box .text-Our-team{
+    color: var(--white);
+    font-size: 16px;
+    margin-inline: 48px;
+    text-align: center;
+}
+.our-partners-body{
+    background-color: var(--bs-blue-900);
+}
+.our-partners-body .our-partners-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-block: 32px;
+}
+.our-partners-body .our-partners-items .title-parners{
+    color: var(--white);
+    font-size: 16px;
+    margin-block: 16px;
+}
+.our-partners-body .our-partners-items .our-partners{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-block: 16px;
+}
+.our-support{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-block: 32px;
+
+}
+.our-support .title-support,.text-support{
+    color: var(--white);
+    font-size: 16px;
+    margin-block: 10px;
+}
+.our-support .but-we-support{
+    color: var(--orange-900);
+    background-color: #FC9E0022;
+    border-radius: 15px;
+    padding-block: 5px;
+    padding-inline: 16px;
+    margin-top: 10px;
+}
+.accordion-frequently-questions{
+    margin-block: 48px;
+}
+.accordion-frequently-questions div.MuiPaper-elevation{
+    background-color: var(--gray-900);
+    border-radius: 15px;
+    margin-top: 10px;
+
+} 
+.accordion-frequently-questions div.MuiAccordionSummary-content p.MuiTypography-root{
+    color: var(--white);
+    font-size: 16px;
+}
+.accordion-frequently-questions  div.MuiAccordionDetails-root p.MuiTypography-root {
+    color: var(--white);
+    font-size: 16px;
+}
+/* mobile */
+@media (max-width: 992px){
+    .our-company-body .our-company-items {
+        padding-block: 32px;
+        margin-inline: 0px;
+    }
+    .our-company-body .our-company-items .title-our-company {
+        font-size: 24px;
+    }
+    .our-company-body .our-company-items .text-our-company {
+
+        margin-inline: 16px;
+    }
+    .our-company-body {
+        background-size: cover;
+    }
+    .main-concerns-body .main-concerns-box {
+
+        padding-inline: 16px;
+        padding-block: 0px;
+    }
+    .main-concerns-box .main-concerns-step {
+        
+        min-width: 305px;
+    }
+    .main-concerns-box .main-concerns-step .text-concerns {
+   
+        font-size: 15px;
+    }
+    .main-concerns-body .main-concerns-content {
+        background-image: url("/src/img/mobileBg.png");
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 20px;
+        margin-block: -13px;
+        min-height: 800px;
+        padding-block: 16px;
+    }
+    .about-main-concerns {
+        margin-inline: 0px;
+        padding-block: 0px;
+        margin-top: 32px;
+    }
+    
+    .decided-aitems .text-decided {
+
+        margin-block: 32px;
+        text-align: center;
+        line-height: 30px;
+    }
+    .ITG-items {
+        align-items: center;
+        margin-block: 32px;
+    }
+    .ITG-items .text-ITG {
+
+        text-align: center;
+    }
+    .our-mission-items {
+        padding-left: 85px;
+        margin-inline: 16px;
+    }
+    .content-our-mission .dec-our-mission {
+        font-size: 13px;
+    }
+    .text-extra-mission-box .text-extra-mission {
+        text-align: center;
+    }
+    .text-extra-mission-box a.read-rtificial {
+        text-align: center;
+    }
+    .text-Our-team-box .text-Our-team {
+        margin-inline: 0px;
+    }
+    .text-Our-team-box {
+        padding-inline: 0px;
+    }
+    .our-partners-body .our-partners-items .our-partners {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .our-partners-body .our-partners-items .our-partners img{
+        margin-block: 16px;
+    }
+    .our-support .title-support, .text-support {
+        text-align: center;
+    }
+}

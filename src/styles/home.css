@@ -277,7 +277,7 @@
 .road-map-body .octagon-check{
     display: flex;
     flex-direction: column;
-    background-color: var(--bs-blue-700);
+    background-color: #0000;
     background-image: url(../img/octagon1.svg);
     background-position: center;
     background-size: 100%;
@@ -292,7 +292,7 @@
 .road-map-body .octagon-sync{
     display: flex;
     flex-direction: column;
-    background-color: var(--bs-blue-700);
+    background-color: #0000;
     background-image: url(../img/octagon2.svg);
     background-position: center;
     background-size: 100%;
@@ -306,7 +306,7 @@
 .road-map-body .octagon-accessTime{
     display: flex;
     flex-direction: column;
-    background-color: var(--bs-blue-700);
+    background-color: #0000;
     background-image: url(../img/octagon3.svg);
     background-position: center;
     background-size: 100%;

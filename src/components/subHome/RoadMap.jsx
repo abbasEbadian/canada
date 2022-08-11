@@ -27,7 +27,7 @@ export default () => {
                 <button className='btn text-white bg-transparent'><ChevronRight fontSize="large" className="border rounded-circle swiper-button-next" /></button>
                 
             </div>
-            <div className="row align-items-center">
+            <div className="row align-items-center w-100 px-4">
                 <Swiper
                     spaceBetween={20}
                     slidesPerView={2}

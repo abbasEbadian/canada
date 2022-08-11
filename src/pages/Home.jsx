@@ -14,9 +14,9 @@ import Commission from '../img/commission.png'
 import Liquidity from '../img/Liquidity.png'
 import Platform from '../img/Platform.png'
 import Phone from '../img/Phone.png'
-import  apple_motion from '../img/motion/apple.mp4'
-import  etherium_motion from '../img/motion/etherium.mp4'
-import  bitcoin_motion from '../img/motion/bitcoin.mp4'
+import apple_motion from '../img/motion/apple.mp4'
+import etherium_motion from '../img/motion/etherium.mp4'
+import bitcoin_motion from '../img/motion/bitcoin.mp4'
 import RoadMap from '../components/subHome/RoadMap'
 import myvideo from '../img/1.mp4'
 import myvideo2 from '../img/1_1.mp4'
@@ -34,9 +34,12 @@ function Home() {
       <Header />
       <div className="container">
         {/* welcom  */}
-        <div className="welcom-body">
+        <div className="welcom-body position-relative">
           <div className="welcom-item-bg"></div>
-          <div className="d-flex align-items-center flex-wrap">
+          <video autoPlay playsInline muted loop className='w-100 position-absolute top-100 end-0 d-none d-lg-block'>
+            <source src={myvideo2} type="video/mp4" />
+          </video>
+          <div className="d-flex align-items-center flex-wrap mb-5">
             <div className="col-12 col-lg-5">
 
               <div className="welcom-item">
@@ -60,15 +63,13 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-12 col-lg-7">
+            <div className="col-12 col-lg-7 ">
               <div className="circuit-design text-center position-relative">
-                
-                  <video autoPlay playsInline muted loop className='w-75'>
-                      <source src={myvideo}  type="video/mp4" />
-                  </video>
-                  <video autoPlay playsInline muted loop className='w-75 position-absolute top-100 end-0'>
-                      <source src={myvideo2}  type="video/mp4" />
-                  </video>
+
+                <video autoPlay playsInline muted loop className='w-75'>
+                  <source src={myvideo} type="video/mp4" />
+                </video>
+
               </div>
             </div>
           </div>
@@ -150,8 +151,8 @@ function Home() {
                   <div className="assest-img">
                     {/* <img src={apple_motion} alt="apple motion" /> */}
                     <video autoPlay playsInline muted loop className='w-100'>
-                            <source src={apple_motion}  type="video/mp4" />
-                        </video>
+                      <source src={apple_motion} type="video/mp4" />
+                    </video>
                   </div>
                   <div className="assest-item x4">
                     <div className="caption-assest-box">
@@ -202,8 +203,8 @@ function Home() {
                   <div className="assest-img">
                     {/* <img src={apple_motion} alt="apple motion" /> */}
                     <video autoPlay playsInline muted loop className='w-100'>
-                            <source src={bitcoin_motion}  type="video/mp4" />
-                        </video>
+                      <source src={bitcoin_motion} type="video/mp4" />
+                    </video>
                   </div>
                   {/* mobile assets */}
                   <div className="assets-item-mobile">
@@ -232,8 +233,8 @@ function Home() {
                   <div className="assest-img">
                     {/* <img src={etherium_motion} alt="apple motion" /> */}
                     <video autoPlay playsInline muted loop className='w-100' >
-                            <source src={etherium_motion}  type="video/mp4" />
-                        </video>
+                      <source src={etherium_motion} type="video/mp4" />
+                    </video>
                   </div>
 
                   <div className="assest-item x4">

@@ -128,3 +128,4 @@ dist
 
 # Local Netlify folder
 .netlify
+sh.exe.stackdump

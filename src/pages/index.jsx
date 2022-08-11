@@ -11,6 +11,7 @@ import SignUp from './SignUp'
 import Blog from './Blog'
 import Contact from './Contact'
 import SingleBlog from './SingleBlog'
+import About from './About'
 
 function Router() {
   return (
@@ -23,9 +24,10 @@ function Router() {
             <Route path="/blog" element={<Blogs/>} />
             <Route path="/signin" element={<SignIn/>} />
             <Route path="/signup" element={<SignUp/>} />
-            <Route path="/admin" element={<Dashboard/>} />
+            {/* <Route path="/admin" element={<Dashboard/>} /> */}
             <Route path="/contact" element={<Contact/>} />
             <Route path="/singleBlog" element={<SingleBlog/>} />
+            <Route path="/about" element={<About/>} />
 
         </Routes>
     </HashRouter>
