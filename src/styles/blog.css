@@ -84,11 +84,27 @@
     color: #fff;
 }
 
+.css-1s2u09g-control {
+    border-radius: 30px !important;
+    padding: 12px;
+}
+
 @media (max-width:767px) {
     .topNews > .d-flex {
         flex-direction: column;
     }
     .bg-top-news {
         height: unset;
+    }
+ 
+}
+
+@media (max-width:992px) {
+    .content-head-blog {
+        height: 100%;
+        margin-bottom: 2rem;
+    }
+    .head-wel {
+        padding-block: 1.2rem;
     }
 }
