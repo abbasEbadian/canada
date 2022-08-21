@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import BannerTableATrader from '../components/SubCentralized/BannerTableATrader'
@@ -8,14 +8,23 @@ import SliderManager from '../components/SubCentralized/SliderManager'
 import TechnologyCentralized from '../components/SubCentralized/TechnologyCentralized'
 import AssetsCentralized from '../components/SubCentralized/AssetsCentralized'
 import FocusTradeCentralized from '../components/SubCentralized/FocusTradeCentralized'
+import axios from 'axios'
+import { MasterContext } from '.'
 
 
 function Centralized() {
-  const CaptionName={
-    
-    manager:"Find The Best Manager",
- 
-  };
+  const [managers, setManagers ] = useState([])
+  const { setLoading} = useContext(MasterContext)
+  
+  useEffect(() => {
+    setLoading(true)
+    axios.get('/api/v1/managers/')
+    .then(({data})=>{
+      setManagers(data)
+    })
+    .catch(f=>console.log(f))
+    .finally(f => setLoading(false))
+  }, [])
   return (
     <div className='centeralized'>
         <Header/>
@@ -47,7 +56,7 @@ function Centralized() {
         </div>
        
         {/* Find manager */}
-        <SliderManager _class="manage-slider"/>
+        <SliderManager managers={managers} _class="manage-slider"/>
 
         {/* technology */}
         <TechnologyCentralized/>

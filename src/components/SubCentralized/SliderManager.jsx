@@ -5,7 +5,7 @@ import {Swiper, SwiperSlide} from 'swiper/react'
 import { Navigation } from 'swiper';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-function SliderManager({ _class, showBorder }) {
+function SliderManager({managers, _class, showBorder }) {
     
     const desktop = useMediaQuery('(min-width:990px)');
     const tablet = useMediaQuery('(max-width:990px)');
@@ -70,8 +70,8 @@ function SliderManager({ _class, showBorder }) {
                 }}
             >
                  {
-                    Array.from({length : 9}).map((slide, idx) => {
-                        return <SwiperSlide key={idx}><SliderManagerItem  showBorder={showBorder}/></SwiperSlide>
+                    managers.map((manager) => {
+                        return <SwiperSlide key={manager.id}><SliderManagerItem  item={manager} showBorder={showBorder}/></SwiperSlide>
                     })
                  }
             </Swiper>
