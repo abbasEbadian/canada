@@ -51,6 +51,7 @@
     border-radius: 20px;
     padding-block: 16px;
     padding-inline: 32px;
+    user-select: none;
 }
 .top-news-body .head-top-news{
     display: flex;
@@ -70,14 +71,14 @@
 
 }
 .top-news-body .top-news-items .top-news-img{
-    background-image: url("../../img/fgd.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    overflow: hidden;
     height: 350px;
     border-radius: 15px;
-
-
+}
+.top-news-body .top-news-items .top-news-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .top-news-body .top-news-content{
     display: flex;
@@ -104,7 +105,7 @@ p.text-news{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 100%;
+	height: 350px;
 }
 span.data-text{
     color: var(--gray-200);
@@ -160,12 +161,12 @@ span.data-text{
     margin-block: 32px;
 
 } 
-.slider-popular-news-items .img-popular-news{
-    background-image: url("../../img/popularNews.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 250px;
+.slider-popular-news-items .img-popular-news img{
     border-radius: 20px 20px 0px 0px;
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    
 }
 .slider-popular-news-items .content-popular-news{
     background-color: var(--gray-900);
@@ -187,7 +188,8 @@ div.data-box{
 }
 .slider-popular-news-items .content-popular-news .text-news-popular{
     color: var(--white);
-    font-size: 16px;
+    font-size: 14px;
+    color: #ccc;
 }
 .slider-latest-news-items .img-slider-latest-news{
     background-image: url("../../img/popularNews.png");
@@ -295,6 +297,9 @@ div.data-box{
         width: 100%;
 
     }
+    .top-news {
+        height: 150px;
+    }
     .welcome-newsroom .welcome-newsroom-text {
         margin-bottom: 16px;
         font-size: 24px;
@@ -312,12 +317,6 @@ div.data-box{
         padding-block: 10px;
         padding-inline: 0px;
     }
-    .top-news-body .top-news-items .top-news-img {
-
-        background-size: contain;
-        height: 140px;
-
-    }
     .top-news-body .head-top-news svg{
 
         width: 50px;
@@ -327,9 +326,7 @@ div.data-box{
     .view-more {
         order: 2;
     }
-    .left-right{
-        display: none;
-    }
+
 
     .cypto-latest-news-body {
         flex-wrap: wrap;
@@ -341,5 +338,14 @@ div.data-box{
     }
     .footer-latest-news{
         display: none;
+    }
+    .top-news-body .top-news-items .top-news-img{
+        margin-bottom: 32px;
+        padding-inline: 12px;
+    }
+}
+@media (max-width: 576px) {
+    .top-news-body .top-news-items .top-news-img{
+        height: 240px;
     }
 }
