@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Header from '../components/Header'
 import AssetsCentralized from '../components/SubCentralized/AssetsCentralized'
 import FocusTradeCentralized from '../components/SubCentralized/FocusTradeCentralized'
@@ -12,8 +12,28 @@ import CTA from '../components/SubCentralized/CTA'
 import TechnologyCentralized from '../components/SubCentralized/TechnologyCentralized'
 import StartNow from '../components/SubCentralized/StartNow'
 import Footer from '../components/Footer'
+import axios from 'axios'
+import { MasterContext } from '.'
 
 function CentralizedForex() {
+    const [managers, setManagers] = useState([])
+    const [blogs, setBlogs] = useState([])
+    const { setLoading } = useContext(MasterContext)
+
+    useEffect(() => {
+        setLoading(true)
+        axios.get('/api/v1/managers/')
+            .then(({ data }) => {
+                setManagers(data)
+            })
+            .catch(f => console.log(f))
+        axios.get('/api/v1/blogs/')
+            .then(({ data }) => {
+                setBlogs(data)
+            })
+            .catch(f => console.log(f))
+            .finally(f => setLoading(false))
+    }, [])
     return (
         <div className='centeralized'>
             <Header />
@@ -22,7 +42,7 @@ function CentralizedForex() {
                 <span className='back-reverse'></span>
             </div>
             <div className="container ">
-                
+
                 {/*focus trade  */}
                 <FocusTradeCentralized />
                 {/* Assets */}
@@ -45,9 +65,9 @@ function CentralizedForex() {
                 </div>
             </div>
             {/* slider Free education consult */}
-            <FreeEducationConsult />
+            <FreeEducationConsult items={blogs}/>
             {/* Find manager */}
-            <SliderManager _class="manage-slider" showBorder />
+            <SliderManager managers={managers} _class="manage-slider" showBorder />
             {/* CTA */}
             <CTA />
             {/* technology */}

@@ -13,56 +13,57 @@ import { MasterContext } from '.'
 
 
 function Centralized() {
-  const [managers, setManagers ] = useState([])
-  const { setLoading} = useContext(MasterContext)
-  
+  const [managers, setManagers] = useState([])
+  const { setLoading } = useContext(MasterContext)
+
   useEffect(() => {
     setLoading(true)
     axios.get('/api/v1/managers/')
-    .then(({data})=>{
-      setManagers(data)
-    })
-    .catch(f=>console.log(f))
-    .finally(f => setLoading(false))
+      .then(({ data }) => {
+        setManagers(data)
+      })
+      .catch(f => console.log(f))
+   
+      .finally(f => setLoading(false))
   }, [])
   return (
     <div className='centeralized'>
-        <Header/>
-        <div className="intro">
-                <span className='back'></span>
-                <span className='back-reverse'></span>
-            </div>
+      <Header />
+      <div className="intro">
+        <span className='back'></span>
+        <span className='back-reverse'></span>
+      </div>
+      <div className="container">
+        {/*focus trade  */}
+        <FocusTradeCentralized />
+        {/* Assets */}
+        <AssetsCentralized />
+      </div>
+      {/* assets table */}
+      <div className="table-assets-body">
         <div className="container">
-          {/*focus trade  */}
-          <FocusTradeCentralized/>
-          {/* Assets */}
-          <AssetsCentralized/>
-        </div>
-        {/* assets table */}
-        <div className="table-assets-body">
-            <div className="container">
-                <HeaderTable/>
-                <div className="chart-table">
-                    <div className="row">
-                        <div className="col-12 col-lg-4">
-                            <BannerTableATrader/>
-                        </div>
-                        <div className="col-12 col-lg-8">
-                            <TableInfo/>
-                        </div>
-                    </div>
-                </div>
+          <HeaderTable />
+          <div className="chart-table">
+            <div className="row">
+              <div className="col-12 col-lg-4">
+                <BannerTableATrader />
+              </div>
+              <div className="col-12 col-lg-8">
+                <TableInfo />
+              </div>
             </div>
+          </div>
         </div>
-       
-        {/* Find manager */}
-        <SliderManager managers={managers} _class="manage-slider"/>
+      </div>
 
-        {/* technology */}
-        <TechnologyCentralized/>
+      {/* Find manager */}
+      <SliderManager managers={managers} _class="manage-slider" />
 
-        <Footer/>
-       
+      {/* technology */}
+      <TechnologyCentralized />
+
+      <Footer />
+
     </div>
   )
 }
