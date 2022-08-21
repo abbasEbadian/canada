@@ -13,18 +13,29 @@ import Aos from 'aos'
 import "aos/dist/aos.css"
 import { useEffect } from 'react'
 import axios from 'axios'
-
-
+import {ToastContainer} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 axios.defaults.baseURL = 'http://localhost:8000'
 
 function App() {
   useEffect(() => {
-    Aos.init({duration: 2000})
+    Aos.init({ duration: 2000 })
   }, [])
-  
+
   return (
     <div className="App">
       <Router></Router>
+      <ToastContainer
+        position="bottom-left"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   )
 }
