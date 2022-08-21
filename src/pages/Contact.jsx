@@ -17,6 +17,7 @@ import { Circles } from 'react-loader-spinner';
 import { Button } from '@mui/material';
 import axios from 'axios'
 import { toast } from 'react-toastify';
+import Header from '../components/Header';
 const ContactSection = styled.section`
     fieldset{
         border: none !important;
@@ -70,6 +71,7 @@ function Contact() {
     }
     return (
         <>
+        <Header/>
             <section className='bg-contact'>
                 <div className="text-contact text-center py-5">
                     <button className='title-button'>Contact us</button>

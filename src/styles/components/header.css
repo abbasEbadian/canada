@@ -22,6 +22,7 @@ header .navbar-item{
 header .navbar-item  a.nav-link{
     /* font-size: 14px; */
     color: var(--white);
+    padding-right: 12px;
   
 
 

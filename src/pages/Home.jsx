@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import TitleHeadBroadcasts from '../components/TitleHeadBroadcasts'
@@ -20,6 +20,8 @@ import bitcoin_motion from '../img/motion/bitcoin.mp4'
 import RoadMap from '../components/subHome/RoadMap'
 import myvideo from '../img/1.mp4'
 import myvideo2 from '../img/1_1.mp4'
+import { useTabsList } from '@mui/base'
+import axios from 'axios'
 
 function Home() {
 
@@ -28,6 +30,18 @@ function Home() {
     road: "Road Map",
     technology: "Technology"
   };
+  const [utils, setUtils] = useState([])
+
+  useEffect(() => {
+    axios.get('/api/v1/utils/')
+      .then(({ data }) => {
+        setUtils(data.sort((a, b) => a.sequence - b.sequence))
+      })
+      .catch(f => console.log(f))
+
+  }, [])
+
+  const utilImgs = [protocolimg1, protocolimg2, protocolimg3, protocolimg4]
   return (
     <div>
 
@@ -82,60 +96,21 @@ function Home() {
 
           </div>
           <div className="row">
-            <div className="col-12 col-lg-3 my-2 my-md-0" data-aos="flip-left">
-              <div className="protocol-component-item"  >
-                <div className="protocol-component-shape-box">
-                  <img src={protocolimg1} alt="" className='protocol-img1' height={51} width={51} />
+            {
+              utils.map((util, idx) => {
+                return <div className="col-12 col-lg-3 my-2 my-md-0" data-aos="flip-left" key={util.id}>
+                  <div className="protocol-component-item"  >
+                    <div className="protocol-component-shape-box">
+                      <img src={utilImgs[idx]} alt={util.title } className={'protocol-img1' }height={51} width={51} />
+                    </div>
+                    <h5 className='caption-protocol-component'>{util.title}</h5>
+                    <p className='text-protocol-component ff'>{util.content}</p>
+                  </div>
                 </div>
-                <h5 className='caption-protocol-component'>Decentralized perpetual
-                  multi asset platform</h5>
-                <p className='text-protocol-component ff'>
-                  Trade Gold, BTC, Equities and Forex on a decentralized and ermissionless platform
-                </p>
-              </div>
+              })
+            }
 
-            </div>
-            <div className="col-12 col-lg-3 my-2 my-md-0" data-aos="flip-right">
-              <div className="protocol-component-item">
-                <div className="protocol-component-shape-box">
-                  <img src={protocolimg2} alt="" className='protocol-img1' height={51} width={51} />
-
-                </div>
-                <h5 className='caption-protocol-component'>Centralized regulated
-                  platform</h5>
-                <p className='text-protocol-component ff'>
-                  Liquidity aggregation of the best traditional market LPs to empower DEX platform
-                </p>
-              </div>
-
-            </div>
-            <div className="col-12 col-lg-3 my-2 my-md-0" data-aos="flip-left">
-              <div className="protocol-component-item">
-                <div className="protocol-component-shape-box">
-                  <img src={protocolimg3} alt="" className='protocol-img1' height={51} width={51} />
-
-                </div>
-                <h5 className='caption-protocol-component'>Tokenized share</h5>
-                <p className='text-protocol-component ff'>
-                  Invest on the best equities around the World without restriction
-                </p>
-              </div>
-
-            </div>
-            <div className="col-12 col-lg-3 my-2 my-md-0" data-aos="flip-right">
-              <div className="protocol-component-item">
-                <div className="protocol-component-shape-box">
-                  <img src={protocolimg4} alt="" className='protocol-img1' height={51} width={51} />
-
-                </div>
-                <h5 className='caption-protocol-component'>Investment management
-                  platform</h5>
-                <p className='text-protocol-component ff'>
-                  Find the best investment manager that help you to achieve your goal in a fully transparent platform
-                </p>
-              </div>
-
-            </div>
+           
           </div>
 
         </div>

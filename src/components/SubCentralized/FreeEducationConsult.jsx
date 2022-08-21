@@ -3,6 +3,15 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import HeadFreeEducation from './HeadFreeEducation';
 import {Swiper, SwiperSlide} from 'swiper/react'
 import { Navigation } from 'swiper';
+import styled from '@emotion/styled';
+
+const Image = styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 160px;
+`
+
 function FreeEducationConsult({items}) {
 
     const nextElClass = `.free-education .swiper-button-back `
@@ -48,8 +57,8 @@ function FreeEducationConsult({items}) {
                     items.map((slide, idx) => {
                         return <SwiperSlide key={slide.id}> <div className="" >
                         <div className="free-education-consult-body">
-                            <div className="free-education-consult-img">
-                                
+                            <div className="free-education-consult-im">
+                                <Image src={slide.image} alt={slide.image_alt} />
                             </div>
                             <div className="free-education-content">
                                 <span className="title-free-education">{slide.title}</span>

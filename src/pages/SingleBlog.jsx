@@ -30,6 +30,8 @@ const BlogDetail = styled.div`
 }
 .blog-content{
   color: white;
+  background: #001730;
+  border: 1px solid #40677077;
 }
 `
 function SingleBlog({ }) {
@@ -61,7 +63,7 @@ function SingleBlog({ }) {
 
   }, [slug])
   return (
-    <BlogDetail className='container'>
+    <BlogDetail className='container '>
       <div className="row mb-5">
         <div className="col-1">
           <div className="bk-singb text-white">
@@ -93,7 +95,7 @@ function SingleBlog({ }) {
 
 
       </div>
-      <div className='blog-content' dangerouslySetInnerHTML={{
+      <div className='blog-content p-4 rounded' dangerouslySetInnerHTML={{
         __html: blog?.content
       }}></div>
     </BlogDetail>
