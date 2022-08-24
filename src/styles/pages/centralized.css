@@ -45,7 +45,8 @@
     font-size: 14px;
     text-align: center;
     margin-block: 16px;
-    font-weight: bold;
+    font-weight: normal;
+    line-height: 1.7;
 }
 .focus-trade-body .search-assets-box{
     display: flex;

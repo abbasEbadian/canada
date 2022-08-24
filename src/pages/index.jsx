@@ -3,6 +3,11 @@ import { BrowserRouter, Route, Routes, Outlet } from 'react-router-dom'
 import Home from './Home'
 import Centralized from './Centralized'
 import CentralizedForex from './CentralizedForex'
+import CentralizedStocks from './CentralizedStocks'
+import CentralizedCommodities from './CentralizedCommodities'
+import CentralizedETF from './CentralizedETF'
+import CentralizedIndices from './CentralizedIndices'
+import CentralizedCrypto from './CentralizedCrypto'
 import Blogs from './Blogs'
 import SignIn from './SignIn'
 import SignUp from './SignUp'
@@ -63,6 +68,11 @@ function Router() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/center" element={<Centralized />} />
         <Route path="/center-forex" element={<CentralizedForex />} />
+        <Route path="/center-Stocks" element={<CentralizedStocks />} />
+        <Route path="/center-commodities" element={<CentralizedCommodities />} />
+        <Route path="/center-indices" element={<CentralizedIndices />} />
+        <Route path="/center-etf" element={<CentralizedETF />} />
+        <Route path="/center-crypto" element={<CentralizedCrypto />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/contact" element={<Contact />} />

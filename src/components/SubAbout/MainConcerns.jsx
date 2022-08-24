@@ -3,11 +3,10 @@ import React from 'react'
 function MainConcerns() {
     const CaptionName = {
         title: "At that duration we had three the main concerns:",
-        step1: "the Platform that is safe and secure",
+        step1: "The Platform that is safe and secure",
         step2: "Be comfortable and accessible to all people(which faced many investors opposition)",
         step3: "Think of the customer and its constant profits and the principal investment(That is, the trading system and experience of our successful team over the years we have provided artificial intelligence to the public to invest in the best possible way)",
         textAbout1:" These three things made us make lots of effort to make something different, something that wasn't before, but we had great obstacles.At that time, new smart contracts were raised, and it was virtually the possibility of building a decentralized platform ",
-        textAbout2:"At that time, new smart contracts were raised, and it was virtually the possibility of building a decentralized platform"
     };
     return (
     <div className='main-concerns-body'>
