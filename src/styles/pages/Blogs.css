@@ -86,8 +86,11 @@
     align-items: flex-start;
     justify-content: flex-start;
     margin-inline: 16px;
-
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
+ 
 span.crypto{
     color: var(--light-blue);
     font-size: 16px;
@@ -190,6 +193,10 @@ div.data-box{
     color: var(--white);
     font-size: 14px;
     color: #ccc;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    min-height: 60px;
 }
 .slider-latest-news-items .img-slider-latest-news{
     background-image: url("../../img/popularNews.png");

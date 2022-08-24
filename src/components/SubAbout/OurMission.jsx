@@ -8,7 +8,7 @@ function OurMission() {
         textmission: "Our mission is summarized in two things ",
         technology: "Technology",
         textSafe:"Creating a safe space and no need to trust for different market trading",
-        textPC:"To use (most up to date) technology to (minimize) customer loss and profit (continuous)",
+        textPC:"Using the most up to date technologies to minimize lost and maximize profit ",
         readRtificial:"Click here to read more about our artificial intelligence",
         textExtraMission2:"But the problem is not knowledge, the problem is that few people are looking for genuine knowledge For years, we have been thinking about creating artificial intelligence so that can help you 24 hour consultant, you will be in the investment path!Artificial intelligence designed by the most professional capital managers and your supporter, guidance and savior in the transactions!",
         textExtraMission:"In recent years, there have been many scams around the world, systems that have cruelly destroyed people's money and we have tried to eliminate the role (need) trust in financial markets using smart contracts. Is a great goal, but it is worth fighting (lets go for an example) Investing a cause, such as medicine, engineering, etc. is the reason for the disadvantage of the people, lack of knowledge!"

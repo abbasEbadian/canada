@@ -50,7 +50,7 @@ function Home() {
         {/* welcom  */}
         <div className="welcom-body position-relative">
           <div className="welcom-item-bg"></div>
-          <video autoPlay playsInline muted loop className='w-100 position-absolute top-100 end-0 d-none d-lg-block'>
+          <video autoPlay playsInline muted loop className='w-100 position-absolute top-100 end-0 d-none d-lg-block twomovie' >
             <source src={myvideo2} type="video/mp4" />
           </video>
           <div className="d-flex align-items-center flex-wrap mb-5">
