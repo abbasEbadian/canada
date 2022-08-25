@@ -8,7 +8,16 @@ import { Routes, Route, useParams } from 'react-router-dom';
 import { MasterContext } from '.';
 import axios from 'axios';
 import styled from '@emotion/styled';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
 
+const SingleBlogPage = styled.section`
+  min-height: 100vh;
+  display: flex;flex-direction: column;
+  .footer-public{
+    margin-top: auto;
+  }
+`
 const BlogDetail = styled.div`
 .bt-social-sb,
 .bk-singb,
@@ -33,6 +42,9 @@ const BlogDetail = styled.div`
   background: #001730;
   border: 1px solid #40677077;
 }
+.protocol-component-item{
+  min-height: unset;
+}
 `
 function SingleBlog({ }) {
   const { setLoading } = useContext(MasterContext)
@@ -51,8 +63,8 @@ function SingleBlog({ }) {
     setLoading(true)
     axios.get('api/v1/blogs/' + blog_id)
       .then(({ data: blog }) => {
-        if (onlyIdPassed){
-          navigate(`/blog/${blog?.id}-${blog?.title.toLowerCase().replace(/\s/g, '-')}`, {replace: true})
+        if (onlyIdPassed) {
+          navigate(`/blog/${blog?.id}-${blog?.title.toLowerCase().replace(/\s/g, '-')}`, { replace: true })
         }
         else {
           setBlog(blog)
@@ -63,42 +75,68 @@ function SingleBlog({ }) {
 
   }, [slug])
   return (
-    <BlogDetail className='container '>
-      <div className="row mb-5">
-        <div className="col-1">
-          <div className="bk-singb text-white">
-            <Link to="/blog">
-              <ChevronLeftIcon />
-            </Link>
+    <SingleBlogPage>
+      <Header />
+      <BlogDetail className='container my-5'>
+        <div className="row mb-5">
+          <div className="col-1">
+            <div className="bk-singb text-white">
+              <Link to="/blog">
+                <ChevronLeftIcon />
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className="col-9 p-0">
-          <div className="prev-news-sb">
-            <Link to="#">
-              {blog?.title}
-            </Link>
+
+          <div className="col-9 p-0">
+            <div className="prev-news-sb">
+              <Link to="#">
+                {blog?.title}
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className="col-2">
-          <div className="bt-social-sb">
-            <Link to="#">
-              <ShareIcon />
-            </Link>
-            <Link to="#">
-              <ThumbUpOffAltIcon />
-            </Link>
-            <Link to="#">
-              <ThumbDownOffAltIcon />
-            </Link>
+          <div className="col-2">
+            <div className="bt-social-sb">
+              <Link to="#">
+                <ShareIcon />
+              </Link>
+              <Link to="#">
+                <ThumbUpOffAltIcon />
+              </Link>
+              <Link to="#">
+                <ThumbDownOffAltIcon />
+              </Link>
+            </div>
           </div>
-        </div>
 
 
-      </div>
-      <div className='blog-content p-4 rounded' dangerouslySetInnerHTML={{
-        __html: blog?.content
-      }}></div>
-    </BlogDetail>
+        </div>
+        <div className="col-lg-12">
+          <div class="protocol-component-body">
+            <div className=" protocol-component-item blog p-4 pb-2 ">
+              <h6 className='text-white fw-bold'>
+                Main Takeaways
+              </h6>
+              <ul className='mt-3 text-white'>
+                <li>
+                  <p className='text-white-50'>
+                    Binance has introduced them as part of our dedication to low fees.
+                  </p>
+                </li>
+                <li>
+                  <p className='text-white-50'>
+                    Our zero-fee BTC trading pairs do exactly what they say. No hidden cost and no restructuring of our business model to compensate.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className='blog-content p-4 rounded' dangerouslySetInnerHTML={{
+          __html: blog?.content
+        }}></div>
+      </BlogDetail>
+      <Footer />
+    </SingleBlogPage>
   )
 }
 
