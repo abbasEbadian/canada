@@ -1,27 +1,28 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function HeaderTable() {
   return (
     <div>
         <div className="head-table-box ">
-            <a href="#" className='head-link-table active'>
+            <Link to="/center-forex" className='head-link-table '>
                 Forex
-            </a>
-            <a href="#" className='head-link-table'>
+            </Link>
+            <Link to="/center-Stocks" className='head-link-table'>
                 CFDs on stock
-            </a>
-            <a href="#" className='head-link-table'>
+            </Link>
+            <Link to="/center-indices" className='head-link-table'>
                 Indices
-            </a>
-            <a href="#" className='head-link-table'>
+            </Link>
+            <Link to="/center-commodities" className='head-link-table'>
                 Commodity
-            </a>
-            <a href="#" className='head-link-table'>
+            </Link>
+            <Link to="/center-etf" className='head-link-table'>
                 Sport Crypto
-            </a>
-            <a href="#" className='head-link-table'>
+            </Link>
+            <Link to="/center-crypto" className='head-link-table'>
                 Perp Crypto
-            </a>
+            </Link>
         </div>
     </div>
   )
