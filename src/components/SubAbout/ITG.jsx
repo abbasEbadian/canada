@@ -3,7 +3,7 @@ import itg_img from '../../img/IMG-2.png'
 function ITG() {
     const CaptionName = {
         title: "Finally, in 2021",
-        text:"by expanding the decentralized financial system and completing the project's artificial intelligence, we decided to create the world's latest investment platform with the personal capital we gained over the years.Something that has been a"
+        text:" Finally, in 2021, by expanding the decentralized financial system and completing the project's artificial intelligence, we decided to create the world's latest investment platform with the personal capital we gained over the years.Something that has been a lot of years we've been trying, studying and waiting for it, and now it's time to get to know our story…"
     };
     return (
     <div className='container itg'>

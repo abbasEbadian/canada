@@ -30,25 +30,25 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    background-color: var(--bs-green);
+    /* background-color: var(--bs-green); */
     border-radius: 20px 0px 0px 20px;
-    background-image: url("../../img/ForexBannerBG.png");
-    background-position: center center;
+    /* background-image: url("../../img/ForexBannerBG.png"); */
+    background-position: center 15%;
     background-size: 70%;
     background-repeat: no-repeat;
 }
 .banner-forex-box .icon-banner-box {
 	margin-top: auto;
     margin-bottom: 24px;
-	background: var(--white);
+	/* background: var(--white);
     display: grid;
     place-items: center;
 	border-radius: 50%;
     width: 125px;
-    height: 125px;
+    height: 125px; */
 }
 .banner-forex-box .icon-banner-box .icon-banner{
-    width: 110px;
+    width: 200px;
 }
 .banner-forex-box .footer-baner-forex{
     display: flex;

@@ -7,7 +7,7 @@ import protocolimg3 from '../img/Phone-(2).png'
 import protocolimg4 from '../img/Email.png'
 // social-icon 
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
@@ -143,7 +143,7 @@ function Contact() {
                                 <div className="socail-media-item">
                                     <a href="" className='socail-media-link'><LinkedInIcon /></a>
                                     <a href="" className='socail-media-link'><TelegramIcon /></a>
-                                    <a href="" className='socail-media-link'><InstagramIcon /></a>
+                                    <a href="" className='socail-media-link'><TwitterIcon /></a>
                                     <a href="" className='socail-media-link'><YouTubeIcon /></a>
                                 </div>
                             </div>
