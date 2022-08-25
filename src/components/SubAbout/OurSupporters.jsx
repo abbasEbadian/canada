@@ -3,7 +3,7 @@ import React from 'react'
 function OurSupporters() {
     const CaptionName = {
         title: "Our supporters:",
-        text:"Our community and all those who have spiritually supported this project will not need a sponsor until the future phases of the project! ",
+        text:"Our community and all those who have spiritually supported this project will not need a sponsor until the future phases of the project! But we welcome any intellectual help! ",
         buttext:"But we welcome any intellectual help!"
     
       };
@@ -11,7 +11,7 @@ function OurSupporters() {
     <div className='container'>
         <div className="our-support">
             <span className="title-support">{CaptionName.title}</span>
-            <p className="text-support">{CaptionName.text}</p>
+            <p className="text-support fs-5 text-center">{CaptionName.text}</p>
             <span className="but-we-support">{CaptionName.buttext}</span>
         </div>
     </div>

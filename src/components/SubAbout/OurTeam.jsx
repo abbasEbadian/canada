@@ -4,7 +4,7 @@ import TitleHeadBroadcasts from '../TitleHeadBroadcasts';
 function OurTeam() {
     const CaptionName = {
         Ourteam: "Our team",
-        textOurTeam:"Given the great mission we have and we want to bring all the financial markets into the decentralized world, there are many enemies on our way! People who want this goal to be achieved and that's why we refrain from introducing our team's thinkers carefully! But our team consists of a group of strong and experienced investment managers who were project designers and enjoyed it!A team of artificial intelligence elites in the world's top universities with major projects and a dedicated and loyal executive team!"
+        textOurTeam:"Given the great mission we have and we want to bring all the financial markets into the decentralized world, there are many enemies on our way! People who want this goal to be achieved and that's why we refrain from introducing our team's thinkers carefully! But our team consists of a group of strong and experienced investment managers who were project designers and enjoyed it! A team of artificial intelligence elites in the world's top universities with major projects and a dedicated and loyal executive team!"
 
     };
     return (

@@ -23,8 +23,35 @@ import myvideo2 from '../img/1_1.mp4'
 import { useTabsList } from '@mui/base'
 import axios from 'axios'
 
+import { styled } from '@mui/material/styles';
+import Button from '@mui/material/Button';
+import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
+
 function Home() {
 
+  // tooltip RoadMap
+  const CustomWidthTooltip = styled(({ className, ...props }) => (
+    <Tooltip {...props} classes={{ popper: className }} />
+  ))({
+    [`& .${tooltipClasses.tooltip}`]: {
+      maxWidth: 500,
+    },
+  });
+
+  const NoMaxWidthTooltip = styled(({ className, ...props }) => (
+    <Tooltip {...props} classes={{ popper: className }} />
+  ))({
+    [`& .${tooltipClasses.tooltip}`]: {
+      maxWidth: 'none',
+    },
+  });
+
+  const longText = `
+Aliquam eget finibus ante, non facilisis lectus. Sed vitae dignissim est, vel aliquam tellus.
+Praesent non nunc mollis, fermentum neque at, semper arcu.
+Nullam eget est sed sem iaculis gravida eget vitae justo.
+`;
+  // tooltip RoadMap
   const CaptionName = {
     protocol: "Protocol components",
     road: "Road Map",
@@ -55,9 +82,7 @@ function Home() {
           </video>
           <div className="d-flex align-items-center flex-wrap mb-5">
             <div className="col-12 col-lg-5">
-
               <div className="welcom-item">
-
                 <h2 className='my-3 text-center'>
                   <span className='title-welcom'><span className='welcom-b'>Welcome</span> to the new
                     generation trading platform</span>
@@ -101,7 +126,7 @@ function Home() {
                 return <div className="col-12 col-lg-3 my-2 my-md-0" data-aos="flip-left" key={util.id}>
                   <div className="protocol-component-item"  >
                     <div className="protocol-component-shape-box">
-                      <img src={utilImgs[idx]} alt={util.title } className={'protocol-img1' }height={51} width={51} />
+                      <img src={utilImgs[idx]} alt={util.title} className={'protocol-img1'} height={51} width={51} />
                     </div>
                     <h5 className='caption-protocol-component'>{util.title}</h5>
                     <p className='text-protocol-component ff'>{util.content}</p>
@@ -110,7 +135,7 @@ function Home() {
               })
             }
 
-           
+
           </div>
 
         </div>
@@ -362,6 +387,7 @@ function Home() {
                   <p className="dec-technology">
                     Tokenized position and account, transfer to wallets or use as a collateral
                   </p>
+              
                 </div>
 
               </div>
