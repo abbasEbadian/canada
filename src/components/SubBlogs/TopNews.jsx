@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import ViewmoreLike from './ViewmoreLike';
+
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, A11y } from 'swiper';
 import { ListItem } from '@mui/material';
-
+import { Link } from 'react-router-dom'
+import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 function TopNews({ postList }) {
     const [activePost, setActivePost] = useState({})
 
@@ -32,7 +35,8 @@ function TopNews({ postList }) {
                         >
                             {postList && postList.map(post => {
                                 return <SwiperSlide key={ListItem.id}>
-                                    <div className="top-news-img">
+                                    <div className="top-news-img position-relative">
+                                        <Link to={`/blog/${post?.id}-${post.title?.replace(/\s/g, '-')}`} className='position-absolute inset-0'></Link>
                                         <img src={post?.image} alt={post?.image_alt} ></img>
                                     </div>
                                 </SwiperSlide>
@@ -46,11 +50,31 @@ function TopNews({ postList }) {
                             <h4 className='text-white'>{activePost?.title}</h4>
                             <br />
                             <p className='text-secondary'
-                             dangerouslySetInnerHTML={{
-                                __html: activePost?.summary
-                             }}></p>
+                                dangerouslySetInnerHTML={{
+                                    __html: activePost?.summary
+                                }}></p>
                         </div>
-                        <ViewmoreLike />
+                        <div className="view-more-like">
+                            <div className="view-more">
+                                <Link to={`/blog/${activePost?.id}-${activePost?.title?.replace(/\s/g, '-')}`} className='btn-view-more'>
+                                    View more
+                                    <KeyboardArrowRightIcon />
+                                </Link>
+
+                            </div>
+                            <div className="like-comment">
+                                <div className="comment-box">
+                                    < ChatBubbleOutlineIcon />
+                                    <span className="comment">{activePost?.comment || 0}</span>
+
+                                </div>
+                                <div className="like-box ms-3">
+                                    <FavoriteBorderIcon />
+                                    <span className="like-top-news">{activePost?.like || 0}</span>
+
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
                 </div>

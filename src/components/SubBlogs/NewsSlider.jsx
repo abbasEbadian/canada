@@ -3,14 +3,19 @@ import DataBox from './DataBox';
 import HeadPopularNews from './HeadPopularNews'
 import ArrowCircleLeftOutlinedIcon from '@mui/icons-material/ArrowCircleLeftOutlined';
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
-
-import Sortslider from '../SubCentralized/SortSlider';
+import {Link} from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper';
 import styled from '@emotion/styled';
 
-const SwiperDiv = styled.div`
-   
+const SwiperDiv = styled.div``
+const Slide = styled.div`
+    position: relative;
+    > a{
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+    }
 `
 function NewsSlider({ postList, title, class_prepend }) {
     return (
@@ -35,7 +40,7 @@ function NewsSlider({ postList, title, class_prepend }) {
                         </div>
                     </div>
                     <div className="col-lg-4 d-none d-lg-block">
-                        
+
                     </div>
 
 
@@ -63,7 +68,8 @@ function NewsSlider({ postList, title, class_prepend }) {
                 >
                     {postList && postList.map(post => {
                         return <SwiperSlide key={post.id}>
-                            <div className="slider-popular-news-items">
+                            <Slide className="slider-popular-news-items">
+                                <Link to={`/blog/${post.id}-${post.title.replace(/\s/g, '-')}`}></Link>
                                 <div className="img-popular-news" >
                                     <img src={post.image} alt={post.image_alt} />
                                 </div>
@@ -78,7 +84,7 @@ function NewsSlider({ postList, title, class_prepend }) {
                                         {new Date(post.created).toLocaleDateString('en', { year: "numeric", month: "long", day: '2-digit' })}
                                     </span>
                                 </div>
-                            </div>
+                            </Slide>
                         </SwiperSlide>
                     })}
 

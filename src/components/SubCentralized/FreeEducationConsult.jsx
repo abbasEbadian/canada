@@ -4,7 +4,7 @@ import HeadFreeEducation from './HeadFreeEducation';
 import {Swiper, SwiperSlide} from 'swiper/react'
 import { Navigation } from 'swiper';
 import styled from '@emotion/styled';
-
+import {Link} from 'react-router-dom'
 const Image = styled.img`
     width: 100%;
     height: 100%;
@@ -68,7 +68,7 @@ function FreeEducationConsult({items}) {
                                 </p>
     
                             </div>
-                            <a href="" className='more-free-education'><ChevronRightIcon/></a>
+                            <Link to={`/blog/${slide.id}-${slide.title.replace(/\s/g, '-')}`} className='more-free-education'><ChevronRightIcon/></Link>
                         </div>
                         <div className="data-education-box">
                             <span className="data-freee-ducation">{new Date(slide.created).toLocaleDateString('en', {year: "numeric", month: "long", day: "2-digit"})}</span>

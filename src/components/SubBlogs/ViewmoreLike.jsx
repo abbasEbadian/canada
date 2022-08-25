@@ -13,26 +13,7 @@ function ViewmoreLike() {
       };
     return (
     
-        <div className="view-more-like">
-            <div className="view-more">
-                <button className='btn-view-more'>
-                    View more
-                    <KeyboardArrowRightIcon/>
-                </button>
-            </div>
-            <div className="like-comment">
-                <div className="comment-box">
-                    < ChatBubbleOutlineIcon/>
-                    <span className="comment">{TopNewsCaption.comment}</span>
-
-                </div>
-                <div className="like-box ms-3">
-                    <FavoriteBorderIcon/>
-                    <span className="like-top-news">{TopNewsCaption.like}</span>
-
-                </div>
-            </div>
-        </div>
+       <></>
     
   )
 }
