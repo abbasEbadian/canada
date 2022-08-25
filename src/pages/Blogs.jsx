@@ -9,14 +9,13 @@ import NewsSlider from '../components/SubBlogs/NewsSlider';
 import TopNews from '../components/SubBlogs/TopNews';
 import WelcomeNewsroom from '../components/SubBlogs/WelcomeNewsroom';
 
-
 function Blogs() {
     const [ blogs, setBlogs ] = useState([])
     const { setLoading} = useContext(MasterContext)
 
     useEffect(() => {
       setLoading(true)
-      axios.get('http://localhost:8000/api/v1/blogs/')
+      axios.get('api/v1/blogs/')
       .then(({data})=>{
         setBlogs(data)
       })

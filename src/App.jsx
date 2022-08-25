@@ -15,7 +15,11 @@ import { useEffect } from 'react'
 import axios from 'axios'
 import {ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
-axios.defaults.baseURL = 'http://localhost:8000'
+if(process.env.NODE_ENV === 'development'){
+  axios.defaults.baseURL = 'http://localhost:8000'
+}else{
+  axios.defaults.baseURL = 'http://82.115.19.221/'
+}
 
 function App() {
   useEffect(() => {
