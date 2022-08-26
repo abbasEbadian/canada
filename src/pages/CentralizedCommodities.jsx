@@ -22,12 +22,12 @@ function CentralizedForex() {
 
     useEffect(() => {
         setLoading(true)
-        axios.get('/api/v1/managers/')
+        axios.get('/api/v1/managers/?page=commodities')
             .then(({ data }) => {
                 setManagers(data)
             })
             .catch(f => console.log(f))
-        axios.get('/api/v1/blogs/')
+        axios.get('/api/v1/blogs/?page=commodities')
             .then(({ data }) => {
                 setBlogs(data)
             })
@@ -51,7 +51,7 @@ function CentralizedForex() {
             {/* assets table */}
             <div className="table-assets-body">
                 <div className="container">
-                    <HeaderTable />
+                    <HeaderTable activePage={'commodities'}/>
                     <div className="chart-table">
                         <div className="row">
                             <div className="col-12 col-lg-4">

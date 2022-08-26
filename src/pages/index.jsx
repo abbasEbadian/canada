@@ -13,6 +13,7 @@ import SignIn from './SignIn'
 import SignUp from './SignUp'
 import Contact from './Contact'
 import SingleBlog from './SingleBlog'
+import SinglePress from './SinglePress'
 import About from './About'
 import styled from '@emotion/styled';
 import { Triangle } from 'react-loader-spinner'
@@ -66,17 +67,18 @@ function Router() {
       <Routes>
         <Route path="/blog" element={<Blogs />} />
         <Route path="/" element={<Home />}></Route>
-        <Route path="/center" element={<Centralized />} />
-        <Route path="/center-forex" element={<CentralizedForex />} />
-        <Route path="/center-Stocks" element={<CentralizedStocks />} />
-        <Route path="/center-commodities" element={<CentralizedCommodities />} />
-        <Route path="/center-indices" element={<CentralizedIndices />} />
-        <Route path="/center-etf" element={<CentralizedETF />} />
-        <Route path="/center-crypto" element={<CentralizedCrypto />} />
+        <Route path="/centralized" element={<Centralized />} />
+        <Route path="/centralized/forex" element={<CentralizedForex />} />
+        <Route path="/centralized/stocks" element={<CentralizedStocks />} />
+        <Route path="/centralized/commodities" element={<CentralizedCommodities />} />
+        <Route path="/centralized/indices" element={<CentralizedIndices />} />
+        <Route path="/centralized/etf" element={<CentralizedETF />} />
+        <Route path="/centralized/crypto" element={<CentralizedCrypto />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog/:slug" element={<SingleBlog />} />
+        <Route path="/press/:slug" element={<SinglePress />} />
         <Route path="/about" element={<About />} />
       </Routes>
     </MasterContext.Provider>

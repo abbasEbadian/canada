@@ -22,7 +22,20 @@ function Header() {
     ]
 
 
-
+    const download = () => {
+        // using Java Script method to get PDF file
+        fetch('intellisense.pdf').then(response => {
+            response.blob().then(blob => {
+                // Creating new object of PDF file
+                const fileURL = window.URL.createObjectURL(blob);
+                // Setting various property values
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = 'Intellisense Whitepaper.pdf';
+                alink.click();
+            })
+        })
+    }
     return (
         <header className='header-public'>
             <div className="container">
@@ -60,7 +73,11 @@ function Header() {
                         <PersonIcon />
                     </a>
 
+<<<<<<< HEAD
                     <button className='btn-down-white-paper  d-none d-xl-block'>
+=======
+                    <button className='btn-down-white-paper  d-none d-xl-block' onClick={download}>
+>>>>>>> 1fa91d0fe366c73d8d46737d73eb0880255ef572
                         <img src={DownloadIcon} alt="download icon" className='mx-2' /> Download white paper
                     </button>
                     <button className='d-block d-xl-none btn bg-transparent text-white' onClick={e => setMobileSidebarOpen(true)} >

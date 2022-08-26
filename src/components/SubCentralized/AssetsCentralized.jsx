@@ -19,7 +19,7 @@ function AssetsCentralized() {
                       <span className="name-assets">Bitcoin</span>
                       <span className="value-assets">24,456$</span>
                     </div>
-                    <div className="value-assets-box">
+                    <div className="value-assets-box mb-3">
                       <span className="value-assets">CHG</span>
                       <span className="value-assets">VOL</span>
                     </div>
@@ -33,11 +33,11 @@ function AssetsCentralized() {
                     <img src={IconAwesome} alt="IconAwesome" height={50} />
                   </div>
                   <div className="value-assets-body">
-                    <div className="value-assets-box">
+                    <div className="value-assets-box ">
                       <span className="name-assets">Etherium</span>
                       <span className="value-assets">24,456$</span>
                     </div>
-                    <div className="value-assets-box">
+                    <div className="value-assets-box  mb-3">
                       <span className="value-assets">CHG</span>
                       <span className="value-assets">VOL</span>
                     </div>
@@ -56,7 +56,7 @@ function AssetsCentralized() {
                       <span className="name-assets">Apple</span>
                       <span className="value-assets">24,456$</span>
                     </div>
-                    <div className="value-assets-box">
+                    <div className="value-assets-box  mb-3">
                       <span className="value-assets">CHG</span>
                       <span className="value-assets">VOL</span>
                     </div>
