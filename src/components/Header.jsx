@@ -16,11 +16,24 @@ function Header() {
         { label: "Community", href: "#" },
         { label: "Media", href: "#" },
         { label: "Ecosystem", href: "#" },
-        { label: "About", href: "#"}
+        { label: "About", href: "#" }
     ]
 
 
-
+    const download = () => {
+        // using Java Script method to get PDF file
+        fetch('intellisense.pdf').then(response => {
+            response.blob().then(blob => {
+                // Creating new object of PDF file
+                const fileURL = window.URL.createObjectURL(blob);
+                // Setting various property values
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = 'Intellisense Whitepaper.pdf';
+                alink.click();
+            })
+        })
+    }
     return (
         <header className='header-public'>
             <div className="container">
@@ -33,13 +46,13 @@ function Header() {
                     <ul className='links meno-collapsed d-xl-flex d-none'>
                         {
                             links.map((link, idx) => {
-                                return <li key={link.label} className={idx === 0? ' active ': ''}>
+                                return <li key={link.label} className={idx === 0 ? ' active ' : ''}>
                                     <a href={link.href} className='nav-link'>{link.label}</a>
                                 </li>
                             })
                         }
                     </ul>
-                    <Sidebar links={links} setMobileSidebarOpen={setMobileSidebarOpen} mobileSidebarOpen={mobileSidebarOpen}/>
+                    <Sidebar links={links} setMobileSidebarOpen={setMobileSidebarOpen} mobileSidebarOpen={mobileSidebarOpen} />
 
 
                     <button className='btn-navbar-search d-xl-block d-none '>
@@ -55,19 +68,19 @@ function Header() {
                         <PersonIcon />
                     </a>
 
-                    <button className='btn-down-white-paper  d-none d-xl-block'>
-                        <img src={DownloadIcon} alt="download icon" className='mx-2'/> Download white paper
+                    <button className='btn-down-white-paper  d-none d-xl-block' onClick={download}>
+                        <img src={DownloadIcon} alt="download icon" className='mx-2' /> Download white paper
                     </button>
-                    <button className='d-block d-xl-none btn bg-transparent text-white' onClick={ e=> setMobileSidebarOpen(true) } >
+                    <button className='d-block d-xl-none btn bg-transparent text-white' onClick={e => setMobileSidebarOpen(true)} >
                         <MenuIcon />
                     </button>
                 </div>
-                
+
             </div>
             <button className='btn-down-white-paper w-100  py-2 mx-0 mt-4 d-flex  d-xl-none px-4'>
-                    <img src={DownloadIcon} alt="download icon" className='mx-2'/> Download white paper
-                    <ChevronRightIcon className='ms-auto' />
-                </button>
+                <img src={DownloadIcon} alt="download icon" className='mx-2' /> Download white paper
+                <ChevronRightIcon className='ms-auto' />
+            </button>
 
         </header>
     )
