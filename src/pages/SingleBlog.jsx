@@ -110,7 +110,7 @@ function SingleBlog({ }) {
 
 
         </div>
-        <div className="col-lg-12">
+        <div className="col-lg-12 mb-4">
           <div class="protocol-component-body">
             <div className=" protocol-component-item blog p-4 pb-2 ">
               <h6 className='text-white fw-bold'>
