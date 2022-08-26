@@ -67,13 +67,13 @@ function Router() {
       <Routes>
         <Route path="/blog" element={<Blogs />} />
         <Route path="/" element={<Home />}></Route>
-        <Route path="/centrilized" element={<Centralized />} />
-        <Route path="/centrilized/forex" element={<CentralizedForex />} />
-        <Route path="/centrilized/stocks" element={<CentralizedStocks />} />
-        <Route path="/centrilized/commodities" element={<CentralizedCommodities />} />
-        <Route path="/centrilized/indices" element={<CentralizedIndices />} />
-        <Route path="/centrilized/etf" element={<CentralizedETF />} />
-        <Route path="/centrilized/crypto" element={<CentralizedCrypto />} />
+        <Route path="/centralized " element={<Centralized />} />
+        <Route path="/centralized /forex" element={<CentralizedForex />} />
+        <Route path="/centralized /stocks" element={<CentralizedStocks />} />
+        <Route path="/centralized /commodities" element={<CentralizedCommodities />} />
+        <Route path="/centralized /indices" element={<CentralizedIndices />} />
+        <Route path="/centralized /etf" element={<CentralizedETF />} />
+        <Route path="/centralized /crypto" element={<CentralizedCrypto />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/contact" element={<Contact />} />
