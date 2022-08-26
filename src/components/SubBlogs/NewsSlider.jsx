@@ -1,9 +1,7 @@
 import React from 'react'
-import DataBox from './DataBox';
-import HeadPopularNews from './HeadPopularNews'
 import ArrowCircleLeftOutlinedIcon from '@mui/icons-material/ArrowCircleLeftOutlined';
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper';
 import styled from '@emotion/styled';
@@ -17,7 +15,22 @@ const Slide = styled.div`
         z-index: 2;
     }
 `
-function NewsSlider({ postList, title, class_prepend }) {
+function NewsSlider({ postList, title, class_prepend, parallax = false }) {
+
+    const onChange = ({ activeIndex }) => {
+        Array(...document.querySelectorAll(`.${class_prepend} .swiper-slide`)).map((slide, idx) => {
+            activeIndex = activeIndex % (postList.length  )
+            idx = idx % (postList.length)
+            const val1 =  Math.abs(activeIndex - idx)
+            const val = Math.min(val1, postList.length  - val1)
+            const  deg = 1 - ( val * 0.075)
+            slide.style.transform = `scale(${deg})`;
+            const  deg2 = 1 - (val * 0.15)
+            slide.style.opacity = deg2;
+            
+        })
+    }
+
     return (
         <SwiperDiv className='container mb-5'>
 
@@ -46,17 +59,27 @@ function NewsSlider({ postList, title, class_prepend }) {
 
                 </div>
             </div>
-            <div className="slider-popular-news-box">
+            <div className={"slider-popular-news-box " + class_prepend}>
                 <Swiper
                     spaceBetween={20}
+                    onSlideChange={parallax ? onChange : undefined}
+                    loop={parallax}
+                    centeredSlides={parallax}
+                    centeredSlidesBounds
                     breakpoints={{
                         320: {
+                            slidesPerView: 1,
+                        }, 430: {
                             slidesPerView: 1.5,
-                        }, 480: {
+                        }, 576: {
+                            slidesPerView: 2,
+                        }, 768: {
                             slidesPerView: 2.5,
-                        }, 990: {
+                        }, 992: {
+                            slidesPerView: 3,
+                        }, 1200: {
                             slidesPerView: 4
-                        }, 1440: {
+                        }, 1400: {
                             slidesPerView: 5
                         },
                     }}
@@ -80,9 +103,16 @@ function NewsSlider({ postList, title, class_prepend }) {
                                     }}>
 
                                     </span>
-                                    <span className='text-white-50 data-text w-100 text-end'>
-                                        {new Date(post.created).toLocaleDateString('en', { year: "numeric", month: "long", day: '2-digit' })}
-                                    </span>
+                                    <div className='d-flex align-items-end justify-content-between'>
+                                        <div className='text-white'>
+                                            <small>by: <br /></small>
+                                            INTELLISENSE
+                                        </div>
+                                        <span className='text-white-50 data-text w-100 text-end pb-1'>
+                                            {new Date(post.created).toLocaleDateString('en', { year: "numeric", month: "long", day: '2-digit' })}
+                                        </span>
+                                    </div>
+
                                 </div>
                             </Slide>
                         </SwiperSlide>

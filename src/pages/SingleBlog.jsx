@@ -10,6 +10,7 @@ import axios from 'axios';
 import styled from '@emotion/styled';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import NewsSlider from '../components/SubBlogs/NewsSlider';
 
 const SingleBlogPage = styled.section`
   min-height: 100vh;
@@ -53,6 +54,7 @@ function SingleBlog({ }) {
   const navigate = useNavigate()
 
   const [blog, setBlog] = useState(undefined)
+  const [blogs, setBlogs] = useState([])
 
   useEffect(() => {
     if (!slug) return
@@ -61,12 +63,15 @@ function SingleBlog({ }) {
     console.log(onlyIdPassed)
     blog_id = blog_id[0]
     setLoading(true)
-    axios.get('api/v1/blogs/' + blog_id)
-      .then(({ data: blog }) => {
+    // axios.get('api/v1/blogs/' + blog_id)
+    axios.get('api/v1/blogs/' )
+      .then(({ data: blogs }) => {
+        const blog = blogs.find(i=>+i.id === +blog_id)
         if (onlyIdPassed) {
           navigate(`/blog/${blog?.id}-${blog?.title.toLowerCase().replace(/\s/g, '-')}`, { replace: true })
         }
         else {
+          setBlogs(blogs)
           setBlog(blog)
         }
       })
@@ -135,6 +140,7 @@ function SingleBlog({ }) {
           __html: blog?.content
         }}></div>
       </BlogDetail>
+      <NewsSlider postList={blogs} class_prepend={'single_blog_slider'} title={""} parallax/>
       <Footer />
     </SingleBlogPage>
   )

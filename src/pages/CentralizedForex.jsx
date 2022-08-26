@@ -27,7 +27,7 @@ function CentralizedForex() {
                 setManagers(data)
             })
             .catch(f => console.log(f))
-        axios.get('/api/v1/blogs/')
+        axios.get('/api/v1/blogs/?page=forex')
             .then(({ data }) => {
                 setBlogs(data)
             })
