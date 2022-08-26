@@ -18,7 +18,7 @@ function Centralized() {
 
   useEffect(() => {
     setLoading(true)
-    axios.get('/api/v1/managers/')
+    axios.get('/api/v1/managers/?page=all')
       .then(({ data }) => {
         setManagers(data)
       })
@@ -42,7 +42,7 @@ function Centralized() {
       {/* assets table */}
       <div className="table-assets-body">
         <div className="container">
-          <HeaderTable />
+          <HeaderTable activePage={'forex'}/>
           <div className="chart-table">
             <div className="row">
               <div className="col-12 col-lg-4">

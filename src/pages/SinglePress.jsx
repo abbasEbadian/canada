@@ -12,7 +12,7 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import NewsSlider from '../components/SubBlogs/NewsSlider';
 
-const SingleBlogPage = styled.section`
+const SinglePressPage = styled.section`
   min-height: 100vh;
   display: flex;flex-direction: column;
   .footer-public{
@@ -47,7 +47,7 @@ const BlogDetail = styled.div`
   min-height: unset;
 }
 `
-function SingleBlog({ }) {
+function SinglePress({ }) {
   const { setLoading } = useContext(MasterContext)
 
   const { slug } = useParams()
@@ -58,22 +58,21 @@ function SingleBlog({ }) {
 
   useEffect(() => {
     if (!slug) return
-
+    
     let blog_id = slug.split('-')
     const onlyIdPassed = blog_id.length === 1
-    console.log(onlyIdPassed)
     blog_id = blog_id[0]
     setLoading(true)
+
     axios.get('api/v1/blogs/?nofilter=1' )
       .then(({ data: blogs }) => {
         const blog = blogs.find(i=>+i.id === +blog_id)
-
-        if(blog?.category_id?.title === 'press') {
+        if(blog?.category_id?.title !== 'press') {
           navigate(`/404`, { replace: false })
           return
         }
         if (onlyIdPassed) {
-          navigate(`/blog/${blog?.id}-${blog?.title.toLowerCase().replace(/\s/g, '-')}`, { replace: true })
+          navigate(`/press/${blog?.id}-${blog?.title.toLowerCase().replace(/\s/g, '-')}`, { replace: true })
         }
         else {
           setBlogs(blogs)
@@ -85,7 +84,7 @@ function SingleBlog({ }) {
 
   }, [slug])
   return (
-    <SingleBlogPage>
+    <SinglePressPage>
       <Header />
       <BlogDetail className='container my-5'>
         <div className="row mb-5">
@@ -147,8 +146,8 @@ function SingleBlog({ }) {
       </BlogDetail>
       <NewsSlider postList={blogs} class_prepend={'single_blog_slider'} title={""} parallax/>
       <Footer />
-    </SingleBlogPage>
+    </SinglePressPage>
   )
 }
 
-export default SingleBlog
+export default SinglePress
