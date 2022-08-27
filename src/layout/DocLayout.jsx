@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import HeaderDocumentation from '../components/SubDocumentation/HeaderDocumentation'
 import SidebarDoc from '../components/SubDocumentation/SidebarDoc';
-import ContentDoc from '../components/SubDocumentation/ContentDoc';
 
 function Documentation({ children, active }) {
   const [open, setOpen] = useState(false)
