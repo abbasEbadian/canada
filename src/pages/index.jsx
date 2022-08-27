@@ -18,6 +18,8 @@ import SinglePress from './SinglePress'
 import About from './About'
 import styled from '@emotion/styled';
 import { Triangle } from 'react-loader-spinner'
+import DocOverview from './document/DocOverview'
+import DocGettingStarted from './document/DocGettingStarted'
 
 const Loader = styled.div`
   backdrop-filter: blur(6px);
@@ -81,7 +83,8 @@ function Router() {
         <Route path="/blog/:slug" element={<SingleBlog />} />
         <Route path="/press/:slug" element={<SinglePress />} />
         <Route path="/about" element={<About />} />
-        <Route path="/doc" element={<Documentation />} />
+        <Route path="/doc/overview" element={<DocOverview />} />
+        <Route path="/doc/getting_started" element={<DocGettingStarted />} />
       </Routes>
     </MasterContext.Provider>
   </>

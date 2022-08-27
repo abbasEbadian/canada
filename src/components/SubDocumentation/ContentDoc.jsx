@@ -69,7 +69,7 @@ function ContentDoc() {
     decStep: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
   };
   return (
-    <ContentBody data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+    <ContentBody >
       {/* table */}
       <TableContent />
       <div className="caption-content-box">

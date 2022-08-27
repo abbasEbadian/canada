@@ -2,13 +2,15 @@ import React from "react";
 import Logo from "../../img/logo.png";
 import SearchIcon from "@mui/icons-material/Search";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-
+import MenuIcon from '@mui/icons-material/Menu'
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 
 //#region
 const HeadDocument = styled.div`
   padding-block: 16px;
   display: flex;
+  align-items: center;
   background-color: var(--bs-blue-900);
   padding-inline: 16px;
   .img-logo-doc {
@@ -52,10 +54,45 @@ const HeadDocument = styled.div`
         padding-inline: 16px;
     }
   }
+  .toggler{
+    color: white;
+    fill: white;
+  }
+  a.intelligent-link {
+    padding-inline: 8px;
+    border-radius: 8px;
+    margin-left: 16px;
+    display: flex;
+    .text{
+      display: none;
+    }
+  }
+  @media (max-width: 1050px) {
+    div.search-intelligent-box {
+      justify-content: flex-end;
+     
+      div.search-document{
+        display: none;
+      }
+    }
+    .img-logo-doc img{
+      height: 36px;
+    }
+    
+  }
+  @media (min-width: 1050px) {
+    .toggler{display: none;}
+    a.intelligent-link {
+      
+      .text{
+        display: block;
+      }
+    }
+  }
 `;
 //#endregion
 
-function HeaderDocumentation() {
+function HeaderDocumentation({ toggleMenu, menuOpen }) {
   return (
     <HeadDocument>
       <div className="img-logo-doc">
@@ -73,13 +110,15 @@ function HeaderDocumentation() {
             placeholder="Search in documentation..."
           />
         </div>
+          <MenuIcon className="toggler" onClick={toggleMenu} color="#fff" role='button' />
         <div className="back-to-intelligent">
-          <a href="" className="intelligent-link">
-            Back to Intelligent
+          <Link to="/" className="intelligent-link">
+            <span className="text ">Back to Intelligent</span>
             <ChevronRightIcon />
-          </a>
+          </Link>
         </div>
       </div>
+
     </HeadDocument>
   );
 }
