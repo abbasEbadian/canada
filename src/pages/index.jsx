@@ -8,6 +8,7 @@ import CentralizedCommodities from './CentralizedCommodities'
 import CentralizedETF from './CentralizedETF'
 import CentralizedIndices from './CentralizedIndices'
 import CentralizedCrypto from './CentralizedCrypto'
+import Documentation from './Documentation'
 import Blogs from './Blogs'
 import SignIn from './SignIn'
 import SignUp from './SignUp'
@@ -80,6 +81,7 @@ function Router() {
         <Route path="/blog/:slug" element={<SingleBlog />} />
         <Route path="/press/:slug" element={<SinglePress />} />
         <Route path="/about" element={<About />} />
+        <Route path="/doc" element={<Documentation />} />
       </Routes>
     </MasterContext.Provider>
   </>
