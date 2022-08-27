@@ -40,7 +40,10 @@ const AccordionDocument = styled.div`
     }
     
   }
-  .Mui-expanded .icon {
+  div.Mui-expanded {
+    margin-top: 0 !important;
+  }
+  div.Mui-expanded .icon {
     svg{
       background-color: #052441;
     }
