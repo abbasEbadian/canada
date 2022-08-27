@@ -14,11 +14,11 @@ function Header() {
 
     const links = [
         { label: "Home", href: "/" },
-        { label: "Developers", href: "#" },
-        { label: "Community", href: "#" },
-        { label: "Media", href: "#" },
-        { label: "Ecosystem", href: "#" },
-        { label: "About", href: "#" }
+        { label: "Broker", href: "/centralized" },
+        { label: "Perpetual dex", href: "#" },
+        { label: "Tokenized platform", href: "#" },
+        { label: "Blog", href: "/blog" },
+        { label: "About", href: "/about" }
     ]
 
 
@@ -73,11 +73,7 @@ function Header() {
                         <PersonIcon />
                     </a>
 
-<<<<<<< HEAD
-                    <button className='btn-down-white-paper  d-none d-xl-block'>
-=======
                     <button className='btn-down-white-paper  d-none d-xl-block' onClick={download}>
->>>>>>> 1fa91d0fe366c73d8d46737d73eb0880255ef572
                         <img src={DownloadIcon} alt="download icon" className='mx-2' /> Download white paper
                     </button>
                     <button className='d-block d-xl-none btn bg-transparent text-white' onClick={e => setMobileSidebarOpen(true)} >
