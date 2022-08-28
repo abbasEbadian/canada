@@ -75,7 +75,7 @@ function Centralized() {
       </div>
       <CentralizedImage className="container text-center ">
         <picture  width={"100%"}>
-          <source media="(max-width:992px)" srcset="img/mobile/Features.png"  />
+          <source media="(max-width:992px)" srcSet="img/mobile/Features.png"  />
           <img src="img/Features.png" className="text-center" alt="features" width={"100%"}/>
         </picture>
   
