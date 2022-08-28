@@ -15,6 +15,7 @@ import Contact from './Contact'
 import SingleBlog from './SingleBlog'
 import SinglePress from './SinglePress'
 import About from './About'
+import Notfound from './404'
 import styled from '@emotion/styled';
 import { Triangle } from 'react-loader-spinner'
 import DocOverview from './document/DocOverview'
@@ -84,6 +85,7 @@ function Router() {
         <Route path="/about" element={<About />} />
         <Route path="/doc/overview" element={<DocOverview />} />
         <Route path="/doc/getting_started" element={<DocGettingStarted />} />
+        <Route path="*" element={<Notfound />} />
       </Routes>
     </MasterContext.Provider>
   </>

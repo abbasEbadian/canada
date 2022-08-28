@@ -52,7 +52,7 @@ function Header() {
                         {
                             links.map((link, idx) => {
                                 return <li key={link.label} className={idx === 0 ? ' active ' : ''}>
-                                    <a href={link.href} className='nav-link'>{link.label}</a>
+                                    <Link to={link.href} className='nav-link'>{link.label}</Link>
                                 </li>
                             })
                         }

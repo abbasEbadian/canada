@@ -15,14 +15,28 @@ import CopyrightIcon from '@mui/icons-material/Copyright';
 
 
 function Footer() {
+  const download = () => {
+    // using Java Script method to get PDF file
+    fetch('intellisense.pdf').then(response => {
+        response.blob().then(blob => {
+            // Creating new object of PDF file
+            const fileURL = window.URL.createObjectURL(blob);
+            // Setting various property values
+            let alink = document.createElement('a');
+            alink.href = fileURL;
+            alink.download = 'Intellisense Whitepaper.pdf';
+            alink.click();
+        })
+    })
+}
   return (
     <div className='footer-public'>
       {/* white paper */}
       <div className="white-paper-body">
         <div className="downlaod-white-box">
-          <a href="" className='btn-footer-white-paper'>
+          <button href="" className='btn-footer-white-paper' onClick={download}>
             <img src={DownloadIcon} alt="download icon" className='me-2' />Download white paper
-          </a>
+          </button>
         </div>
         <div className="read-whitepaper-box">
           <span className="read-whitepaper tex-bold"><b>Read Intelligent platform whitepaper now</b></span>
