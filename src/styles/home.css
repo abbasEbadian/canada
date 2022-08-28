@@ -6,6 +6,7 @@
 /* welcom */
 #home-page{
     position: relative;
+    overflow: hidden;
 }
 #home-page .image-layer {
     position: absolute;
