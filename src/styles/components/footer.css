@@ -8,7 +8,7 @@
     border-radius: 20px 20px 0px 0px;
     padding-block:16px;
 }
-.white-paper-body .downlaod-white-box a.btn-footer-white-paper{
+.white-paper-body .downlaod-white-box button.btn-footer-white-paper{
     background-color: var(--white);
     font-size: 15px;
     color: var(--bs-blue-900);
