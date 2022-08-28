@@ -12,6 +12,7 @@ import VisaImg from '../img/visa.png'
 import Skrill from '../img/Skrill.png'
 import Mastercard from '../img/mastercard.png'
 import CopyrightIcon from '@mui/icons-material/Copyright';
+import { Link } from 'react-router-dom';
 
 
 function Footer() {
@@ -63,26 +64,17 @@ function Footer() {
                 <div className="links-body">
                   <span className="title-footer d-none d-lg-block">Links</span>
                   <div className="link-box">
-
-
-
                     <div className="links">
-                      <a href="" className='title-link'>Developers</a>
-                      <a href="" className='title-link'>Community</a>
-                      <a href="" className='title-link'>Media</a>
-                      <a href="" className='title-link'>Ecosystem</a>
-                    </div>
-                    <div className="links">
-
-                      <a href="" className='title-link'>About Us</a>
-                      <a href="" className='title-link'>Contact Us</a>
+                      <Link to="/doc/overview" className='title-link'>Documentation</Link>
                       <a href="" className='title-link'>White Paper</a>
-                      <a href="" className='title-link'>FAQs</a>
-
+                      <a href="#" className='title-link'>Ecosystem</a>
                     </div>
-
+                    <div className="links">
+                      <Link to="/about" className='title-link'>About Us</Link>
+                      <Link to="/contact" className='title-link'>Contact Us</Link>
+                      <Link to="/about#faq" className='title-link'>FAQs</Link>
+                    </div>
                   </div>
-
                 </div>
               </div>
               <div className="col-12 col-lg-5 px-4">
