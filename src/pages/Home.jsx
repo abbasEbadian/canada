@@ -20,13 +20,13 @@ import bitcoin_motion from '../img/motion/bitcoin.mp4'
 import RoadMap from '../components/subHome/RoadMap'
 import myvideo from '../img/1.mp4'
 import myvideo2 from '../img/1_1.mp4'
-import { useTabsList } from '@mui/base'
 import axios from 'axios'
 
 import { styled } from '@mui/material/styles';
-import Button from '@mui/material/Button';
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 
+import leftNodeImage from '../img/center/Group1040.png'
+import layerimage from '../img/center/BG.png'
 function Home() {
 
   // tooltip RoadMap
@@ -70,14 +70,16 @@ Nullam eget est sed sem iaculis gravida eget vitae justo.
 
   const utilImgs = [protocolimg1, protocolimg2, protocolimg3, protocolimg4]
   return (
-    <div>
+    <div  id='home-page'>
+    <img className="image-layer" src={layerimage}></img>
 
       <Header />
       <div className="container">
         {/* welcom  */}
         <div className="welcom-body position-relative">
           <div className="welcom-item-bg"></div>
-          <video autoPlay playsInline muted loop className='w-100 position-absolute top-100 end-0 d-none d-lg-block twomovie' >
+          
+          <video autoPlay playsInline muted loop className='w-100 position-absolute top-100 end-0 d-none d-lg-block twomovie' style={{opacity: 0.5}}>
             <source src={myvideo2} type="video/mp4" />
           </video>
           <div className="d-flex align-items-center flex-wrap mb-5">
@@ -142,6 +144,7 @@ Nullam eget est sed sem iaculis gravida eget vitae justo.
         {/*Road Map  */}
         <RoadMap />
         {/* Assest */}
+
         <div className="assest-body">
           <div className="row">
             {/* Apple */}
@@ -149,7 +152,7 @@ Nullam eget est sed sem iaculis gravida eget vitae justo.
               <div className="row">
                 <div className="col-lg-7 col-12 content">
                   <div className="assest-img">
-                    {/* <img src={apple_motion} alt="apple motion" /> */}
+                    <img src={leftNodeImage} alt="node image" className='leftnode node' />
                     <video autoPlay playsInline muted loop className='w-100'>
                       <source src={apple_motion} type="video/mp4" />
                     </video>
@@ -201,7 +204,7 @@ Nullam eget est sed sem iaculis gravida eget vitae justo.
                     </div>
                   </div>
                   <div className="assest-img">
-                    {/* <img src={apple_motion} alt="apple motion" /> */}
+                  <img src={leftNodeImage} alt="node image" className='rightnode node' />
                     <video autoPlay playsInline muted loop className='w-100'>
                       <source src={bitcoin_motion} type="video/mp4" />
                     </video>
@@ -231,7 +234,7 @@ Nullam eget est sed sem iaculis gravida eget vitae justo.
               <div className="row">
                 <div className="col-lg-7 col-12 content"  >
                   <div className="assest-img">
-                    {/* <img src={etherium_motion} alt="apple motion" /> */}
+                  <img src={leftNodeImage} alt="node image" className='leftnode node' />
                     <video autoPlay playsInline muted loop className='w-100' >
                       <source src={etherium_motion} type="video/mp4" />
                     </video>
