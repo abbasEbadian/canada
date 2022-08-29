@@ -533,6 +533,9 @@
     position: relative;
     border-radius: 50%;
 }
+.assest-img video {
+    border-radius: 50%;
+}
 .assest-img .node {
     position: absolute;
     content: " ";
