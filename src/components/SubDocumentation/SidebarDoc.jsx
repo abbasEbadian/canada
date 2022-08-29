@@ -192,6 +192,16 @@ const pages = [
       "Trading on Drift",
       "Glossary"
     ]
+  },
+  {
+    title: 'Getting Started',
+    key: 'test', // Pass this name as expandend
+    image: (color) => <GettingStartedIcon color={color} />,
+    items: [
+      "Set up Wallet",
+      "Trading on Drift",
+      "Glossary"
+    ]
   }
 ]
 function SidebarDoc({ active, expanded, toggleMenu }) {

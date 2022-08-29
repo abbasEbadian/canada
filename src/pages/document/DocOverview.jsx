@@ -94,7 +94,7 @@ function DocOverview() {
             <span className="text-step">{CaptionName.textstep}</span>
           </div>
           <div className="img-step-box">
-            <img src={Deposit} alt="" width={700} />
+            <img src={Deposit} alt="" width={'100%'} />
           </div>
           <p className="dec-step">
             {CaptionName.decStep}
@@ -111,7 +111,7 @@ function DocOverview() {
             <span className="text-step">{CaptionName.textstep}</span>
           </div>
           <div className="img-step-box">
-            <img src={Deposit} alt="" width={700} />
+            <img src={Deposit} alt="" width={'100%'} />
           </div>
           <p className="dec-step">
             {CaptionName.decStep}
@@ -128,7 +128,7 @@ function DocOverview() {
             <span className="text-step">{CaptionName.textstep}</span>
           </div>
           <div className="img-step-box">
-            <img src={Deposit} alt="" width={700} />
+            <img src={Deposit} alt="" width={'100%'} />
           </div>
           <p className="dec-step">
             {CaptionName.decStep}
