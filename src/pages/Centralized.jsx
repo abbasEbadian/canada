@@ -33,7 +33,7 @@ function Centralized() {
 
   useEffect(() => {
     setLoading(true)
-    axios.get('/api/v1/centralized/1')
+    axios.get('/api/v1/centralized/')
       .then(({ data }) => {
         setSlides(data)
       })

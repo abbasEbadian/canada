@@ -44,21 +44,19 @@ function CenterIntro({ slides }) {
             navigation
             pagination
         >
-            {Array.from({ length: 3 }).map((post, idx) => {
-                const n = ['first_slide_content', 'second_slide_content', 'third_slide_content']
-                const _d = slides[n[idx]]
+            {slides && slides.map((post, idx) => {
                 return <SwiperSlide key={idx} className="position-relative">
                     <div className="top-news-img">
                         {/* <Link to={`/blog/${post?.id}-${post.title?.replace(/\s/g, '-')}`} className='position-absolute inset-0'></Link> */}
                         <picture  width={"100%"}>
-                            <source media="(max-width:992px)" srcSet="img/mobile/slide1.png"  />
-                            <img src="img/slide1.png" className="text-center" alt="features" width={"100%"}/>
+                            <source media="(min-width:992px)" srcSet={post.image}  />
+                            <img src={post.image_mobile} className="text-center" alt="features" width={"100%"}/>
                         </picture>
                     </div>
                     <Box className='container  position-absolute dynamic' >
                         <DynamicContent className="col-lg-5 col-12">
                             <div dangerouslySetInnerHTML={{
-                                __html: _d
+                                __html: post.content
                             }}></div>
                             {idx === 0&& <FormControl sx={{ m: 1, width: '50%' , minWidth: "300px"}} variant="outlined" className='d-none d-lg-block'>
                                 <OutlinedInput
