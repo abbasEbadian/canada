@@ -95,9 +95,8 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background-color: var(--gray-900);
+    background-color: #57697dd9;
     border-radius: 20px;
-
     padding-inline:32px;
     border: 1px solid var(--light-blue);
     min-height: 243px;
@@ -562,6 +561,7 @@
     border: 1px solid var(--green);
     border-radius: 20px;
     width: 100%;
+    background: #57697d8c;
 }
 .asset-row:nth-of-type(odd) .assest-item{
     padding-left: 62px;

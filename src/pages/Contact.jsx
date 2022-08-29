@@ -18,6 +18,7 @@ import { Button } from '@mui/material';
 import axios from 'axios'
 import { toast } from 'react-toastify';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 const ContactSection = styled.section`
     fieldset{
         border: none !important;
@@ -49,29 +50,29 @@ function Contact() {
     const submit = (e) => {
         e.preventDefault()
 
-        if(!Object.values(data).every(Boolean)){
-            
+        if (!Object.values(data).every(Boolean)) {
+
             toast.warning("Make sure all fields have value!")
             return
-        }   
+        }
         setLoading(true)
         axios.post('/api/v1/contacts/', data)
-        .then(({status}) => {
-            
-            if(status === 201){
-                toast.success("Message sent!")
-                setData(Object.fromEntries(Object.keys(data).map(f=>[f, ""])))
-            }
-            else
-                toast.error('Some error occured! Try again later')
-            
-        }) 
-        .catch(e=> console.log(e))
-        .finally(f=>setLoading(false))
+            .then(({ status }) => {
+
+                if (status === 201) {
+                    toast.success("Message sent!")
+                    setData(Object.fromEntries(Object.keys(data).map(f => [f, ""])))
+                }
+                else
+                    toast.error('Some error occured! Try again later')
+
+            })
+            .catch(e => console.log(e))
+            .finally(f => setLoading(false))
     }
     return (
         <>
-        <Header/>
+            <Header />
             <section className='bg-contact'>
                 <div className="text-contact text-center py-5">
                     <button className='title-button'>Contact us</button>
@@ -148,7 +149,7 @@ function Contact() {
                                 </div>
                             </div>
                         </div>
-                        <form onSubmit={ submit }className="col-lg-8  row justify-content-end ">
+                        <form onSubmit={submit} className="col-lg-8  row justify-content-end ">
                             <div className="col-lg-6 col-12">
 
                                 <TextField
@@ -218,8 +219,8 @@ function Contact() {
                                 />
                             </div>
                             <div className="send-message">
-                                <Button type={'submit'} variant="contained" sx={{minWidth: 200}}>
-                                    {!loading? "Send message": <Circles color='white' width={15} height={15}/>}
+                                <Button type={'submit'} variant="contained" sx={{ minWidth: 200 }}>
+                                    {!loading ? "Send message" : <Circles color='white' width={15} height={15} />}
                                 </Button>
                             </div>
                         </form>
@@ -227,6 +228,7 @@ function Contact() {
                     </div>
                 </div>
             </ContactSection>
+            <Footer />
         </>
     )
 }

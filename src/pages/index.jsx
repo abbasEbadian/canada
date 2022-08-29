@@ -20,6 +20,7 @@ import styled from '@emotion/styled';
 import { Triangle } from 'react-loader-spinner'
 import DocOverview from './document/DocOverview'
 import DocGettingStarted from './document/DocGettingStarted'
+import DocTest from './document/DocTest'
 
 const Loader = styled.div`
   backdrop-filter: blur(6px);
@@ -85,6 +86,7 @@ function Router() {
         <Route path="/about" element={<About />} />
         <Route path="/doc/overview" element={<DocOverview />} />
         <Route path="/doc/getting_started" element={<DocGettingStarted />} />
+        <Route path="/doc/test" element={<DocTest />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
     </MasterContext.Provider>

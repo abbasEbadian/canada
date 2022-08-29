@@ -8,7 +8,8 @@ import protocolimg3 from '../img/protocol-component-img3.png'
 import protocolimg4 from '../img/protocol-component-img4.png'
 import CircuitDesign from '../img/CircuitDesign.png'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import LogoGoals from '../img/goal_logo.gif'
+import LogoGoals from '../img/goals.mp4'
+// import LogoGoals from '../img/goal_logo.gif'
 import Transaction from '../img/Transaction.png'
 import Commission from '../img/commission.png'
 import Liquidity from '../img/Liquidity.png'
@@ -302,8 +303,11 @@ Nullam eget est sed sem iaculis gravida eget vitae justo.
             </div>
             <div className="col-12 col-lg-4">
               <div className="Logo-Goals-box">
-                <img src={LogoGoals} alt="goals" className='w-100' />
+                {/* <img src={LogoGoals} alt="goals" className='w-100' /> */}
                 {/* <span>Goals</span> */}
+                <video autoPlay playsInline muted loop className='w-100'>
+                  <source src={LogoGoals} type="video/mp4" />
+                </video>
               </div>
             </div>
           </div>
