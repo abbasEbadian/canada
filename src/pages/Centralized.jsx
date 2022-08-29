@@ -12,6 +12,7 @@ import axios from 'axios'
 import { MasterContext } from '.'
 import NewsSlider from '../components/SubBlogs/NewsSlider'
 import styled from '@emotion/styled'
+import CenterIntro from '../components/SubCentralized/CenterIntro'
 
 const CentralizedImage = styled.div`
 margin-bottom: 64px;
@@ -32,7 +33,7 @@ function Centralized() {
 
   useEffect(() => {
     setLoading(true)
-    axios.get('/api/v1/centralized/')
+    axios.get('/api/v1/centralized/1')
       .then(({ data }) => {
         setSlides(data)
       })
@@ -57,14 +58,10 @@ function Centralized() {
         <span className='back'></span>
         <span className='back-reverse'></span>
       </div>
-      <div className="container">
-        {/*focus trade  */}
-        <FocusTradeCentralized />
-        {/* Assets */}
-        <AssetsCentralized />
-      </div>
+      
+       <CenterIntro slides={slides}/>
       {/* assets table */}
-      <div className="table-assets-body">
+      <div className="table-assets-body mt-0">
         <div className="container">
           <HeaderTable activePage={'forex'} />
           <div className="chart-table">
