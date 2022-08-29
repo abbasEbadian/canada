@@ -27,10 +27,16 @@ margin-bottom: 64px;
 function Centralized() {
   const [managers, setManagers] = useState([])
   const [blogs, setBlogs] = useState([])
+  const [slides, setSlides] = useState([])
   const { setLoading } = useContext(MasterContext)
 
   useEffect(() => {
     setLoading(true)
+    axios.get('/api/v1/centralized/')
+      .then(({ data }) => {
+        setSlides(data)
+      })
+      .catch(f => console.log(f))
     axios.get('/api/v1/managers/?page=all')
       .then(({ data }) => {
         setManagers(data)
