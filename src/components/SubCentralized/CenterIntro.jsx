@@ -4,7 +4,7 @@ import { Navigation, Pagination, A11y } from 'swiper';
 import { Box, FormControl, IconButton, InputAdornment, OutlinedInput, TextField } from '@mui/material';
 import styled from '@emotion/styled';
 import SearchIcon from '@mui/icons-material/Search';
-
+import {get_image_link} from '../../App'
 const Dynamic = styled.div`
     .dynamic{
         top: 40%;
@@ -49,8 +49,8 @@ function CenterIntro({ slides }) {
                     <div className="top-news-img">
                         {/* <Link to={`/blog/${post?.id}-${post.title?.replace(/\s/g, '-')}`} className='position-absolute inset-0'></Link> */}
                         <picture  width={"100%"}>
-                            <source media="(min-width:992px)" srcSet={post.image}  />
-                            <img src={post.image_mobile} className="text-center" alt="features" width={"100%"}/>
+                            <source media="(min-width:992px)" srcSet={get_image_link(post.image)}  />
+                            <img src={get_image_link(post.image_mobile)} className="text-center" alt="features" width={"100%"}/>
                         </picture>
                     </div>
                     <Box className='container  position-absolute dynamic' >
