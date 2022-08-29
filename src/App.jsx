@@ -23,6 +23,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 export const get_image_link = (url) => {
+  if(!url) return ""
   if (process.env.NODE_ENV === 'development') {
     return "http://localhost:8000" + url
   }else{
