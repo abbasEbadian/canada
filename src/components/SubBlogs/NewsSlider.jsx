@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper';
 import styled from '@emotion/styled';
-
-const SwiperDiv = styled.div``
+ const SwiperDiv = styled.div``
 const Slide = styled.div`
     position: relative;
     > a{
@@ -19,15 +18,15 @@ function NewsSlider({ postList, title, class_prepend, parallax = false }) {
 
     const onChange = ({ activeIndex }) => {
         Array(...document.querySelectorAll(`.${class_prepend} .swiper-slide`)).map((slide, idx) => {
-            activeIndex = activeIndex % (postList.length  )
+            activeIndex = activeIndex % (postList.length)
             idx = idx % (postList.length)
-            const val1 =  Math.abs(activeIndex - idx)
-            const val = Math.min(val1, postList.length  - val1)
-            const  deg = 1 - ( val * 0.075)
+            const val1 = Math.abs(activeIndex - idx)
+            const val = Math.min(val1, postList.length - val1)
+            const deg = 1 - (val * 0.075)
             slide.style.transform = `scale(${deg})`;
-            const  deg2 = 1 - (val * 0.15)
+            const deg2 = 1 - (val * 0.15)
             slide.style.opacity = deg2;
-            
+
         })
     }
 
@@ -106,7 +105,7 @@ function NewsSlider({ postList, title, class_prepend, parallax = false }) {
                                     <div className='d-flex align-items-end justify-content-between'>
                                         <div className='text-white'>
                                             <small>by: <br /></small>
-                                            INTELLISENSE
+                                            intelligent
                                         </div>
                                         <span className='text-white-50 data-text w-100 text-end pb-1'>
                                             {new Date(post.created).toLocaleDateString('en', { year: "numeric", month: "long", day: '2-digit' })}

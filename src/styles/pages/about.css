@@ -37,7 +37,7 @@
 
 }
 .main-concerns-body .main-concerns-content{
-    background-image: url("../../img/sdfsa.png");
+    background-image: url("../../img/Image-1.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -281,7 +281,7 @@
         font-size: 15px;
     }
     .main-concerns-body .main-concerns-content {
-        background-image: url("/src/img/mobileBg.png");
+        background-image: url("/src/img/Image-2.png");
         background-position: bottom;
         background-repeat: no-repeat;
         background-size: cover;
