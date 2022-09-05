@@ -3,7 +3,7 @@ import PaweredBannerTable from './PaweredBannerTable';
 import TextBannerTable from './TextBannerTable';
 import TitleBannerTable from './TitleBannerTable';
 import BannerTraderLogo from '../../img/BannerTableATrader (1).png';
-import Logo from '../../img/logo.png';
+import Logo from '../../img/logo.svg';
 
 
 function BannerTableATrader() {

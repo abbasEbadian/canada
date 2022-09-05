@@ -15,7 +15,7 @@ function Header() {
     const links = [
         { label: "Home", href: "/" },
         { label: "Broker", href: "/centralized" },
-        { label: "Perpetual dex", href: "#" },
+        { label: "Perpetual DEX", href: "/comming-soon" },
         { label: "Tokenized platform", href: "#" },
         { label: "Blog", href: "/blog" },
         { label: "About", href: "/about" }

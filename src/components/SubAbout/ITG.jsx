@@ -1,5 +1,5 @@
 import React from 'react'
-import itg_img from '../../img/IMG-2.png'
+import itg_img from '../../img/INTG.svg'
 function ITG() {
     const CaptionName = {
         title: "Finally, in 2021",

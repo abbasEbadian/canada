@@ -506,7 +506,7 @@ div.x5 .table-items  img{
     .left-right{
         display: flex;
         align-items: center;
-        justify-content: space-between ;
+        justify-content: center ;
     }
     .table-box{
         overflow: hidden;
