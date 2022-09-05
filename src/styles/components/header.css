@@ -60,7 +60,7 @@ header .navbar-item .btn-down-white-paper{
 .mobile-sidebar .blur{
     position: absolute;
     inset: 0;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(25px);
     z-index: -1;
 }
 .mobile-sidebar .content{

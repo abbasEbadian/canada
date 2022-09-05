@@ -5,27 +5,12 @@ import styled from "@emotion/styled";
 import Deposit from "../../img/document/Deposit.png"
 import DocLayout from '../../layout/DocLayout'
 const ContentBody = styled.div`
-  flex-basis: auto;
-  flex-grow: 1;
-  margin-inline: 16px;
-  margin-top: 32px;
-  position: relative;
-  .caption-content-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    .caption-content {
-      color: var(--white);
-      font-size: 48px;
-    }
-    .time-content-box {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      color: var(--light-blue);
-    }
-
-  }
+ .introduction {
+  color : #fff;
+  line-height: 2.4;
+  padding: 15px 25px;
+  text-align: justify;
+}
   .step-content-body {
     display: flex;
     flex-direction: column;
@@ -60,81 +45,34 @@ const ContentBody = styled.div`
   }
 `;
 function DocOverview() {
-  const CaptionName = {
-    time: "19:59",
-    date: "2022, June 21",
-    captionContent: "Set up Wallet, Deposits and Withdrawals",
-    stepNumber1: "1.",
-    steplink: "Install Intelligent wallet",
-    textstep: "on your preferred browser (Chrome, Brave, Firefox, Edge).",
-    decStep: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
-  };
+  
   return (
     <DocLayout active={'overview'}>
-      <ContentBody >
-        {/* table */}
-        {/* <TableContent /> */}
-        <div className="caption-content-box">
-          <span className="caption-content">{CaptionName.captionContent}</span>
-          <div className="time-content-box">
-            <AccessTimeIcon />
-            <span className="time-content me-lg-3 ms-lg-1">
-              {CaptionName.date}
-            </span>
-            <span className="time-content">{CaptionName.time}</span>
-          </div>
-          <i  id="overview_1"></i>
-        </div>
-        <div className="step-content-body">
-          <div className="caption-step-content">
-            <span className="step-number">{CaptionName.stepNumber1}</span>
-            <a href="" className="step-link">
-              {CaptionName.steplink}
-            </a>
-            <span className="text-step">{CaptionName.textstep}</span>
-          </div>
-          <div className="img-step-box">
-            <img src={Deposit} alt="" width={'100%'} />
-          </div>
-          <p className="dec-step">
-            {CaptionName.decStep}
-
-          </p>
-          <i  id="overview_2"></i>
-        </div>
-        <div className="step-content-body">
-          <div className="caption-step-content">
-            <span className="step-number">{CaptionName.stepNumber1}</span>
-            <a href="" className="step-link">
-              {CaptionName.steplink}
-            </a>
-            <span className="text-step">{CaptionName.textstep}</span>
-          </div>
-          <div className="img-step-box">
-            <img src={Deposit} alt="" width={'100%'} />
-          </div>
-          <p className="dec-step">
-            {CaptionName.decStep}
-
-          </p>
-          <i  id="overview_3"></i>
-        </div>
-        <div className="step-content-body">
-          <div className="caption-step-content">
-            <span className="step-number">{CaptionName.stepNumber1}</span>
-            <a href="" className="step-link">
-              {CaptionName.steplink}
-            </a>
-            <span className="text-step">{CaptionName.textstep}</span>
-          </div>
-          <div className="img-step-box">
-            <img src={Deposit} alt="" width={'100%'} />
-          </div>
-          <p className="dec-step">
-            {CaptionName.decStep}
-
-          </p>
-          <i  id="overview_4"></i>
+      <ContentBody id="overview_1">
+        <div className="introduction">
+          Intelligent Protocol is a platform with the help of which you can trade and invest in various assets from any market such as stock market, cryptocurrencies, forex and even the commodity market in a decentralized environment and on the Solana platform.
+          Intelligent is a platform that is going to transform the financial world and makes this goal possible with its features, not with slogans!
+          One of the most attractive parts of Intelligent is the special artificial intelligence of this platform, which is the first time in the financial world that this technology has been used with complex algorithms. A lot has been said about intelligent artificial intelligence in other parts of this page and in separate articles about this feature. But intelligent has several other features outside the discussion of artificial intelligence that make it very attractive. Sections that include: <br />
+          1- trade, hold and stick all in one platform!<br />
+          2- practical diagrams with the most features<br />
+          3- Gamify and special prizes<br />
+          4- incentive schemes and invitation awards (Affiliate)<br />
+          5- Decentralized and high security, no need for identity verification<br />
+          6- real and tangible assets along with the interest of the shares provided<br />
+          7- Professional and full-time support in the language of your country<br />
+          8- Providing education at the level up to the professional level and receiving an award for watching the training (WTE)<br />
+          9- notifications and 24-hour app support<br />
+          <span className="fw-bold">10- lossless platforms</span><br />
+          
+        <span className="fw-bold">11- spread fee- 0- for VIP account</span><br />
+          12- Invest in the shortest time and without knowledge of fund managers<br />
+          13- Trade and trade from all over the world without restrictions and disrupt the capitalist system<br />
+          14- Confirming the best fund managers<br />
+          15- providing unique artificial intelligence capabilities<br />
+          16- conferences and the attractive part of Trade Temple<br />
+          There are 17 sections that, if you do well in them, you have created an extraordinary resume for yourself.<br />
+          18- Etc<br />
+          To read more about intelligent, there are many articles about this project on reputable sites in the world that you can read and read our white paper below!
         </div>
       </ContentBody>
     </DocLayout>
@@ -142,3 +80,7 @@ function DocOverview() {
 }
 
 export default DocOverview;
+
+
+
+ 

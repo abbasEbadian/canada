@@ -178,31 +178,84 @@ const pages = [
     key: 'overview', // Pass this name as expandend
     image: (color) => <OverviewIcon color={color} />,
     items: [
-      "Set up Wallet",
-      "Trading on Drift",
-      "Glossary"
+      "Introduction",
     ]
   },
   {
-    title: 'Getting Started',
-    key: 'getting_started', // Pass this name as expandend
+    title: 'Technical_review',
+    key: 'technical-review', // Pass this name as expandend
     image: (color) => <GettingStartedIcon color={color} />,
     items: [
-      "Set up Wallet",
-      "Trading on Drift",
-      "Glossary"
+      "Clearing house ", // getting_started_1
+      "Insurance fund ", // getting_started_2
+      "Auto deleveraging" // getting_started_3
     ]
   },
   {
-    title: 'Getting Started',
-    key: 'test', // Pass this name as expandend
+    title: 'Pools',
+    key: 'pools', // Pass this name as expandend
     image: (color) => <GettingStartedIcon color={color} />,
     items: [
-      "Set up Wallet",
-      "Trading on Drift",
-      "Glossary"
+      "Collateral pool ",
+      "Liquidity pool ",
+      "Account pool ",
+      "Position pool  ",
+      "Data pool",
+      "Tokenized account pool ",
+
     ]
-  }
+  },
+  {
+    title: 'Accounts',
+    key: 'accounts', // Pass this name as expandend
+    image: (color) => <GettingStartedIcon color={color} />,
+    items: [
+      "Collateral account  ",
+      "Liquidity provider  ",
+      "Position account   ",
+      "Position NFT account   ",
+      "NFT account ",
+
+    ]
+  },
+  {
+    title: 'Pricing',
+    key: 'pricing', // Pass this name as expandend
+    image: (color) => <OverviewIcon color={color} />,
+    items: [
+      // "Introduction",
+    ]
+  },
+  {
+    title: 'Artificial Intelligence ',
+    key: 'artificial', // Pass this name as expandend
+    image: (color) => <OverviewIcon color={color} />,
+    items: [
+      // "Introduction",
+    ]
+  },
+  {
+    title: 'Tokens & Tokenomic',
+    key: 'tokens', // Pass this name as expandend
+    image: (color) => <GettingStartedIcon color={color} />,
+    items: [
+      "INTG",
+      "LP",
+      "BUNDLE",
+
+    ]
+  },
+  {
+    title: 'Liquidation ',
+    key: 'liquidation', // Pass this name as expandend
+    image: (color) => <GettingStartedIcon color={color} />,
+    items: [
+      "Liquidation threshold ",
+      "Partial liquidation ",
+      "Insurance fund",
+
+    ]
+  },
 ]
 function SidebarDoc({ active, expanded, toggleMenu }) {
   return (
@@ -213,28 +266,30 @@ function SidebarDoc({ active, expanded, toggleMenu }) {
           <div className="d-vl-none p-3 pb-0 text-white" >
             <div className="d-flex align-items-center justify-content-between">
               <img src={Logo} alt="logo" height={32} />
-              <CloseIcon onClick={toggleMenu} role="button"/>
+              <CloseIcon onClick={toggleMenu} role="button" />
             </div>
             <br />
             <div className="search-document">
-          <button className="btn-search-document">
-            {" "}
-            <SearchIcon />
-          </button>
-          <input
-            className="input-document"
-            type="text"
-            placeholder="Search in documentation..."
-          />
-        </div>
+              <button className="btn-search-document">
+                {" "}
+                <SearchIcon />
+              </button>
+              <input
+                className="input-document"
+                type="text"
+                placeholder="Search in documentation..."
+              />
+            </div>
             <hr />
           </div>
           {
             pages.map((page, idx) => {
               const _expanded = active === page.key
-              return <Accordion expanded={_expanded} key={idx}>
+              const has_sub = page.items.length > 0
+
+              return <Accordion expanded={_expanded && has_sub} key={idx}>
                 <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
+                  expandIcon={has_sub ? <ExpandMoreIcon /> : undefined}
                   className={_expanded ? 'expanded' : ''}
                 >
                   <Typography component="div" className="w-100 d-flex align-items-center icon">
@@ -243,13 +298,13 @@ function SidebarDoc({ active, expanded, toggleMenu }) {
                     <Link to={`/doc/${page.key}`} className="text-white fs-6 flex-grow-1">{page.title}</Link>
                   </Typography>
                 </AccordionSummary>
-                <AccordionDetails>
+                {has_sub && <AccordionDetails>
                   <Scrollspy offset={12} className="accordion-details   list-unstyled text-white" items={page.items.map((i, x) => page.key + '_' + (x + 1))} currentClassName="is-current">
 
                     {
                       page.items.map((item, idx2) => {
                         return <li className="accordion-details-link" key={idx2}>
-                          <a href={`#${page.key}_${idx2 + 1} `}>
+                          <a href={`#${page.key}_${idx2 + 1}`}>
                             <span>
                               <RadioButtonUncheckedIcon fontSize="small" />
                             </span>
@@ -260,7 +315,7 @@ function SidebarDoc({ active, expanded, toggleMenu }) {
                     }
 
                   </Scrollspy>
-                </AccordionDetails>
+                </AccordionDetails>}
               </Accordion>
             })
           }

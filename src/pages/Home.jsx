@@ -19,8 +19,8 @@ import apple_motion from '../img/motion/apple.mp4'
 import etherium_motion from '../img/motion/etherium.mp4'
 import bitcoin_motion from '../img/motion/bitcoin.mp4'
 import RoadMap from '../components/subHome/RoadMap'
-import myvideo from '../img/1.mp4'
-import myvideo2 from '../img/1_1.mp4'
+import myvideo from '../img/up.mp4'
+import myvideo2 from '../img/down.mp4'
 import axios from 'axios'
 
 import { styled } from '@mui/material/styles';
@@ -28,6 +28,7 @@ import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 
 import leftNodeImage from '../img/center/Group1040.png'
 import layerimage from '../img/center/BG.png'
+import layerimage2 from '../img/Group-1128.png'
 function Home() {
 
   // tooltip RoadMap
@@ -71,16 +72,16 @@ Nullam eget est sed sem iaculis gravida eget vitae justo.
 
   const utilImgs = [protocolimg1, protocolimg2, protocolimg3, protocolimg4]
   return (
-    <div  id='home-page'>
-    <img className="image-layer" src={layerimage}></img>
+    <div id='home-page'>
+      <img className="image-layer" src={layerimage}></img>
 
       <Header />
       <div className="container">
         {/* welcom  */}
         <div className="welcom-body position-relative">
           <div className="welcom-item-bg"></div>
-          
-          <video autoPlay playsInline muted loop className='w-100 position-absolute top-100 end-0 d-none d-lg-block twomovie' style={{opacity: 0.5}}>
+
+          <video autoPlay playsInline muted loop className='w-100 position-absolute top-100 end-0 d-none d-lg-block twomovie' style={{ opacity: 0.5 , margin: "-35px -5px"}}>
             <source src={myvideo2} type="video/mp4" />
           </video>
           <div className="d-flex align-items-center flex-wrap mb-5">
@@ -94,7 +95,7 @@ Nullam eget est sed sem iaculis gravida eget vitae justo.
                 <div className="read-more-welcom-box">
                   <div className="sey-hi-box">
                     <svg xmlns="http://www.w3.org/2000/svg" width="38.483" height="38.483" viewBox="278 625.767 38.483 38.483"><g data-name="play-outline"><path d="M291.736 654.615a1.374 1.374 0 0 1-1.374-1.373v-16.484c0-.485.256-.934.673-1.182a1.374 1.374 0 0 1 1.374 0l15.11 8.242a1.374 1.374 0 0 1 0 2.418l-15.11 8.241c-.21.102-.44.15-.673.138Zm1.374-15.549v11.868L303.975 645l-10.865-5.934Z" fill="#ff861f" fillRule="evenodd" data-name="Path 33" /><path d="M297.23 628.517c9.104 0 16.484 7.38 16.484 16.483 0 9.103-7.38 16.483-16.483 16.483-9.104 0-16.484-7.38-16.484-16.483 0-9.103 7.38-16.483 16.484-16.483m0-2.748C286.61 625.77 278 634.38 278 645c0 10.62 8.61 19.23 19.23 19.23 10.621 0 19.231-8.61 19.231-19.23 0-10.62-8.61-19.23-19.23-19.23Z" fill="#ff861f" fillRule="evenodd" data-name="Path 32" /></g></svg>
-                    <span className="sey-hi-to-itg">Sey hi to itg</span>
+                    <span className="sey-hi-to-itg">Sey hi to INTG</span>
                   </div>
                   <div className="read-more-box">
                     <a href="" className='d-flex align-item-center'>
@@ -109,7 +110,7 @@ Nullam eget est sed sem iaculis gravida eget vitae justo.
               <div className="circuit-design text-center position-relative">
 
                 <video autoPlay playsInline muted loop className='w-75'>
-                  <source src={myvideo} type="video/mp4" />
+                  <source src={myvideo} type="video/mp4" / >
                 </video>
 
               </div>
@@ -120,6 +121,7 @@ Nullam eget est sed sem iaculis gravida eget vitae justo.
         <div className="protocol-component-body">
           <div className="title-Broadcasts-box">
             <TitleHeadBroadcasts CaptionHead={CaptionName.protocol} />
+            <span className='text-white'>Protocol Component</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="82.4" height="23.183" viewBox="918.767 1192.85 82.4 23.183"><path d="M919.788 1196.653c2.09-3.62 6.731-4.863 10.35-2.773 3.278 1.892 4.58 5.878 3.242 9.301l17.998 10.39 36.939-9.895a6.377 6.377 0 0 1 .833-3.751 6.432 6.432 0 0 1 8.79-2.356 6.43 6.43 0 0 1 2.353 8.789 6.432 6.432 0 0 1-8.788 2.356 6.411 6.411 0 0 1-2.597-2.832l-37.854 10.142-18.816-10.864c-2.296 2.87-6.4 3.735-9.676 1.843-3.62-2.09-4.863-6.73-2.774-10.35m11.145 6.434a5.298 5.298 0 0 0-1.937-7.229 5.298 5.298 0 0 0-7.229 1.937 5.298 5.298 0 0 0 1.937 7.23 5.298 5.298 0 0 0 7.23-1.938" fill="#ff861f" fillRule="evenodd" data-name="Path 300" /></svg>
 
           </div>
@@ -205,7 +207,7 @@ Nullam eget est sed sem iaculis gravida eget vitae justo.
                     </div>
                   </div>
                   <div className="assest-img">
-                  <img src={leftNodeImage} alt="node image" className='rightnode node' />
+                    <img src={leftNodeImage} alt="node image" className='rightnode node' />
                     <video autoPlay playsInline muted loop className='w-100'>
                       <source src={bitcoin_motion} type="video/mp4" />
                     </video>
@@ -235,7 +237,7 @@ Nullam eget est sed sem iaculis gravida eget vitae justo.
               <div className="row">
                 <div className="col-lg-7 col-12 content"  >
                   <div className="assest-img">
-                  <img src={leftNodeImage} alt="node image" className='leftnode node' />
+                    <img src={leftNodeImage} alt="node image" className='leftnode node' />
                     <video autoPlay playsInline muted loop className='w-100' >
                       <source src={etherium_motion} type="video/mp4" />
                     </video>
@@ -278,12 +280,15 @@ Nullam eget est sed sem iaculis gravida eget vitae justo.
         </div>
         {/* goals*/}
         <div className="goals-body">
+        <div className='img-layer-section position-relative'>
+            <img class="image-layer2" src={layerimage2} />
+          </div>
           <div className="d-flex align-items-center flex-wrap-reverse mb-5">
             <div className="col-12 col-lg-8">
               <div className="goals-item">
                 <div className="title-Broadcasts-box">
 
-                  <svg xmlns="http://www.w3.org/2000/svg" width="82.4" height="23.183" viewBox="918.767 1192.85 82.4 23.183"><path d="M919.788 1196.653c2.09-3.62 6.731-4.863 10.35-2.773 3.278 1.892 4.58 5.878 3.242 9.301l17.998 10.39 36.939-9.895a6.377 6.377 0 0 1 .833-3.751 6.432 6.432 0 0 1 8.79-2.356 6.43 6.43 0 0 1 2.353 8.789 6.432 6.432 0 0 1-8.788 2.356 6.411 6.411 0 0 1-2.597-2.832l-37.854 10.142-18.816-10.864c-2.296 2.87-6.4 3.735-9.676 1.843-3.62-2.09-4.863-6.73-2.774-10.35m11.145 6.434a5.298 5.298 0 0 0-1.937-7.229 5.298 5.298 0 0 0-7.229 1.937 5.298 5.298 0 0 0 1.937 7.23 5.298 5.298 0 0 0 7.23-1.938" fill="#ff861f" fillRule="evenodd" data-name="Path 300" /></svg>
+                  <div className='text-start'><h5 class="text-white m-0 ps-3">Goals</h5><div></div><svg xmlns="http://www.w3.org/2000/svg" width="82.4" height="23.183" viewBox="918.767 1192.85 82.4 23.183"><path d="M919.788 1196.653c2.09-3.62 6.731-4.863 10.35-2.773 3.278 1.892 4.58 5.878 3.242 9.301l17.998 10.39 36.939-9.895a6.377 6.377 0 0 1 .833-3.751 6.432 6.432 0 0 1 8.79-2.356 6.43 6.43 0 0 1 2.353 8.789 6.432 6.432 0 0 1-8.788 2.356 6.411 6.411 0 0 1-2.597-2.832l-37.854 10.142-18.816-10.864c-2.296 2.87-6.4 3.735-9.676 1.843-3.62-2.09-4.863-6.73-2.774-10.35m11.145 6.434a5.298 5.298 0 0 0-1.937-7.229 5.298 5.298 0 0 0-7.229 1.937 5.298 5.298 0 0 0 1.937 7.23 5.298 5.298 0 0 0 7.23-1.938" fill="#ff861f" fill-rule="evenodd" data-name="Path 300"></path></svg></div>
 
                 </div>
                 <div className="texts-goals">
@@ -353,6 +358,7 @@ Nullam eget est sed sem iaculis gravida eget vitae justo.
         </div>
         {/* technology */}
         <div className="technology-body">
+        
           <div className="d-flex align-items-center justify-content-between flex-wrap">
             <div className="col-12 col-lg-6">
               <div className="technology-img ">
@@ -364,9 +370,9 @@ Nullam eget est sed sem iaculis gravida eget vitae justo.
             </div>
             <div className="col-12 col-lg-6">
               <div className="technology-item">
-                <div className="title-Broadcasts-box text-center">
+                <div className="title-Broadcasts-box text-center pb-3">
                   <TitleHeadBroadcasts CaptionHead={CaptionName.technology} />
-                  <svg xmlns="http://www.w3.org/2000/svg" width="82.4" height="23.183" viewBox="918.767 1192.85 82.4 23.183"><path d="M919.788 1196.653c2.09-3.62 6.731-4.863 10.35-2.773 3.278 1.892 4.58 5.878 3.242 9.301l17.998 10.39 36.939-9.895a6.377 6.377 0 0 1 .833-3.751 6.432 6.432 0 0 1 8.79-2.356 6.43 6.43 0 0 1 2.353 8.789 6.432 6.432 0 0 1-8.788 2.356 6.411 6.411 0 0 1-2.597-2.832l-37.854 10.142-18.816-10.864c-2.296 2.87-6.4 3.735-9.676 1.843-3.62-2.09-4.863-6.73-2.774-10.35m11.145 6.434a5.298 5.298 0 0 0-1.937-7.229 5.298 5.298 0 0 0-7.229 1.937 5.298 5.298 0 0 0 1.937 7.23 5.298 5.298 0 0 0 7.23-1.938" fill="#ff861f" fillRule="evenodd" data-name="Path 300" /></svg>
+                  <div className='text-center'><h5 class="text-white m-0 ">Technology</h5><div></div><svg xmlns="http://www.w3.org/2000/svg" width="82.4" height="23.183" viewBox="918.767 1192.85 82.4 23.183"><path d="M919.788 1196.653c2.09-3.62 6.731-4.863 10.35-2.773 3.278 1.892 4.58 5.878 3.242 9.301l17.998 10.39 36.939-9.895a6.377 6.377 0 0 1 .833-3.751 6.432 6.432 0 0 1 8.79-2.356 6.43 6.43 0 0 1 2.353 8.789 6.432 6.432 0 0 1-8.788 2.356 6.411 6.411 0 0 1-2.597-2.832l-37.854 10.142-18.816-10.864c-2.296 2.87-6.4 3.735-9.676 1.843-3.62-2.09-4.863-6.73-2.774-10.35m11.145 6.434a5.298 5.298 0 0 0-1.937-7.229 5.298 5.298 0 0 0-7.229 1.937 5.298 5.298 0 0 0 1.937 7.23 5.298 5.298 0 0 0 7.23-1.938" fill="#ff861f" fill-rule="evenodd" data-name="Path 300"></path></svg></div>
                 </div>
                 <p className="caption-technology">
                   We’ve created a unique visual system and strategy across the wideExisting spectrum of visible mobile applications…
@@ -394,7 +400,7 @@ Nullam eget est sed sem iaculis gravida eget vitae justo.
                   <p className="dec-technology">
                     Tokenized position and account, transfer to wallets or use as a collateral
                   </p>
-              
+
                 </div>
 
               </div>

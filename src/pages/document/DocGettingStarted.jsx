@@ -2,64 +2,19 @@ import React from "react";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import styled from "@emotion/styled";
 // import TableContent from "./TableContent";
-import Deposit from "../../img/document/Deposit.png"
+import Technical from "../../img/document/technical.png"
+import clearing from "../../img/document/clearing.png"
 import DocLayout from '../../layout/DocLayout'
 const ContentBody = styled.div`
-  flex-basis: auto;
-  flex-grow: 1;
-  margin-inline: 16px;
-  margin-top: 32px;
-  position: relative;
-  .caption-content-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    .caption-content {
-      color: var(--white);
-      font-size: 48px;
-    }
-    .time-content-box {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      color: var(--light-blue);
-    }
+color : #fff;
+line-height: 2.4;
+padding: 15px 25px;
+text-align: justify;
 
-  }
-  .step-content-body {
-    display: flex;
-    flex-direction: column;
-    margin-top: 100px;
-    padding-top: 16px;
-    .caption-step-content {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-      .step-number {
-        color: var(--white);
-        margin-right: 10px;
-      }
-      .step-link {
-        color: var(--light-blue);
-        font-size: 18px;
-        margin-right: 10px;
-      }
-      .text-step{
-        color: var(--white);
-        font-size: 18px;
-      }
-    }
-    .img-step-box{
-      margin-inline: auto;
-      margin-block: 32px;
-    }
-    p{
-      color: var(--white);
-      font-size: 16px;
-
-    }
-  }
+img {
+  width : 100%;
+  border-radius : 10px
+}
 `;
 function DocOverview() {
   const CaptionName = {
@@ -72,71 +27,75 @@ function DocOverview() {
     decStep: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
   };
   return (
-    <DocLayout active={'getting_started'}>
+    <DocLayout active={'technical-review'}>
       <ContentBody >
         {/* table */}
         {/* <TableContent /> */}
-        <div className="caption-content-box"  >
-          <span className="caption-content">{CaptionName.captionContent}</span>
-          <div className="time-content-box">
-            <AccessTimeIcon />
-            <span className="time-content me-lg-3 ms-lg-1">
-              {CaptionName.date}
+
+        <div className="step-content-body" id="technical-review_1">
+          <p>
+            Behind the scenes, Intelligent has used different departments for its centralized and decentralized platforms, each of these departments has a specific task in this platform, which is performed by admin in the centralized part and by smart contracts in the decentralized part.
+            <br />
+            In general, the platform is divided into 3 sections, which we will refer to all of these sections below:
+          </p>
+          <img src={Technical} width={"100%"} alt="" />
+          <div className="py-4">
+            <ul>
+              <li>
+                 	Clearing house
+              </li>
+              <li>
+                	Markets
+              </li>
+              <li>
+                	DEX platform
+              </li>
+            </ul>
+          </div>
+          <p>
+            There are three main parts of the intelligent platform, and all other parts are a subset of these three parts. We will explain these sections in the following!
+          </p>
+          <p>
+            This part is the most important part of the platform because it acts as the core of the platform. All transfers and orders and transfers of user credits are under the supervision of this department, and as it was said, the centralized departments are managed by the admin and the decentralized departments are managed by smart contracts.
+            <br />
+            The various sections of the clearing house include the following, which are further discussed in the white paper:
+          </p>
+          <img src={clearing} width={"100%"} alt="" />
+          <p>
+            According to this photo, the importance of the clearing house section is clearly defined. <br />
+            Finally, if we want to summarize this section in one sentence, the clearing house is responsible for all the settlements between users and users with the platform. If you want to read more about this, click here.
+
+          </p>
+        </div>
+        <div className="step-content-body" id="technical-review_2">
+          <div className="fw-bold">
+            
+            <p>
+              This part is one of the most attractive parts of Intelligent for investors. When the investment reaches the level of liquidation and loses its assets, the remaining money in that transaction is deposited into the insurance fund. But for what?
+            </p>
+            <p>
+              Because when the account of one of the traders reaches a negative limit, the insurance helps to get the account out of the negative number. This function makes the traders not indebted to the platform and other users, and in the worst case they exit the transaction with the loss of their capital.
+            </p>
+          </div>
+        </div>
+        <div className="step-content-body" id="technical-review_3">
+          <div className="fw-bold">
+            <p>
+              This technology is very efficient because it makes the platform reach the state of Ballots, but how?
+              <br />
+              When there is an imbalance in the order book between buyers and sellers.
+            </p>
+          </div>
+          <div>
+            <span className="fw-bold">
+              If there is no balance, the transactions are connected to the liquidity pool, but sometimes
             </span>
-            <span className="time-content">{CaptionName.time}</span>
+            <span>
+            it is possible that there is not enough liquidity in this pool, so these transactions are automatically directed to the auto deleveraging section where, according to calculations, some transactions are Fill and the rest are They are killed.
+            <br />
+            This system is very necessary and practical for the security of the platform and the stability of the conditions inside it, which ultimately ends in the security of the users.
+            </span>
           </div>
-          <i ></i>
-        </div>
-        <div className="step-content-body"  id="getting_started_1">
-          <div className="caption-step-content">
-            <span className="step-number">{CaptionName.stepNumber1}</span>
-            <a href="" className="step-link">
-              {CaptionName.steplink}
-            </a>
-            <span className="text-step">{CaptionName.textstep}</span>
-          </div>
-          <div className="img-step-box">
-            <img src={Deposit} alt="" width={"100%"} />
-          </div>
-          <p className="dec-step">
-            {CaptionName.decStep}
-
-          </p>
-          <i ></i>
-        </div>
-        <div className="step-content-body" id="getting_started_2">
-          <div className="caption-step-content">
-            <span className="step-number">{CaptionName.stepNumber1}</span>
-            <a href="" className="step-link">
-              {CaptionName.steplink}
-            </a>
-            <span className="text-step">{CaptionName.textstep}</span>
-          </div>
-          <div className="img-step-box">
-            <img src={Deposit} alt="" width={"100%"} />
-          </div>
-          <p className="dec-step">
-            {CaptionName.decStep}
-
-          </p>
-          <i  ></i>
-        </div>
-        <div className="step-content-body" id="getting_started_3">
-          <div className="caption-step-content">
-            <span className="step-number">{CaptionName.stepNumber1}</span>
-            <a href="" className="step-link">
-              {CaptionName.steplink}
-            </a>
-            <span className="text-step">{CaptionName.textstep}</span>
-          </div>
-          <div className="img-step-box">
-            <img src={Deposit} alt="" width={"100%"} />
-          </div>
-          <p className="dec-step">
-            {CaptionName.decStep}
-
-          </p>
-          <i  ></i>
         </div>
       </ContentBody>
     </DocLayout>

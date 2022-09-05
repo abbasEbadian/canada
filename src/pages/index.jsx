@@ -20,7 +20,13 @@ import styled from '@emotion/styled';
 import { Triangle } from 'react-loader-spinner'
 import DocOverview from './document/DocOverview'
 import DocGettingStarted from './document/DocGettingStarted'
-import DocTest from './document/DocTest'
+import DocPools from './document/DocPools'
+import DocAccount from './document/DocAccount'
+import DocPrice from './document/DocPrice'
+import DocArtificial from './document/DocArtificial'
+import DocTokens from './document/DocTokens'
+import DocLiquidation from './document/DocLiquidation'
+import Comming from './Perpetual'
 
 const Loader = styled.div`
   backdrop-filter: blur(6px);
@@ -85,8 +91,14 @@ function Router() {
         <Route path="/press/:slug" element={<SinglePress />} />
         <Route path="/about" element={<About />} />
         <Route path="/doc/overview" element={<DocOverview />} />
-        <Route path="/doc/getting_started" element={<DocGettingStarted />} />
-        <Route path="/doc/test" element={<DocTest />} />
+        <Route path="/doc/technical-review" element={<DocGettingStarted />} />
+        <Route path="/doc/pools" element={<DocPools />} />
+        <Route path="/doc/accounts" element={<DocAccount />} />
+        <Route path="/doc/pricing" element={<DocPrice />} />
+        <Route path="/doc/artificial" element={<DocArtificial />} />
+        <Route path="/doc/tokens" element={<DocTokens />} />
+        <Route path="/doc/liquidation" element={<DocLiquidation />} />
+        <Route path="/comming-soon" element={<Comming />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
     </MasterContext.Provider>

@@ -9,7 +9,7 @@ function HeaderTable({ activePage }) {
                 Forex
             </Link>
             <Link to="/centralized/stocks" className={'head-link-table ' + (activePage === 'stocks'? 'active': '')}>
-                CFDs on stock
+                 Stock
             </Link>
             <Link to="/centralized/indices" className={'head-link-table ' + (activePage === 'indices'? 'active': '')}>
                 Indices
@@ -18,10 +18,10 @@ function HeaderTable({ activePage }) {
                 Commodity
             </Link>
             <Link to="/centralized/etf" className={'head-link-table ' + (activePage === 'etf'? 'active': '')}>
-                Sport Crypto
+                 Crypto
             </Link>
             <Link to="/centralized/crypto" className={'head-link-table ' + (activePage === 'crypto'? 'active': '')}>
-                Perp Crypto
+                ETFs
             </Link>
         </div>
     </div>

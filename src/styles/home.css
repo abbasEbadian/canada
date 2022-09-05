@@ -16,6 +16,13 @@
     opacity: 0.4;
     z-index: -1;
 }
+.image-layer2 {
+    position: absolute;
+    left: calc(15vw - 100%);
+    width: 85vw;
+    transform: rotate(180deg);
+        z-index: -1;
+}
 .welcom-body{
     padding-inline: 32px;
 }
@@ -84,6 +91,9 @@
 /* .protocol-component-body{
     margin-top: 100px;
 } */
+.protocol-component-body {
+    opacity: .9;
+}
 .protocol-component-body .title-Broadcasts-box{
     display: flex;
     flex-direction: column;
@@ -894,4 +904,15 @@
 
 .twomovie {
     margin: -7px -1px;
+}
+
+
+@media (min-width: 767px ) and (max-width: 992px) {
+    .footer-body .footer-items .links-body .link-box {
+        justify-content:start;
+    }
+    .footer-body .footer-items .links-body .link-box .links:nth-child(2) {
+
+        padding-left: 3rem;
+    }
 }
