@@ -5,12 +5,9 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import WhatsappSharpIcon from '@mui/icons-material/WhatsappSharp';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import Visa from '../img/visa.png'
-import Paypal from '../img/paypal.png'
-import WebMoney from '../img/webmoney.png'
-import VisaImg from '../img/visa.png'
-import Skrill from '../img/Skrill.png'
-import Mastercard from '../img/mastercard.png'
+import tether from '../img/tether.svg'
+import usdc from '../img/usdc.svg'
+import bitcoin from '../img/bitcoin.svg'
 import CopyrightIcon from '@mui/icons-material/Copyright';
 import { Link } from 'react-router-dom';
 import logo from '../img/logo.svg'
@@ -96,14 +93,9 @@ function Footer() {
                     We accept
                   </span>
                   <div className="we-accept">
-                    <a href="" className='accept-link'>
-                      <img src={VisaImg} alt="Visa" />
-                    </a>
-                    <a href="" className='accept-link'> <img src={Mastercard} alt="Visa" /></a>
-                    <a href="" className='accept-link'> <img src={Paypal} alt="Paypal" /></a>
-                    <a href="" className='accept-link'> <img src={WebMoney} alt="WebMoney" /></a>
-
-                    <a href="" className='accept-link'> <img src={Skrill} alt="Skrill" /></a>
+                    <a href="" className='accept-link'> <img src={bitcoin} alt="bitcoin" /></a>
+                    <a href="" className='accept-link'> <img src={tether} alt="tether" /></a>
+                    <a href="" className='accept-link'> <img src={usdc} alt="usdc" /></a>
                   </div>
                 </div>
               </div>
