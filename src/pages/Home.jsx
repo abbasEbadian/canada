@@ -22,7 +22,8 @@ import RoadMap from '../components/subHome/RoadMap'
 import myvideo from '../img/up.mp4'
 import myvideo2 from '../img/down.mp4'
 import axios from 'axios'
-
+import homeLeftImage from '../img/homeLeft.png';
+import homeLeftPath from '../img/homeLeftPath.png';
 import { styled } from '@mui/material/styles';
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 
@@ -84,7 +85,10 @@ Nullam eget est sed sem iaculis gravida eget vitae justo.
           <video autoPlay playsInline muted loop className='w-100 position-absolute top-100 end-0 d-none d-lg-block twomovie' style={{ opacity: 0.5 , margin: "-35px -5px"}}>
             <source src={myvideo2} type="video/mp4" />
           </video>
-          <div className="d-flex align-items-center flex-wrap mb-5">
+
+          <div className="d-flex align-items-center flex-wrap mb-5 home-cont">
+            <img className='left-image ' src={homeLeftImage} alt={"LEFT"}/>
+            <img className='left-path ' src={homeLeftPath} alt={"LEFT path"}/>
             <div className="col-12 col-lg-5">
               <div className="welcom-item">
                 <h2 className='my-3 text-center'>

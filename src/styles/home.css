@@ -26,20 +26,32 @@
 .welcom-body{
     padding-inline: 32px;
 }
-/* .welcom-item-bg{
-    background: url(../../img/CompositeLayer.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 713px;
-    background-position: top;
-    width: 500px;
-} */
+
+.home-cont{
+    position: relative;
+}
+.home-cont .left-image {
+    position: absolute;
+    left: -7%;
+    top: 0;
+    height: 100%;
+    z-index: -1;
+}
+
+.home-cont .left-path {
+    position: absolute;
+    width: 100vw;
+    left: calc(50% - 50vw);
+    top: 400px;
+    width: 16vw;
+    z-index: -1;
+}
 .welcom-item{
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-inline: 32px;
-    background-image: url("../img/Content.png");
+    
     width: 100%;
     height: 500px;
     background-position: center;
@@ -631,10 +643,14 @@
     min-width: 30%;
     text-align: end;
 }
+.circuit-design img {
+    max-width: 100%;
+}
 
 .assets-item-mobile{
     display: none;
 }
+
 @media (max-width: 1400px) {
     .road-map-body .octagon-accessTime, .road-map-body .octagon-sync, .road-map-body .octagon-check{
         padding-top: 60px;
@@ -644,12 +660,40 @@
     .title-Broadcasts-box button{
         visibility: hidden;
     }
-
 }
-.circuit-design img {
-    max-width: 100%;
+@media (max-width: 992px) {
+    body .home-cont .left-image {
+        height: unset;
+        width: 100%;
+        left: 0;
+    }
+    .home-cont .left-path {
+        display: none;
+    }
+    .welcom-item{
+        width: unset;
+        margin-inline: 0px;
+    }
+    video.twomovie  {
+        opacity: 0.2;
+        margin: -35px -5px;
+        transform: rotate(90deg) scale(5);
+        width: 120%;
+        top: 200% !important;
+    }
 }
-
+@media (max-width: 576px) {
+    .welcom-item{
+        width: unset;
+        margin-inline: 0px;
+        justify-content: flex-start;
+        padding-top: 32px;
+        height: 350px;
+    }
+    .circuit-design > video {
+        width: 100% !important;
+    }
+}
 @media (max-width: 768px){
     .welcom-body {
         padding-inline: 0px;
