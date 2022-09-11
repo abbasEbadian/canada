@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useEffect} from "react";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import styled from "@emotion/styled";
 // import TableContent from "./TableContent";
 import Technical from "../../img/document/technical.png"
 import clearing from "../../img/document/clearing.png"
 import DocLayout from '../../layout/DocLayout'
+import { Link } from "react-router-dom";
 const ContentBody = styled.div`
 color : #fff;
 line-height: 2.4;
@@ -14,6 +15,15 @@ text-align: justify;
 img {
   width : 100%;
   border-radius : 10px
+}
+.step-content-body {
+  padding : 180px 0; 
+}
+a {
+  color : #fff;
+  border : 1px solid #eee;
+  border-radius : 7px;
+  padding: 5px 25px
 }
 `;
 function DocOverview() {
@@ -26,6 +36,14 @@ function DocOverview() {
     textstep: "on your preferred browser (Chrome, Brave, Firefox, Edge).",
     decStep: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
   };
+//   useEffect(() => {
+//     const body = document.querySelector('#root');
+
+//     body.scrollIntoView({
+//         behavior: 'smooth'
+//     }, 500)
+
+// }, []);
   return (
     <DocLayout active={'technical-review'}>
       <ContentBody >
@@ -96,6 +114,10 @@ function DocOverview() {
             This system is very necessary and practical for the security of the platform and the stability of the conditions inside it, which ultimately ends in the security of the users.
             </span>
           </div>
+        </div>
+        <div className="d-flex align-items-center justify-content-between">
+          <Link to="/doc/overview" variant="outlined">prev</Link>
+          <Link to="/doc/pools" variant="outlined">next</Link>
         </div>
       </ContentBody>
     </DocLayout>

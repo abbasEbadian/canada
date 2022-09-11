@@ -45,9 +45,9 @@ function BannerTableCForex({ azkoja = 'center' }) {
         else if(azkoja === 'etf') {
             return {
                 
-                TitleBanner: "ETF Trading",
+                TitleBanner: "  Crypto",
                 TextBanner: "Lorem ipsum dolor sit amet,  ",
-                image: LogoEtf,
+                image:    LogoCrypto,
                 bgColor: '#DC6805'
             }
         }
@@ -61,9 +61,9 @@ function BannerTableCForex({ azkoja = 'center' }) {
         }
         else if (azkoja === 'crypto') {
             return {
-                TitleBanner: "Crypto",
+                TitleBanner: "ETF",
                 TextBanner: "Lorem ipsum dolor sit amet,  ",
-                image: LogoCrypto,
+                image: LogoEtf,
                 bgColor: '#F7931A'
             }
         }

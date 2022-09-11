@@ -1,10 +1,17 @@
-import React from "react";
+import React, {useEffect} from "react";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import styled from "@emotion/styled";
 // import TableContent from "./TableContent";
 import Deposit from "../../img/document/Deposit.png"
 import DocLayout from '../../layout/DocLayout'
+import { Link } from "react-router-dom";
 const ContentBody = styled.div`
+a {
+  color : #fff;
+  border : 1px solid #eee;
+  border-radius : 7px;
+  padding: 5px 25px
+}
 color : #fff;
 line-height: 2.4;
 padding: 15px 25px;
@@ -31,6 +38,7 @@ text-align: justify;
 
   }
   .step-content-body {
+    padding : 180px 0; 
     display: flex;
     flex-direction: column;
     margin-top: 10px;
@@ -81,6 +89,14 @@ function DocPools() {
         textstep: "on your preferred browser (Chrome, Brave, Firefox, Edge).",
         decStep: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
     };
+  //   useEffect(() => {
+  //     const body = document.querySelector('#root');
+  
+  //     body.scrollIntoView({
+  //         behavior: 'smooth'
+  //     }, 500)
+  
+  // }, []);
     return (
         <DocLayout active={'liquidation'}>
             <ContentBody >
@@ -112,7 +128,9 @@ function DocPools() {
                     When a transaction is liquidated, the remaining Collateral amount of the user enters the Insurance fund. The capital is stored in the Insurance fund and when the account becomes negative and loses all its collateral, the Insurance fund provides the negative amount of the account .
                     </p>
                 </div>
-
+                <div className="d-flex align-items-center justify-content-between">
+          <Link to="/doc/tokens" variant="outlined">prev</Link>
+        </div>
             </ContentBody>
         </DocLayout>
     );

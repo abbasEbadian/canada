@@ -27,7 +27,7 @@ import DocArtificial from './document/DocArtificial'
 import DocTokens from './document/DocTokens'
 import DocLiquidation from './document/DocLiquidation'
 import Comming from './Perpetual'
-
+import {useLocation} from 'react-router-dom'
 const Loader = styled.div`
   backdrop-filter: blur(6px);
   position: fixed;
@@ -48,7 +48,16 @@ const Loader = styled.div`
 
 export const MasterContext = React.createContext();
 
-function Router() {
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+export function Router() {
   const [ loading, setLoading ] = useState(false)
 
 
@@ -64,6 +73,7 @@ function Router() {
     document.body.style.overflow = loading ? "hidden" : "auto"
   }, [loading])
 
+  
 
   return (<>
     <Loader className={!loading && "deactive"}>
@@ -74,6 +84,8 @@ function Router() {
       loading,
       setLoading: _setLoading,
     }}>
+      
+        <ScrollToTop />
       <Routes>
         <Route path="/blog" element={<Blogs />} />
         <Route path="/" element={<Home />}></Route>
