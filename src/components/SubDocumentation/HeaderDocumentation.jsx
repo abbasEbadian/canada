@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../img/logo.png";
+import logo from '../../img/logo.svg'
 import SearchIcon from "@mui/icons-material/Search";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import MenuIcon from '@mui/icons-material/Menu'
@@ -96,7 +96,7 @@ function HeaderDocumentation({ toggleMenu, menuOpen }) {
   return (
     <HeadDocument>
       <div className="img-logo-doc">
-        <img src={Logo} alt="logo" />
+        <img src={logo} alt="logo" />
       </div>
       <div className="search-intelligent-box">
         <div className="search-document">

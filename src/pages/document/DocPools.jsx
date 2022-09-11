@@ -1,9 +1,12 @@
-import React from "react";
+// import React from "react";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import styled from "@emotion/styled";
 // import TableContent from "./TableContent";
 import Deposit from "../../img/document/Deposit.png"
 import DocLayout from '../../layout/DocLayout'
+import { Link } from "react-router-dom";
+import React, { useEffect } from 'react';
+
 const ContentBody = styled.div`
   color : #fff;
   line-height: 2.4;
@@ -31,6 +34,8 @@ const ContentBody = styled.div`
 
   }
   .step-content-body {
+    padding : 180px 0; 
+    margin: 50px 0;
     display: flex;
     flex-direction: column;
     margin-top: 10px;
@@ -64,6 +69,12 @@ const ContentBody = styled.div`
 
     }
   }
+  a {
+    color : #fff;
+    border : 1px solid #eee;
+    border-radius : 7px;
+    padding: 5px 25px
+  }
 `;
 function DocPools() {
   const CaptionName = {
@@ -75,7 +86,16 @@ function DocPools() {
     textstep: "on your preferred browser (Chrome, Brave, Firefox, Edge).",
     decStep: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
   };
+//   useEffect(() => {
+//     const body = document.querySelector('#root');
+
+//     body.scrollIntoView({
+//         behavior: 'smooth'
+//     }, 500)
+
+// }, []);
   return (
+    
     <DocLayout active={'pools'}>
       <ContentBody >
         {/* table */}
@@ -141,6 +161,11 @@ Note: the trading account of its position is not sold, but according to the anal
             When you tokenize your account, the complete account information is stored in this pool.
             </p>
           </div>
+        </div>
+
+        <div className="d-flex align-items-center justify-content-between">
+          <Link to="/doc/technical-review" variant="outlined">prev</Link>
+          <Link to="/doc/accounts" variant="outlined">next</Link>
         </div>
       </ContentBody >
     </DocLayout >
