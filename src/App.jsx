@@ -19,7 +19,7 @@ import 'react-toastify/dist/ReactToastify.css';
 if (process.env.NODE_ENV === 'development') {
   axios.defaults.baseURL = 'http://localhost:8000'
 } else {
-  axios.defaults.baseURL = 'http://intelligentprotocols.com'
+  axios.defaults.baseURL = 'https://intelligentprotocols.com'
 }
 
 export const get_image_link = (url) => {
