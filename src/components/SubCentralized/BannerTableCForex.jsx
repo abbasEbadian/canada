@@ -3,7 +3,7 @@ import forexLogo from '../../img/forexLogo.png';
 import PaweredBannerTable from '../SubCentralized/PaweredBannerTable';
 import TextBannerTable from '../SubCentralized/TextBannerTable';
 import TitleBannerTable from '../SubCentralized/TitleBannerTable';
-import Logo from '../../img/logo.png';
+import Logo from '../../img/logo.svg';
 import LogoStocks from '../../img/motion/Group3310.png'
 import LogoCommodities from '../../img/motion/Group-3311.png'
 import LogoEtf from '../../img/motion/Group3312.png'
